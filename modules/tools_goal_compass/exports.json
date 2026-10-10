@@ -1,0 +1,675 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "e25926941342488b89144e082f41b87e198be9705a0ed3148d5c94b9d74b5d2c",
+    "catalog.metta": "e75fc7f94f551332c9fa244633e3bf8d2329483ea70ce6e873c1dc3fb5ea0255",
+    "signatures.metta": "e39f4b47db6ad39165bdd3d1726a2fa10ffc421520803403fede10d6f263a4eb",
+    "skills.metta": "d86cd2949426da7ca5be213436a108d231125edac7b67bba37cb9045613592d5",
+    "src/law.metta": "821547841129db8672ecc78c0ee877ee0d661d411685ce387cb961a6e63b1322"
+  },
+  "callables": [
+    {
+      "name": "goal-life-can-grant-effect?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-decision",
+      "arities": [
+        9
+      ]
+    },
+    {
+      "name": "goal-life-eighth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-eleventh",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-evidence-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-fifth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-final-step?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "goal-life-fourth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-ninth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-output-authority",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-refuse",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "goal-life-second",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-seventh",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-sixth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-state-name?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-state-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-step",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "goal-life-step-matched",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "goal-life-stop-rule-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-tenth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-third",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-thirteenth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "goal-life-twelfth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-answer-hard-cap",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "loop3-append",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-budgets-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-can-grant-effect?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-candidate-hard-cap",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "loop3-card-admitted?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-card-authority",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-card-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-card-id-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-card-ids-unique?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-card-output",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-card-prerequisites",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-compose",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "loop3-expand-cards",
+      "arities": [
+        13
+      ]
+    },
+    {
+      "name": "loop3-expand-cards-acc",
+      "arities": [
+        15
+      ]
+    },
+    {
+      "name": "loop3-find-card-id",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-first-applicable",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "loop3-frontier-hard-cap",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "loop3-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-naive-forward",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "loop3-node-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-obligation-goal",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-obligations",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-output-authority",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-prerequisites-satisfied?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-proof-hard-cap",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "loop3-receipt-answer-count",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-receipt-candidates",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-receipt-peak-frontier",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-receipt-pruned",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-receipt-status",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-receipt-steps",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-remove-card",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-result-answers",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-result-receipt",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-reverse",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "loop3-reverse-onto",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-search",
+      "arities": [
+        13
+      ]
+    },
+    {
+      "name": "loop3-search-finish",
+      "arities": [
+        10
+      ]
+    },
+    {
+      "name": "loop3-step-hard-cap",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "loop3-trusted-answer-bag",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "loop3-trusted-attach-card",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-trusted-combine-heads",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "loop3-trusted-merge-one",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-trusted-solve-cards",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "loop3-trusted-solve-goal",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "loop3-trusted-solve-hypotheses",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "loop3-trusted-wrap-answers",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-unresolved-count",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "loop3-verify-answer",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "loop3-verify-plan-steps",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "resident-goal-composition-v1",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-goal-step",
+      "arities": [
+        3
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "GoalTransitionDecisionV1",
+      "arities": [
+        15
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "GoalTransitionRefusalV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillCardLine",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "context-assembled",
+      "arities": [
+        0
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "context-step",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-answer",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-budgets",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-expansion",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-node",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-obligation",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-receipt",
+      "arities": [
+        11
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "loop3-result",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "max",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "naive-budget-exhausted",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "naive-no-progress",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "naive-reached",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "plan-replay-invalid",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "plan-replay-valid",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "readiness-card",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "size-atom",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "trusted-plan",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "user-prompt-received",
+      "arities": [
+        0
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

@@ -1,0 +1,1100 @@
+{
+  "handover_amendment": "2026-10-10 handover copy, not re-run: jurisdiction symbols renamed to owner-joint and mind-self (the originals carried personal names) in the recorded calls and outputs, one Goal Weaver comment and one program.py provenance label reworded, and the file pins updated to the renamed bytes. The run this receipt records predates the rename.",
+  "scope": "banked synthetic examples through isolated candidate import resolution, not installed agent/runtime acceptance",
+  "recorded_at": "2026-10-03T20:19:54.552855+00:00",
+  "provider_calls": 0,
+  "effect_calls": 0,
+  "passed": true,
+  "tools_checked": [
+    "affect",
+    "atom-recall",
+    "attention",
+    "belief-governance",
+    "dream-consolidation",
+    "energy",
+    "ensemble",
+    "ethical-appraisal",
+    "goal-compass",
+    "habitat-snapshot",
+    "home-assistant",
+    "living-home",
+    "living-intent",
+    "novelty",
+    "predictive-learning",
+    "scratch-plans",
+    "self-observation",
+    "skill-affordance",
+    "standing-values",
+    "substrates"
+  ],
+  "results": [
+    {
+      "tool": "atom-recall",
+      "name": "exact-key-not-semantic",
+      "call": "(tools-atom-recall r1 (study) ((AtomMemoryEntryV1 lamp (study lighting)) (AtomMemoryEntryV1 book (studying))))",
+      "expected": [
+        "(AtomMemoryRecallDecisionV1 r1 (lamp) authority-none)"
+      ],
+      "actual": [
+        "(AtomMemoryRecallDecisionV1 r1 (lamp) authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "atom-recall",
+      "name": "recall-multi-key-order",
+      "call": "(tools-atom-recall r2 (study heat) ((AtomMemoryEntryV1 lamp (study)) (AtomMemoryEntryV1 temp (heat)) (AtomMemoryEntryV1 book (reading))))",
+      "expected": [
+        "(AtomMemoryRecallDecisionV1 r2 (lamp temp) authority-none)"
+      ],
+      "actual": [
+        "(AtomMemoryRecallDecisionV1 r2 (lamp temp) authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "atom-recall",
+      "name": "recall-empty",
+      "call": "(tools-atom-recall r3 () ())",
+      "expected": [
+        "(AtomMemoryRecallDecisionV1 r3 () authority-none)"
+      ],
+      "actual": [
+        "(AtomMemoryRecallDecisionV1 r3 () authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "atom-recall",
+      "name": "recall-no-match",
+      "call": "(tools-atom-recall r4 (sleep) ((AtomMemoryEntryV1 lamp (study))))",
+      "expected": [
+        "(AtomMemoryRecallDecisionV1 r4 () authority-none)"
+      ],
+      "actual": [
+        "(AtomMemoryRecallDecisionV1 r4 () authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "atom-recall",
+      "name": "recall-cannot-authorize",
+      "call": "(memory-recall-can-grant-effect? arbitrary)",
+      "expected": [
+        "false"
+      ],
+      "actual": [
+        "false"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-completion",
+      "call": "(tools-goal-step (GoalLifecycleStateV1 episode-1 v1 verifying goal-1 verify () none 0 0 0 (GoalStopRuleV1 artifact-complete result-1) synthetic-provenance) (GoalProgressEvidenceV1 episode-1 v1 ev1 result-1 completion-met stranger-verifiable) v2)",
+      "expected": [
+        "(GoalTransitionDecisionV1 episode-1 v1 v2 goal-1 verifying completed complete ev1 result-1 summarize-completed-goal 1 0 0 (GoalStopRuleV1 artifact-complete result-1) inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionDecisionV1 episode-1 v1 v2 goal-1 verifying completed complete ev1 result-1 summarize-completed-goal 1 0 0 (GoalStopRuleV1 artifact-complete result-1) inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-self-report-insufficient",
+      "call": "(tools-goal-step (GoalLifecycleStateV1 episode-1 v1 verifying goal-1 verify () none 0 0 0 (GoalStopRuleV1 artifact-complete result-1) synthetic-provenance) (GoalProgressEvidenceV1 episode-1 v1 ev1 result-1 completion-met self-reported) v2)",
+      "expected": [
+        "(GoalTransitionRefusalV1 episode-1 v1 completion-not-stranger-verifiable ev1 inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionRefusalV1 episode-1 v1 completion-not-stranger-verifiable ev1 inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-stale-evidence",
+      "call": "(tools-goal-step (GoalLifecycleStateV1 episode-1 v1 verifying goal-1 verify () none 0 0 0 (GoalStopRuleV1 artifact-complete result-1) synthetic-provenance) (GoalProgressEvidenceV1 episode-1 v0 ev1 result-1 completion-met stranger-verifiable) v2)",
+      "expected": [
+        "(GoalTransitionRefusalV1 episode-1 v1 stale-evidence ev1 inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionRefusalV1 episode-1 v1 stale-evidence ev1 inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-wrong-episode",
+      "call": "(tools-goal-step (GoalLifecycleStateV1 episode-1 v1 verifying goal-1 verify () none 0 0 0 (GoalStopRuleV1 artifact-complete result-1) synthetic-provenance) (GoalProgressEvidenceV1 episode-2 v1 ev1 result-1 completion-met stranger-verifiable) v2)",
+      "expected": [
+        "(GoalTransitionRefusalV1 episode-1 v1 wrong-episode ev1 inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionRefusalV1 episode-1 v1 wrong-episode ev1 inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-same-successor",
+      "call": "(tools-goal-step (GoalLifecycleStateV1 episode-1 v1 verifying goal-1 verify () none 0 0 0 (GoalStopRuleV1 artifact-complete result-1) synthetic-provenance) (GoalProgressEvidenceV1 episode-1 v1 ev1 result-1 completion-met stranger-verifiable) v1)",
+      "expected": [
+        "(GoalTransitionRefusalV1 episode-1 v1 invalid-successor-version ev1 inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionRefusalV1 episode-1 v1 invalid-successor-version ev1 inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-malformed",
+      "call": "(tools-goal-step broken (GoalProgressEvidenceV1 episode-1 v1 ev1 result-1 completion-met stranger-verifiable) v2)",
+      "expected": [
+        "(GoalTransitionRefusalV1 none none invalid-state unknown-evidence inspect-simulate)"
+      ],
+      "actual": [
+        "(GoalTransitionRefusalV1 none none invalid-state unknown-evidence inspect-simulate)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-cannot-authorize",
+      "call": "(goal-life-can-grant-effect? arbitrary)",
+      "expected": [
+        "false"
+      ],
+      "actual": [
+        "false"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "habitat-snapshot",
+      "name": "habitat-preserves-revision-provenance",
+      "call": "(tools-habitat-room (HabitatSnapshotV1 snapshot-1 synthetic-fixture ((HabitatObservationV1 lamp study on) (HabitatObservationV1 thermostat hall 20))) study)",
+      "expected": [
+        "(HabitatRoomViewV1 snapshot-1 synthetic-fixture study ((HabitatObservationV1 lamp study on)) authority-none)"
+      ],
+      "actual": [
+        "(HabitatRoomViewV1 snapshot-1 synthetic-fixture study ((HabitatObservationV1 lamp study on)) authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "habitat-snapshot",
+      "name": "habitat-unknown-room-empty",
+      "call": "(tools-habitat-room (HabitatSnapshotV1 snapshot-1 synthetic-fixture ((HabitatObservationV1 lamp study on) (HabitatObservationV1 thermostat hall 20))) bedroom)",
+      "expected": [
+        "(HabitatRoomViewV1 snapshot-1 synthetic-fixture bedroom () authority-none)"
+      ],
+      "actual": [
+        "(HabitatRoomViewV1 snapshot-1 synthetic-fixture bedroom () authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "habitat-snapshot",
+      "name": "habitat-cannot-authorize",
+      "call": "(tools-habitat-can-grant-effect? arbitrary)",
+      "expected": [
+        "false"
+      ],
+      "actual": [
+        "false"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "attention",
+      "name": "native-attention-changes-selection",
+      "call": "(tools-attention-select enabled (focus-state 10 10 ((salience a 0.8 0 False none fresh) (salience b 0 0 False none fresh)) ()) ((focus-candidate a 0.1 0 payload-a) (focus-candidate b 0.6 1 payload-b)) 1 input-1 state-1 sensor-1)",
+      "contains": [
+        "(focus-ranked a 0.9 0 payload-a)",
+        "enabled (a) sensor-1 inspect-simulate"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 attention (focus-selection (focus-agenda advisory ((focus-ranked a 0.9 0 payload-a))) (focus-agenda-receipt input-1 state-1 enabled (a) sensor-1 inspect-simulate)) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "attention",
+      "name": "disabled-baseline-selects-b",
+      "call": "(tools-attention-select disabled (focus-state 10 10 ((salience a 0.8 0 False none fresh) (salience b 0 0 False none fresh)) ()) ((focus-candidate a 0.1 0 payload-a) (focus-candidate b 0.6 1 payload-b)) 1 input-1 state-1 sensor-1)",
+      "contains": [
+        "(focus-ranked b 0.6 1 payload-b)",
+        "disabled (b) sensor-1 inspect-simulate"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 attention (focus-selection (focus-agenda advisory ((focus-ranked b 0.6 1 payload-b))) (focus-agenda-receipt input-1 state-1 disabled (b) sensor-1 inspect-simulate)) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "attention",
+      "name": "duplicate-ordinals-refused",
+      "call": "(tools-attention-select enabled (focus-state 10 10 ((salience a 0.8 0 False none fresh) (salience b 0 0 False none fresh)) ()) ((focus-candidate a 0.1 0 payload-a) (focus-candidate b 0.6 0 payload-b)) 1 input-1 state-1 sensor-1)",
+      "contains": [
+        "focus-selection-rejected duplicate-ordinal"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 attention (focus-selection-rejected duplicate-ordinal (focus-agenda-receipt input-1 state-1 enabled () sensor-1 inspect-simulate)) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-intent",
+      "name": "bind-complete-current-intent",
+      "call": "(tools-intent-bind call-1 ep (living-intent-state ep v1 hd pd ((LivingIntentHeadV1 ep v1 head-0 goal why focus () last-result next provenance current)) ((LivingIntentProjectionV1 ep v1 hd pd (living-intent) () () (open-commitments)))))",
+      "expected": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentContributionBindingV1 call-1 ep v1 pd) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentContributionBindingV1 call-1 ep v1 pd) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-intent",
+      "name": "intent-return-stale",
+      "call": "(tools-intent-return (LivingIntentContributionBindingV1 call-1 ep v0 pd) (living-intent-state ep v1 hd pd ((LivingIntentHeadV1 ep v1 head-0 goal why focus () last-result next provenance current)) ((LivingIntentProjectionV1 ep v1 hd pd (living-intent) () () (open-commitments)))))",
+      "expected": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentRefusalV1 call-1 stale-return v0 v1) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentRefusalV1 call-1 stale-return v0 v1) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-intent",
+      "name": "intent-wrong-episode",
+      "call": "(tools-intent-bind call-1 other (living-intent-state ep v1 hd pd ((LivingIntentHeadV1 ep v1 head-0 goal why focus () last-result next provenance current)) ((LivingIntentProjectionV1 ep v1 hd pd (living-intent) () () (open-commitments)))))",
+      "expected": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentRefusalV1 call-1 wrong-episode none v1) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentRefusalV1 call-1 wrong-episode none v1) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "typed-value-adoption-appraisal",
+      "call": "(tools-value-transition (StandingValueTransitionV1 decision-1 adopt none (StandingValueV1 value-1 promise opaque-kind owner-joint none reason () review-condition release-condition active) (StandingValueAuthorityV1 owner-joint owner-joint decision-1)))",
+      "contains": [
+        "StandingValueTransitionDecisionV1 decision-1 accepted adopt",
+        "inspect-simulate authority-none"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (StandingValueTransitionDecisionV1 decision-1 accepted adopt (StandingValueV1 value-1 promise opaque-kind owner-joint none reason () review-condition release-condition active) (StandingValueAuthorityV1 owner-joint owner-joint decision-1) inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "wrong-value-jurisdiction-refused",
+      "call": "(tools-value-transition (StandingValueTransitionV1 decision-1 adopt none (StandingValueV1 value-1 promise opaque-kind owner-joint none reason () review-condition release-condition active) (StandingValueAuthorityV1 mind-self mind-self decision-1)))",
+      "contains": [
+        "invalid-or-unauthorised-transition"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (StandingValueTransitionRefusalV1 decision-1 invalid-or-unauthorised-transition inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "protected-content-delete-refused",
+      "call": "(tools-retention-check (RetentionCovenantV1 covenant-1 value-1 hash-1 must-retain-verbatim (preserve-exact) (private) no-release-permitted active) (RetentionOperationV1 op-1 delete hash-1 none delete private never none))",
+      "contains": [
+        "must-retain-verbatim-prohibits-delete"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (RetentionOperationRefusalV1 op-1 must-retain-verbatim-prohibits-delete inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ethical-appraisal",
+      "name": "non-scalar-dominance",
+      "call": "(tools-ethical-compare a b ((AffectedBeing person declared fixture ())) (agency-balance) ((Impact ia a person agency-balance immediate supports (stv 0.9 0.9) ((Source source-1 experiment-fixture))) (Impact ib b person agency-balance immediate undermines (stv 0.9 0.9) ((Source source-2 experiment-fixture)))) () ())",
+      "expected": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 True False () advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 true false () advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ethical-appraisal",
+      "name": "unknown-impact-incomparable",
+      "call": "(tools-ethical-compare a b ((AffectedBeing person declared fixture ())) (agency-balance) () () ())",
+      "expected": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 False False () advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 false false () advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ethical-appraisal",
+      "name": "protected-floor-reported",
+      "call": "(tools-ethical-compare a b ((AffectedBeing person declared fixture ())) (agency-balance) ((Impact ia a person agency-balance immediate supports (stv 0.9 0.9) ((Source source-1 experiment-fixture))) (Impact ib b person agency-balance immediate undermines (stv 0.9 0.9) ((Source source-2 experiment-fixture)))) () ((GovernanceFloor floor-1 a person consent violated ((Source owner human-declared)))))",
+      "contains": [
+        "floor-conflict floor-1 a person consent violated existing-governance-required"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 true false ((floor-conflict floor-1 a person consent violated existing-governance-required)) advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "belief-governance",
+      "name": "supported-belief-classification",
+      "call": "(tools-belief-appraise claim (stv 0.9 0.8) internal)",
+      "expected": [
+        "(ToolsSampleResultV1 belief-governance (admitted claim (stv 0.9 0.8) internal) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 belief-governance (admitted claim (stv 0.9 0.8) internal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "belief-governance",
+      "name": "ambiguity-quarantine",
+      "call": "(tools-belief-appraise claim (stv 0.5 0.99) internal)",
+      "expected": [
+        "(ToolsSampleResultV1 belief-governance (quarantined Q_AMBIGUOUS claim (stv 0.5 0.99) internal) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 belief-governance (quarantined Q_AMBIGUOUS claim (stv 0.5 0.99) internal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "belief-governance",
+      "name": "low-support-refusal",
+      "call": "(tools-belief-appraise claim (stv 0.9 0.1) internal)",
+      "expected": [
+        "(ToolsSampleResultV1 belief-governance (rejected LOW_SUPPORT claim (stv 0.9 0.1) internal) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 belief-governance (rejected LOW_SUPPORT claim (stv 0.9 0.1) internal) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "belief-governance",
+      "name": "shared-provenance-no-double-credit",
+      "call": "(tools-provenance-revise (0.9 0.8 (source-1)) (0.9 0.8 (source-1)))",
+      "expected": [
+        "(ToolsSampleResultV1 belief-governance (stv 0.9 0.8) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 belief-governance (stv 0.9 0.8) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "self-observation",
+      "name": "invocation-readback-grounded",
+      "call": "(tools-self-readback (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) (CurrentMechanismEvidenceSetV1 (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) ((CurrentMechanismEvidenceV1 focus pre coordinate-1 available invoked (MechanismOutputDigestV1 digest-1) (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1))) authority-none))",
+      "contains": [
+        "CurrentMechanismStateV1 focus ran pre coordinate-1",
+        "authority-none"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 self-observation (CurrentMechanismReadbackV1 (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) ((CurrentMechanismStateV1 focus ran pre coordinate-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (MechanismOutputDigestV1 digest-1))) (CurrentMechanismGeneralizationV1 all-enumerated-current-mechanisms-classified ((CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1)) exact-receipt-enumeration) inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "self-observation",
+      "name": "stale-turn-not-current",
+      "call": "(tools-self-readback (CurrentTurnBindingV1 turn-2 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) (CurrentMechanismEvidenceSetV1 (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) ((CurrentMechanismEvidenceV1 focus pre coordinate-1 available invoked (MechanismOutputDigestV1 digest-1) (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1))) authority-none))",
+      "contains": [
+        "stale-turn-binding"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 self-observation (CurrentMechanismReadbackRefusalV1 stale-turn-binding authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "self-observation",
+      "name": "missing-invocation-not-ran",
+      "call": "(tools-self-readback (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) (CurrentMechanismEvidenceSetV1 (CurrentTurnBindingV1 turn-1 input-1 seal-1 synthetic-user) (CurrentFocusBindingV1 focus coordinate-1 digest-1 (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1) (source-1)) ((CurrentMechanismEvidenceV1 focus pre coordinate-1 available scheduled none (CurrentMechanismReceiptRefV1 pre focus coordinate-1 digest-1))) authority-none))",
+      "contains": [
+        "current-focus-receipt-missing"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 self-observation (CurrentMechanismReadbackRefusalV1 current-focus-receipt-missing authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ensemble",
+      "name": "same-coordinate-agreement",
+      "call": "(tools-ensemble-compare (EnsembleClaimV1 (EnsembleClaimCoordinateV1 claim-1 subject relation 0 1 v1) positive active) (EnsembleClaimV1 (EnsembleClaimCoordinateV1 claim-1 subject relation 0 1 v1) positive active))",
+      "expected": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 agreement no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 agreement no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ensemble",
+      "name": "opposed-claims-preserved",
+      "call": "(tools-ensemble-compare (EnsembleClaimV1 (EnsembleClaimCoordinateV1 claim-1 subject relation 0 1 v1) positive active) (EnsembleClaimV1 (EnsembleClaimCoordinateV1 claim-1 subject relation 0 1 v1) negative active))",
+      "expected": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 contradiction no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 contradiction no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "ensemble",
+      "name": "malformed-claim-unknown",
+      "call": "(tools-ensemble-compare bad (EnsembleClaimV1 (EnsembleClaimCoordinateV1 claim-1 subject relation 0 1 v1) positive active))",
+      "expected": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 relation-unknown no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 relation-unknown no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "novelty",
+      "name": "novelty-genesis-bounded",
+      "call": "(tools-novelty-genesis (NoveltyInspectionPolicyV1 policy-1 1 1 2 100 (\"direct-test\") (local-private)) 1000)",
+      "expected": [
+        "(ToolsSampleResultV1 novelty (NoveltyInspectionStateV1 policy-1 0 1000 () () ()) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 novelty (NoveltyInspectionStateV1 policy-1 0 1000 () () ()) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "novelty",
+      "name": "inspect-only-lease",
+      "call": "(tools-novelty-inspect (NoveltyInspectionPolicyV1 policy-1 1 1 2 100 (\"direct-test\") (local-private)) (NoveltyInspectionStateV1 policy-1 0 1000 () () ()) (CycleComposerIngressInput \"direct-test\" ((CycleComposerIngressFrame (65))) 1000) (CycleComposerIngressDigestResult (CycleComposerIngressDigestRequest sha256 \"direct-test\" ((CycleComposerIngressFrame (65)))) \"fixture-digest\") (NoveltyArrivalV1 arrival-1 content-1 \"fixture-digest\" provenance-1 local-private ordinary-loss evidence-1 (NoveltyQuarantineCheckV1 arrival-1 \"fixture-digest\" inspection-cleared)))",
+      "contains": [
+        "NoveltyInspectionDecisionV1 arrival-1 accepted",
+        "inspection-only authority-none"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 novelty (NoveltyInspectionDecisionV1 arrival-1 accepted (NoveltyGrantV1 (novelty-grant arrival-1) arrival-1 content-1 \"fixture-digest\" \"direct-test\" 0 2 1100 2 inspection-only authority-none) (NoveltyInspectionStateV1 policy-1 0 1000 ((NoveltyGrantV1 (novelty-grant arrival-1) arrival-1 content-1 \"fixture-digest\" \"direct-test\" 0 2 1100 2 inspection-only authority-none)) ((NoveltySeenArrivalV1 arrival-1 \"fixture-digest\" \"direct-test\" evidence-1)) ((NoveltySourceChargeV1 \"direct-test\" 0 1))) inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "novelty",
+      "name": "unlisted-source-refused",
+      "call": "(tools-novelty-inspect (NoveltyInspectionPolicyV1 policy-1 1 1 2 100 (\"direct-test\") (local-private)) (NoveltyInspectionStateV1 policy-1 0 1000 () () ()) (CycleComposerIngressInput \"socket\" ((CycleComposerIngressFrame (65))) 1000) (CycleComposerIngressDigestResult (CycleComposerIngressDigestRequest sha256 \"socket\" ((CycleComposerIngressFrame (65)))) \"untrusted-digest\") (NoveltyArrivalV1 arrival-1 content-1 \"untrusted-digest\" provenance-1 local-private ordinary-loss evidence-1 (NoveltyQuarantineCheckV1 arrival-1 \"untrusted-digest\" inspection-cleared)))",
+      "contains": [
+        "source-not-eligible"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 novelty (NoveltyInspectionRefusalV1 arrival-1 source-not-eligible inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "energy-reserve-no-provider-authority",
+      "call": "(tools-energy-reserve (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "CognitiveEnergyLeaseReceiptV1",
+        "100 policy-1) 90 10 0",
+        "provider-call-authority-false effect-authority-false"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseReceiptV1 (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 2 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 90 10 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) reserved provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "stale-energy-version-refused",
+      "call": "(tools-energy-reserve (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 0 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "stale-energy-version"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseRefusalV1 stale-energy-version authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "energy-overspend-refused",
+      "call": "(tools-energy-reserve (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 110 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "insufficient-cognitive-energy"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseRefusalV1 insufficient-cognitive-energy authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "predictive-learning",
+      "name": "brier-score-before-target",
+      "call": "(tools-prediction-score (PredictionSampleV1 p1 m1 context 4 0.75) (TargetSampleV1 t1 context 5 0))",
+      "expected": [
+        "(ToolsSampleResultV1 predictive-learning (PredictionScoreSampleV1 p1 t1 m1 context brier 0.5625 prediction-not-evidence) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 predictive-learning (PredictionScoreSampleV1 p1 t1 m1 context brier 0.5625 prediction-not-evidence) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "predictive-learning",
+      "name": "target-leakage-refused",
+      "call": "(tools-prediction-score (PredictionSampleV1 p1 m1 context 5 0.75) (TargetSampleV1 t1 context 5 0))",
+      "expected": [
+        "(ToolsSampleResultV1 predictive-learning (ToolsRefusalV1 prequential-fence-violated) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 predictive-learning (ToolsRefusalV1 prequential-fence-violated) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "predictive-learning",
+      "name": "mismatched-context-refused",
+      "call": "(tools-prediction-score (PredictionSampleV1 p1 m1 context 4 0.75) (TargetSampleV1 t1 other 5 0))",
+      "expected": [
+        "(ToolsSampleResultV1 predictive-learning (ToolsRefusalV1 wrong-context) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 predictive-learning (ToolsRefusalV1 wrong-context) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "scratch-plans",
+      "name": "explicit-promotion-proposal",
+      "call": "(tools-scratch-promote (ScratchHeadSampleV1 scratch-a v1 2) (ScratchPromotionSampleV1 p1 scratch-a v1 3 shareable-candidate hypothesis provenance))",
+      "expected": [
+        "(ToolsSampleResultV1 scratch-plans (ScratchPromotionProposalV1 p1 scratch-a v1 hypothesis provenance owner-review-required) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 scratch-plans (ScratchPromotionProposalV1 p1 scratch-a v1 hypothesis provenance owner-review-required) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "scratch-plans",
+      "name": "private-remains-scratch",
+      "call": "(tools-scratch-promote (ScratchHeadSampleV1 scratch-a v1 2) (ScratchPromotionSampleV1 p1 scratch-a v1 3 private hypothesis provenance))",
+      "expected": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 private-or-simulation-remains-scratch) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 private-or-simulation-remains-scratch) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "scratch-plans",
+      "name": "cross-scope-refused",
+      "call": "(tools-scratch-promote (ScratchHeadSampleV1 scratch-a v1 2) (ScratchPromotionSampleV1 p1 scratch-b v1 3 shareable-candidate hypothesis provenance))",
+      "expected": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 stale-or-cross-scope) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 stale-or-cross-scope) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "scratch-plans",
+      "name": "scratch-expiry-refused",
+      "call": "(tools-scratch-promote (ScratchHeadSampleV1 scratch-a v1 2) (ScratchPromotionSampleV1 p1 scratch-a v1 2 shareable-candidate hypothesis provenance))",
+      "expected": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 expired-scratch) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 scratch-plans (ToolsRefusalV1 expired-scratch) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "dream-consolidation",
+      "name": "derived-reference-dedup",
+      "call": "(tools-consolidation-propose (ConsolidationSampleV1 c1 sleep-1 snapshot-1 (a b a) () shareable-observed wake-1))",
+      "expected": [
+        "(ToolsSampleResultV1 dream-consolidation (ConsolidationCandidateSampleV1 c1 sleep-1 snapshot-1 (a b) wake-1 wake-review-required originals-preserved) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 dream-consolidation (ConsolidationCandidateSampleV1 c1 sleep-1 snapshot-1 (a b) wake-1 wake-review-required originals-preserved) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "dream-consolidation",
+      "name": "protected-reference-refused",
+      "call": "(tools-consolidation-propose (ConsolidationSampleV1 c1 sleep-1 snapshot-1 (a b a) (b) shareable-observed wake-1))",
+      "expected": [
+        "(ToolsSampleResultV1 dream-consolidation (ToolsRefusalV1 protected-memory) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 dream-consolidation (ToolsRefusalV1 protected-memory) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "dream-consolidation",
+      "name": "dream-not-observation",
+      "call": "(tools-consolidation-propose (ConsolidationSampleV1 c1 sleep-1 snapshot-1 (a b a) () simulation wake-1))",
+      "expected": [
+        "(ToolsSampleResultV1 dream-consolidation (ToolsRefusalV1 private-simulated-or-malformed-source) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 dream-consolidation (ToolsRefusalV1 private-simulated-or-malformed-source) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "affect",
+      "name": "debt-rests-without-succession",
+      "call": "(tools-rest-appraise (RestPressureSampleV1 a1 11 100 10 available task))",
+      "expected": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 rest continuity-preserved no-succession) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 rest continuity-preserved no-succession) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "affect",
+      "name": "person-unavailable-no-message",
+      "call": "(tools-rest-appraise (RestPressureSampleV1 a1 0 100 10 unavailable task))",
+      "expected": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 quiet-exploration no-message) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 quiet-exploration no-message) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "affect",
+      "name": "reserve-protected",
+      "call": "(tools-rest-appraise (RestPressureSampleV1 a1 0 10 10 available task))",
+      "expected": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 rest continuity-preserved no-succession) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 rest continuity-preserved no-succession) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "affect",
+      "name": "invalid-pressure-refused",
+      "call": "(tools-rest-appraise (RestPressureSampleV1 a1 -1 100 10 available task))",
+      "expected": [
+        "(ToolsSampleResultV1 affect (ToolsRefusalV1 invalid-pressure) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 affect (ToolsRefusalV1 invalid-pressure) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "skill-affordance",
+      "name": "prerequisites-visible-not-permission",
+      "call": "(tools-skill-nominate (SkillDescriptorSampleV1 recall 1 tools-atom-recall none (petta memory) authority-none) (petta memory))",
+      "expected": [
+        "(ToolsSampleResultV1 skill-affordance (SkillNominationSampleV1 recall 1 tools-atom-recall none () separate-execution-admission-required) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 skill-affordance (SkillNominationSampleV1 recall 1 tools-atom-recall none () separate-execution-admission-required) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "skill-affordance",
+      "name": "missing-prerequisites-preserved",
+      "call": "(tools-skill-nominate (SkillDescriptorSampleV1 recall 1 tools-atom-recall none (petta memory) authority-none) (petta))",
+      "expected": [
+        "(ToolsSampleResultV1 skill-affordance (SkillNominationSampleV1 recall 1 tools-atom-recall none (memory) separate-execution-admission-required) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 skill-affordance (SkillNominationSampleV1 recall 1 tools-atom-recall none (memory) separate-execution-admission-required) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "skill-affordance",
+      "name": "forged-descriptor-authority-refused",
+      "call": "(tools-skill-nominate (SkillDescriptorSampleV1 recall 1 tools-atom-recall none (petta memory) effect-grant) (petta memory))",
+      "expected": [
+        "(ToolsSampleResultV1 skill-affordance (ToolsRefusalV1 invalid-skill-descriptor) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 skill-affordance (ToolsRefusalV1 invalid-skill-descriptor) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "substrates",
+      "name": "declared-feature-fit",
+      "call": "(tools-substrate-check (SubstrateCapabilitiesSampleV1 PeTTa fixture-build (native-equations explicit-spaces) authority-none) (SubstrateRequestSampleV1 s1 (native-equations)))",
+      "expected": [
+        "(ToolsSampleResultV1 substrates (SubstrateFitSampleV1 s1 PeTTa fixture-build () supplied-capability-observation no-parity-claim) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 substrates (SubstrateFitSampleV1 s1 PeTTa fixture-build () supplied-capability-observation no-parity-claim) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "substrates",
+      "name": "missing-mork-feature-not-invented",
+      "call": "(tools-substrate-check (SubstrateCapabilitiesSampleV1 PeTTa fixture-build (native-equations explicit-spaces) authority-none) (SubstrateRequestSampleV1 s1 (mork-transaction)))",
+      "expected": [
+        "(ToolsSampleResultV1 substrates (SubstrateFitSampleV1 s1 PeTTa fixture-build (mork-transaction) supplied-capability-observation no-parity-claim) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 substrates (SubstrateFitSampleV1 s1 PeTTa fixture-build (mork-transaction) supplied-capability-observation no-parity-claim) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "substrates",
+      "name": "bad-substrate-shape-refused",
+      "call": "(tools-substrate-check bad (SubstrateRequestSampleV1 s1 (native-equations)))",
+      "expected": [
+        "(ToolsSampleResultV1 substrates (ToolsRefusalV1 invalid-substrate-shape) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 substrates (ToolsRefusalV1 invalid-substrate-shape) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "home-assistant",
+      "name": "specific-light-proposal",
+      "call": "(tools-home-propose (HomeDeviceSampleV1 light.fixture light revision-1 off) (HomeLightIntentSampleV1 h1 light.fixture revision-1 turn-on))",
+      "expected": [
+        "(ToolsSampleResultV1 home-assistant (HomeServiceProposalSampleV1 h1 homeassistant turn_on light.fixture revision-1 fresh-effect-permit-and-readback-required) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 home-assistant (HomeServiceProposalSampleV1 h1 homeassistant turn_on light.fixture revision-1 fresh-effect-permit-and-readback-required) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "home-assistant",
+      "name": "stale-home-refused",
+      "call": "(tools-home-propose (HomeDeviceSampleV1 light.fixture light revision-1 off) (HomeLightIntentSampleV1 h1 light.fixture revision-old turn-on))",
+      "expected": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 stale-home-observation) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 stale-home-observation) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "home-assistant",
+      "name": "wrong-home-target-refused",
+      "call": "(tools-home-propose (HomeDeviceSampleV1 light.fixture light revision-1 off) (HomeLightIntentSampleV1 h1 light.other revision-1 turn-on))",
+      "expected": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 wrong-home-target) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 wrong-home-target) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "home-assistant",
+      "name": "unimplemented-effect-not-suggested",
+      "call": "(tools-home-propose (HomeDeviceSampleV1 light.fixture light revision-1 off) (HomeLightIntentSampleV1 h1 light.fixture revision-1 unlock))",
+      "expected": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 unsupported-home-action) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 home-assistant (ToolsRefusalV1 unsupported-home-action) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-home",
+      "name": "understanding-requires-consent",
+      "call": "(tools-habitat-stage (HabitatReadinessSampleV1 house awareness-qualified relationships-unconsented no-domain-mandates manual-fallback))",
+      "expected": [
+        "(ToolsSampleResultV1 living-home (HabitatStageSuggestionV1 house understanding-household consent-and-inspectable-person-model-needed) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-home (HabitatStageSuggestionV1 house understanding-household consent-and-inspectable-person-model-needed) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-home",
+      "name": "living-home-retains-destination",
+      "call": "(tools-habitat-stage (HabitatReadinessSampleV1 house awareness-qualified relationships-consented domain-mandates-present manual-fallback))",
+      "expected": [
+        "(ToolsSampleResultV1 living-home (HabitatStageSuggestionV1 house living-home review-target-action-purpose-time-bindings no-actuator-grant) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-home (HabitatStageSuggestionV1 house living-home review-target-action-purpose-time-bindings no-actuator-grant) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-home",
+      "name": "fallback-required",
+      "call": "(tools-habitat-stage (HabitatReadinessSampleV1 house awareness-qualified relationships-consented domain-mandates-present no-fallback))",
+      "expected": [
+        "(ToolsSampleResultV1 living-home (ToolsRefusalV1 manual-fallback-required) inspect-simulate authority-none)"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-home (ToolsRefusalV1 manual-fallback-required) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "attention",
+      "name": "useful-recall-earns-wage",
+      "call": "(tools-attention-event (focus-state 10 10 ((salience a 0.8 0 False none fresh)) ()) (focus-event wage-1 a useful-recall source-1) (admitted recall-1 (stv 0.9 0.8) internal))",
+      "contains": [
+        "focus-state 9.9 10",
+        "salience a 0.9",
+        "focus-receipt wage-1 applied a useful-recall 0.1"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 attention (focus-result (focus-state 9.9 10 ((salience a 0.9 0 false none fresh)) ((focus-receipt wage-1 applied a useful-recall 0.1 10 9.9 0.8 0.9 source-1 inspect-simulate))) (focus-receipt wage-1 applied a useful-recall 0.1 10 9.9 0.8 0.9 source-1 inspect-simulate)) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "attention",
+      "name": "quarantined-recall-earns-no-wage",
+      "call": "(tools-attention-event (focus-state 10 10 ((salience a 0.8 0 False none fresh)) ()) (focus-event wage-1 a useful-recall source-1) (quarantined Q_AMBIGUOUS recall-1 (stv 0.5 0.8) internal))",
+      "contains": [
+        "focus-state 10 10",
+        "quarantined",
+        "0.8"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 attention (focus-result (focus-state 10 10 ((salience a 0.8 0 false none fresh)) ((focus-receipt wage-1 quarantined a useful-recall 0 10 10 0.8 0.8 source-1 inspect-simulate))) (focus-receipt wage-1 quarantined a useful-recall 0 10 10 0.8 0.8 source-1 inspect-simulate)) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "living-intent",
+      "name": "current-return-bound",
+      "call": "(tools-intent-return (LivingIntentContributionBindingV1 call-1 ep v1 pd) (living-intent-state ep v1 hd pd ((LivingIntentHeadV1 ep v1 head-0 goal why focus () last-result next provenance current)) ((LivingIntentProjectionV1 ep v1 hd pd (living-intent) () () (open-commitments)))))",
+      "contains": [
+        "LivingIntentContributionBindingV1 call-1 ep v1 pd"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentContributionBindingV1 call-1 ep v1 pd) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "exact-preservation-permitted-as-proposal",
+      "call": "(tools-retention-check (RetentionCovenantV1 covenant-1 value-1 hash-1 must-retain-verbatim (preserve-exact) (private) no-release-permitted active) (RetentionOperationV1 op-1 preserve hash-1 hash-1 preserve-exact private none none))",
+      "contains": [
+        "RetentionOperationDecisionV1 op-1 allow-preserve covenant-1"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (RetentionOperationDecisionV1 op-1 allow-preserve covenant-1 inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "retention-public-egress-refused",
+      "call": "(tools-retention-check (RetentionCovenantV1 covenant-1 value-1 hash-1 must-retain-verbatim (preserve-exact) (private) no-release-permitted active) (RetentionOperationV1 op-1 preserve hash-1 hash-1 preserve-exact public none none))",
+      "contains": [
+        "access-scope-denied"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (RetentionOperationRefusalV1 op-1 access-scope-denied inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "standing-values",
+      "name": "content-change-refused",
+      "call": "(tools-retention-check (RetentionCovenantV1 covenant-1 value-1 hash-1 must-retain-verbatim (preserve-exact) (private) no-release-permitted active) (RetentionOperationV1 op-1 preserve hash-1 hash-2 preserve-exact private none none))",
+      "contains": [
+        "preservation-proof-failed"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 standing-values (RetentionOperationRefusalV1 op-1 preservation-proof-failed inspect-simulate authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "used-energy-settled-with-unused-refund",
+      "call": "(tools-energy-close (CognitiveEnergyLeaseReceiptV1 (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 2 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 90 10 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) reserved provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseTerminalV1 lease-1 cognitive-energy-milliunit 4 outcome-1 (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "100 policy-1) 96 0 4",
+        "CognitiveEnergyLeaseClosureReceiptV1",
+        "work-outcome-not-truth"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseClosureReceiptV1 (CognitiveEnergyLeaseReceiptV1 (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 2 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 90 10 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) reserved provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseTerminalV1 lease-1 cognitive-energy-milliunit 4 outcome-1 (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 3 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 96 0 4 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) work-outcome-not-truth provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "wrong-terminal-lease-refused",
+      "call": "(tools-energy-close (CognitiveEnergyLeaseReceiptV1 (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 2 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 90 10 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) reserved provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseTerminalV1 wrong-lease cognitive-energy-milliunit 4 outcome-1 (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "energy-terminal-binding-mismatch"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseRefusalV1 energy-terminal-binding-mismatch authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    },
+    {
+      "tool": "energy",
+      "name": "terminal-overuse-refused",
+      "call": "(tools-energy-close (CognitiveEnergyLeaseReceiptV1 (CognitiveEnergyStateV1 energy-1 1 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 100 0 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseProposalV1 lease-1 energy-1 1 work-1 observe cognitive-energy-milliunit 10 policy-allocation-only provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyStateV1 energy-1 2 cognitive-energy-milliunit (PolicyAllocatedCapacityV1 100 policy-1) 90 10 0 event-driven sleep-wake-independent truth-separate value-separate priority-separate provider-wallet-separate (AuthorityCountsV1 0 0 0 0 0) authority-none) reserved provider-call-authority-false effect-authority-false (AuthorityCountsV1 0 0 0 0 0) authority-none) (CognitiveEnergyLeaseTerminalV1 lease-1 cognitive-energy-milliunit 11 outcome-1 (AuthorityCountsV1 0 0 0 0 0) authority-none))",
+      "contains": [
+        "energy-use-over-reservation"
+      ],
+      "actual": [
+        "(ToolsSampleResultV1 energy (CognitiveEnergyLeaseRefusalV1 energy-use-over-reservation authority-none) inspect-simulate authority-none)"
+      ],
+      "passed": true
+    }
+  ],
+  "native_sources": {
+    "modules/tools_atom_recall/src/law.metta": "4efd99cb48df41888fc76602593e537cf82b76d25d754aab624c7ee3eb8c6896",
+    "modules/tools_atom_recall/skills.metta": "77e3ba09afdb21da85c4bd6dff33f6f1db569890fc3cf199ce040fac232d90ad",
+    "modules/tools_atom_recall/signatures.metta": "19d63702d9f9d5a2157a2380347ea26d4eb869de8af6cab6945624274b7d48cb",
+    "modules/tools_atom_recall/catalog.metta": "01bfd605f48c66223dc294079ec619ae973f456cf7d763e98fe7b67d598fbc91",
+    "modules/tools_atom_recall/affordance.metta": "2d4b3ae4038d820c209e35c20eca7d2d71369fe0a45cfc2b8a311d9a5d2b91e9",
+    "modules/tools_attention/src/law.metta": "d63a240c10a41b6215a946308ef059728e448d0defd4b6f1d42ee0540bce6b1c",
+    "modules/tools_attention/skills.metta": "1374faad5e942c9d65485d1957f4a20159f906a86e50b5180aeb40e3f6e856ff",
+    "modules/tools_attention/signatures.metta": "e7c6cf3e9256b74ac79e88852b52a9e96c2238c3208e0ae1045792f623934de3",
+    "modules/tools_attention/catalog.metta": "1c4a7026f213b61efbb79498d37dfe345085c0760ff4d46d27d63f0518dddb31",
+    "modules/tools_attention/affordance.metta": "e3658e392fe9f932eed68712a28e1a4d07cdfba195d5551ea3d7349ceeaf4097",
+    "modules/tools_goal_compass/src/law.metta": "821547841129db8672ecc78c0ee877ee0d661d411685ce387cb961a6e63b1322",
+    "modules/tools_goal_compass/skills.metta": "d86cd2949426da7ca5be213436a108d231125edac7b67bba37cb9045613592d5",
+    "modules/tools_goal_compass/signatures.metta": "e39f4b47db6ad39165bdd3d1726a2fa10ffc421520803403fede10d6f263a4eb",
+    "modules/tools_goal_compass/catalog.metta": "e75fc7f94f551332c9fa244633e3bf8d2329483ea70ce6e873c1dc3fb5ea0255",
+    "modules/tools_goal_compass/affordance.metta": "e25926941342488b89144e082f41b87e198be9705a0ed3148d5c94b9d74b5d2c",
+    "modules/tools_living_intent/src/law.metta": "65ef3be4f3ab19744b912cbda31c95e53a3c08f7ecb2e689bbb3291b9f3c66ec",
+    "modules/tools_living_intent/skills.metta": "5a5bed903582db5bba33ecb1a2d726e411833991ffbc3a49797d1447cc52b6b5",
+    "modules/tools_living_intent/signatures.metta": "e8a57c69c63a4ff156346f0856b8a8a5157fafba319dacdace3f40295182f6c5",
+    "modules/tools_living_intent/catalog.metta": "662f64aea4f607c8039cbd94013150b0a73085bfaf4dff0ac20bf434b0025d93",
+    "modules/tools_living_intent/affordance.metta": "4375e624040252c781df272ba888850eca7010404e97fb19aa18ca900e2d89d5",
+    "modules/tools_standing_values/src/law.metta": "c7f4cc0c28f272676a3cc4139f0592b87986de89840b3ee5fe0d5021192cecc0",
+    "modules/tools_standing_values/skills.metta": "99e8703e2e0a7a9325c6210d6942db001566845d7dba82d188fe4d072dbdcf1b",
+    "modules/tools_standing_values/signatures.metta": "b6c8e571a2f1f8f7a3e91c46f8ded04743744c98dc955003475300b89522d326",
+    "modules/tools_standing_values/catalog.metta": "ceffd3371eecab4a30dcc1316cd29332b6ac82949c167a9e4149992214f81582",
+    "modules/tools_standing_values/affordance.metta": "1d9cae6e6527ae089e77c691ee330f5c4930eb8832d10ff1c2616142c23713c1",
+    "modules/tools_ethical_appraisal/src/law.metta": "93a0957883f90c609ceaa88fb788a5bcb6da4204dfbf5a259ffda6cc4de1afc4",
+    "modules/tools_ethical_appraisal/skills.metta": "3f42d25eb5abeee320a142de011d3f2e5eb040073d9b486d2873ca0e690a1af3",
+    "modules/tools_ethical_appraisal/signatures.metta": "9c0ea4860959d5696be524fd12b5e8cc343c58ff176d31475973fc78fe8b0f48",
+    "modules/tools_ethical_appraisal/catalog.metta": "8f712ddba3a5a2cb4a75f933ffa7b47d404725acf49740a759dd0c456c5fa360",
+    "modules/tools_ethical_appraisal/affordance.metta": "ef1aa5379f74c74816d9a6a0861c586c47a3f0aaa6bcc9ee6fe9d265d858e3bd",
+    "modules/tools_belief_governance/src/law.metta": "985d9e2c3a1da980c54583351f24b59f6783359c587eee0966bdc3f7fe5c32a7",
+    "modules/tools_belief_governance/skills.metta": "9f2db27e9a45c2c8a903c29649f59729e2372b12760755acdd0fc439fe49c5fd",
+    "modules/tools_belief_governance/signatures.metta": "b386e7e7bdba65f5155611030c5750e999b86a0c70c7863a0d8fe98974cebae3",
+    "modules/tools_belief_governance/catalog.metta": "bd8123f2e6311a69f0755653a8a0337ba149327af3d1fabecf9281c684331685",
+    "modules/tools_belief_governance/affordance.metta": "70bf6f14ff4344f364201430a8e56aeded6689b4a037d03bee9c92ff2c4a6dcc",
+    "modules/tools_self_observation/src/law.metta": "da6940a14b092f645505d10871e6bb8dccf40a7aa4bf46691b7c250aba2fc31d",
+    "modules/tools_self_observation/skills.metta": "6ae6a627466013f5351eaa9f85367d9fbc189375124760820eb7584c2e7a6571",
+    "modules/tools_self_observation/signatures.metta": "ab88036c6b8c52b0f9a919357cda26b7255a8c8a7f13d5f3784af6bff4ddccb9",
+    "modules/tools_self_observation/catalog.metta": "3c741523c08e50a7064d0804a5fe3b3313825bd8cd29618dd6d5ee7fd1c65a49",
+    "modules/tools_self_observation/affordance.metta": "82152f0d62f56605f15a32c709638c0eb1adf8eab13a5eaf5def4506a825cb62",
+    "modules/tools_ensemble/src/law.metta": "cead43da2f4cdceca1d25b6f98af473527cb486b8e8ec4e807229edec55f9f82",
+    "modules/tools_ensemble/skills.metta": "4e7ce9921abe9d9da1da10f111263a8b7456e1fb442ff7b8059ab6cc1ae2c34b",
+    "modules/tools_ensemble/signatures.metta": "5feb2d51cbf3107044fbfbac305091441379700ab4e56c9093238a8506de4d93",
+    "modules/tools_ensemble/catalog.metta": "32c6bdbe46b3337fda043678b34212ed6f7390c006fd21c0f79b859ac171399c",
+    "modules/tools_ensemble/affordance.metta": "dbb2914af5be85b6305bef142c2fe5cf3f615664b3bac9835fce1a949b4ec679",
+    "modules/tools_predictive_learning/src/law.metta": "f3074db67576169bb172b6ea412443ffa7ae9fb0f87feeb844d1605f853d64f5",
+    "modules/tools_predictive_learning/skills.metta": "d216f498d10baad4430775f5b68a2e64950becc0452b94b9defade79c016fa44",
+    "modules/tools_predictive_learning/signatures.metta": "69b99c649060bbb798f47a2a859fd69a8bdc047b3b1d629e56fde4dd2414eacc",
+    "modules/tools_predictive_learning/catalog.metta": "cbf5a05e5bd699ddeab38a4a0a496d22c8524ea1c2260cb7022e7698dc93a290",
+    "modules/tools_predictive_learning/affordance.metta": "f385844fa55060d8f9cd7341509d13e2215c679d3499cb3503f9dea051e52401",
+    "modules/tools_scratch_plans/src/law.metta": "982323da334c7bc09bd3a198952125825f39ab9633cd69f70f08059dfaf76f93",
+    "modules/tools_scratch_plans/skills.metta": "7d31e062f3bb92bbdc1707f4976693ad75bf31b1c39a7b247780a08570094bbd",
+    "modules/tools_scratch_plans/signatures.metta": "f5645ebda3f60f5ee6c5bfdb23e6f40babde13c9f176806eaba137948f369c91",
+    "modules/tools_scratch_plans/catalog.metta": "30b3eea1aac694de32cb143ee6e54826c1859a90704a6c1cd080136de7136fd4",
+    "modules/tools_scratch_plans/affordance.metta": "31f8897dd807946bed718396681ef5a03ce097b298440463ec70e9858dd871e7",
+    "modules/tools_novelty/src/law.metta": "acb60e38139883d73d147950dc85875a346b318b86ab15847d67ba6b1a6783b3",
+    "modules/tools_novelty/skills.metta": "4aaa147c634fbeaec2229bd261d518b2ed4195664f07a0111887d742e3e5e987",
+    "modules/tools_novelty/signatures.metta": "19c4f0dfa27a6a6cfa503c0718b98964a29a8e6dd11b7bf43d78132856900dce",
+    "modules/tools_novelty/catalog.metta": "ede08788be434fd31a377afeab750ee63a303a5b3007a0f33f8670d092bc5e40",
+    "modules/tools_novelty/affordance.metta": "3e78fb76fca7d4d88ac8d3de945b3bfd6c84c8c279e853a0ae7af3dc75a79a72",
+    "modules/tools_dream_consolidation/src/law.metta": "6e664932fa03077d845d72bb113086e5a772f6d5ffe5d4caf6fd7bb4c5011bc5",
+    "modules/tools_dream_consolidation/skills.metta": "e0f9f76240dea493640e7ea0a609a91bac129a716177898b0b0476e95d540970",
+    "modules/tools_dream_consolidation/signatures.metta": "1fa8947a23132783d8155418815c0693db4f6288fbb19bb18fdb818c9ce43740",
+    "modules/tools_dream_consolidation/catalog.metta": "9d160488d5a20d5072670ada7fa64fb41f1d5491bb9313360c87a592d6e3f287",
+    "modules/tools_dream_consolidation/affordance.metta": "8d1e5b53516c4700e8380e87ceea5ea9a5b4ae227b13904d27c14aa6f9c25a1e",
+    "modules/tools_energy/src/law.metta": "49c5f1da501145c8efa84f445274b3d3ce0e4d5bce0b17d786b6dc05f1145baa",
+    "modules/tools_energy/skills.metta": "6ad7937a416527f82d8b56dcc2228ae4814a8f1ce3202866af2f6ae91d6207bb",
+    "modules/tools_energy/signatures.metta": "9ed16b97a88cc4cf098a710ac85b931c8aef1ab21104e0bd138aefb1b0c4918c",
+    "modules/tools_energy/catalog.metta": "1c7ef4e078ba2b370cc560a4b31de2881343aed69b9d4b6ad90280ea0389656c",
+    "modules/tools_energy/affordance.metta": "f1fb7e017b29ba95abbe9025617061ff6870239ad2a0693e9de0f1db48842857",
+    "modules/tools_affect/src/law.metta": "f1e90037d182d98ff99b038e232ab658c9a57fdca514e9e648cb59362e171b9b",
+    "modules/tools_affect/skills.metta": "8f95bcfd314cffacdefc9d41caf797dfe416b1e5acdc93502f8974c06a3b70d5",
+    "modules/tools_affect/signatures.metta": "445e94213e160de6ef4b5df8ec7f3bdfcc277105f31a952a63e7db07818811f8",
+    "modules/tools_affect/catalog.metta": "5567ae16b487f10197cca8eb797ca8b46ebcd6107eea2389b55fc4826bd476e2",
+    "modules/tools_affect/affordance.metta": "d35f9947b99d555de0b0bb90d7a6f21a5c7c0f79f7a5ad0addab075031ba66a3",
+    "modules/tools_skill_affordance/src/law.metta": "0d3c0fd2427a626819276b0f78bff67c32827780ffb435df441061d81142f91b",
+    "modules/tools_skill_affordance/skills.metta": "358fdb50a3ce6ec299ee84d71d19f41814212a46bd3ad63b00ad3c3f6eb9ab19",
+    "modules/tools_skill_affordance/signatures.metta": "4bf367252e701e29d9b72097374b80f3400cbc08a6de1c0b2d1bee5b8270c3a6",
+    "modules/tools_skill_affordance/catalog.metta": "7ec0393c2a95d3e086f8f548d667ac93ab5ae4073e480c6a3caf12752176e374",
+    "modules/tools_skill_affordance/affordance.metta": "6b4353d97e69db63b3dc0df5fdc9b8d17ae008d30d9e4a05b8a71f1776ad3a76",
+    "modules/tools_substrates/src/law.metta": "ee412b40caa148f113e2d9b781185cbaad941c9cb74261c85b2ffb524c73451b",
+    "modules/tools_substrates/skills.metta": "a5c298dd65a0676b5863998d7c00f5a67eba873a95d3f591ac0aeff71cc63c4c",
+    "modules/tools_substrates/signatures.metta": "2b931792ab5b2b93ec187e254c28a180f4c07f703d7b45201b75ce8280f0c9ce",
+    "modules/tools_substrates/catalog.metta": "6f0a204456d7ba87c3413524b9b5c2df5468bdd6b0ec2dd7696f2a24de3f07c7",
+    "modules/tools_substrates/affordance.metta": "5cb82952379f261c68428eef9701240f1d35f9ca27557add5b28f136255a520b",
+    "modules/tools_habitat_snapshot/skills.metta": "e69ab522da48a2f02c0174e73ee1d78db8e51bc0f635da50065a149578de3db8",
+    "modules/tools_habitat_snapshot/signatures.metta": "bb1c7e2164b92efe60b31e48be0e93e6ef2c909903b53e0d191769bddd9c2a70",
+    "modules/tools_habitat_snapshot/catalog.metta": "53d24efafb26e2faf030c92cddce94c51536aeb7f5a363d4641ac5886b427713",
+    "modules/tools_habitat_snapshot/affordance.metta": "0c8a2fe3ad12e54083e1f234b89f3c37becf96ccd6da229a039523417a12505e",
+    "modules/tools_home_assistant/src/law.metta": "de5436af85e7b31e12c6670b94dcd8f4fa9db66ce7028f0deb4481e9d01a9dcf",
+    "modules/tools_home_assistant/skills.metta": "97dabcac36068df62235b751bb55d531c78e38fe3f1735f1ab7c04809f90abfe",
+    "modules/tools_home_assistant/signatures.metta": "fa6d271bdf6df4cd2ab2c986d27adf632df07cac5fc7887b04e460f0bc540712",
+    "modules/tools_home_assistant/catalog.metta": "d300fe211901e33c5a95e04740b904921c81b976df708d0acdb7c327a9a2379d",
+    "modules/tools_home_assistant/affordance.metta": "00e7c37f8945121a98fdfac1224547d29cd78f6a8a2f2a7c65e60bf380c47e85",
+    "modules/tools_living_home/src/law.metta": "9084beae33f74bdd01d9ed46d33dbb63ec34915b8209fe7c64db69a7a053aeb5",
+    "modules/tools_living_home/skills.metta": "22b328bdd7bfeaa88185567cf01004dfc3532cf4362f6dd45c9f9298aef11b53",
+    "modules/tools_living_home/signatures.metta": "c985428f86d76dc58452bf6615dd773175d91ed17c4ad32eb75958ec70cb4c2b",
+    "modules/tools_living_home/catalog.metta": "980e7bb936d5f518e0d8dfbefd989917788e9066dfc09bf36acb26d0eac9f17c",
+    "modules/tools_living_home/affordance.metta": "a250a7c05efa42d3480f40621f67dd82577fe74e90d9b11f6b81a4cacc7bba31"
+  },
+  "examples_sha256": "7fe421e5e481af48363b0fdb9ea5f8a348722ba8d2eea58ad50032203231dc5e",
+  "portable_projection": {
+    "original_receipt_sha256": "c6a2c08449f38dedb784ab93788324e38e71371b55060eb9e54de0e4e182a216",
+    "native_bytes_changed": false,
+    "executed_now": false
+  }
+}

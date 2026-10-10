@@ -1,0 +1,13 @@
+(= (tools-living-home--stage $readiness)
+ (case $readiness
+  (((HabitatReadinessSampleV1 $home awareness-unverified $relationships $mandates $fallback)
+    (HabitatStageSuggestionV1 $home aware-habitat qualify-physical-observations))
+   ((HabitatReadinessSampleV1 $home awareness-qualified relationships-unconsented $mandates $fallback)
+    (HabitatStageSuggestionV1 $home understanding-household consent-and-inspectable-person-model-needed))
+   ((HabitatReadinessSampleV1 $home awareness-qualified relationships-consented no-domain-mandates $fallback)
+    (HabitatStageSuggestionV1 $home living-home obtain-scoped-domain-mandates))
+   ((HabitatReadinessSampleV1 $home awareness-qualified relationships-consented domain-mandates-present manual-fallback)
+    (HabitatStageSuggestionV1 $home living-home review-target-action-purpose-time-bindings no-actuator-grant))
+   ((HabitatReadinessSampleV1 $home awareness-qualified relationships-consented domain-mandates-present no-fallback)
+    (ToolsRefusalV1 manual-fallback-required))
+   ($invalid (ToolsRefusalV1 invalid-habitat-readiness)))))

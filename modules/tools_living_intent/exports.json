@@ -1,0 +1,282 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "4375e624040252c781df272ba888850eca7010404e97fb19aa18ca900e2d89d5",
+    "catalog.metta": "662f64aea4f607c8039cbd94013150b0a73085bfaf4dff0ac20bf434b0025d93",
+    "signatures.metta": "e8a57c69c63a4ff156346f0856b8a8a5157fafba319dacdace3f40295182f6c5",
+    "skills.metta": "5a5bed903582db5bba33ecb1a2d726e411833991ffbc3a49797d1447cc52b6b5",
+    "src/law.metta": "65ef3be4f3ab19744b912cbda31c95e53a3c08f7ecb2e689bbb3291b9f3c66ec"
+  },
+  "callables": [
+    {
+      "name": "tools-intent-bind",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-intent-return",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-living-intent--contract-and3",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-living-intent--contract-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-admit-contribution",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-bind-call",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-binding-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-count-heads",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-count-projections",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-eighth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-eleventh",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-fifth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-fourth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-head-complete?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-head-matches?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-head-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-ninth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-projection-complete?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-projection-matches?",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-projection-refs-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-projection-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-second",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-seventh",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-sixth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-state-current-version",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-state-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-tenth",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-third",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-intent--living-intent-twelfth",
+      "arities": [
+        1
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "LivingIntentContributionBindingV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "LivingIntentRefusalV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "living-intent",
+      "arities": [
+        0
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "open-commitments",
+      "arities": [
+        0
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "size-atom",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

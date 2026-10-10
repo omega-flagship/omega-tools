@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "omega-tools-concurrency-result/v1",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "const": "none"
+        },
+        "state_scope": {
+          "const": "job-local"
+        },
+        "provider_calls": {
+          "const": 0
+        },
+        "persistent_writes": {
+          "const": 0
+        },
+        "shared_runner": {
+          "const": true
+        },
+        "remaining_new_threads": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "kind": {
+          "const": "ConcurrencyResult"
+        },
+        "limit": {
+          "type": "null"
+        },
+        "native": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "maxLength": 4096
+          }
+        },
+        "data": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "recipe": {
+                  "const": "parallel-map"
+                },
+                "rows": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 8,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_-]{0,47}$",
+                        "maxLength": 48
+                      },
+                      "value": {
+                        "type": "integer",
+                        "minimum": -10800,
+                        "maximum": 10800
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "value"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "recipe",
+                "rows"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "recipe": {
+                  "const": "mutex-counter"
+                },
+                "initial": {
+                  "type": "integer",
+                  "minimum": -10000,
+                  "maximum": 10000
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": -10800,
+                  "maximum": 10800
+                }
+              },
+              "required": [
+                "recipe",
+                "initial",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "recipe": {
+                  "const": "transaction-counter"
+                },
+                "initial": {
+                  "type": "integer",
+                  "minimum": -10000,
+                  "maximum": 10000
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": -10800,
+                  "maximum": 10800
+                },
+                "committed": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "recipe",
+                "initial",
+                "value",
+                "committed"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "runtime_definition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "module",
+            "predicate",
+            "source_sha256",
+            "version"
+          ],
+          "properties": {
+            "module": {
+              "const": "thread"
+            },
+            "predicate": {
+              "const": "concurrent_and/2"
+            },
+            "source_sha256": {
+              "const": "bf007d4752f446205dfda66ffc3638d5a8c977fdb802a58073836e3a1167a217"
+            },
+            "version": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "authority",
+        "state_scope",
+        "provider_calls",
+        "persistent_writes",
+        "shared_runner",
+        "remaining_new_threads",
+        "kind",
+        "limit",
+        "native",
+        "data",
+        "runtime_definition"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "const": "none"
+        },
+        "state_scope": {
+          "const": "job-local"
+        },
+        "provider_calls": {
+          "const": 0
+        },
+        "persistent_writes": {
+          "const": 0
+        },
+        "shared_runner": {
+          "const": true
+        },
+        "remaining_new_threads": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "kind": {
+          "const": "ConcurrencyLimitExceeded"
+        },
+        "limit": {
+          "enum": [
+            "time",
+            "parent-inferences",
+            "job-deadline"
+          ]
+        },
+        "native": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "data": {
+          "type": "null"
+        },
+        "runtime_definition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "module",
+            "predicate",
+            "source_sha256",
+            "version"
+          ],
+          "properties": {
+            "module": {
+              "const": "thread"
+            },
+            "predicate": {
+              "const": "concurrent_and/2"
+            },
+            "source_sha256": {
+              "const": "bf007d4752f446205dfda66ffc3638d5a8c977fdb802a58073836e3a1167a217"
+            },
+            "version": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "persistent_writes",
+        "shared_runner",
+        "authority",
+        "state_scope",
+        "provider_calls",
+        "kind",
+        "limit",
+        "native",
+        "data"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "limit": {
+                "enum": [
+                  "time",
+                  "parent-inferences"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "runtime_definition"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

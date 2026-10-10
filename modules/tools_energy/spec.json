@@ -1,0 +1,74 @@
+{
+  "tool": "energy",
+  "module": "tools_energy",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-energy-reserve",
+      "arguments": [
+        "state",
+        "proposal"
+      ],
+      "semantics": "Propose a version-bound cognitive-energy reservation; money and provider authority remain separate.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    },
+    {
+      "name": "tools-energy-close",
+      "arguments": [
+        "receipt",
+        "terminal"
+      ],
+      "semantics": "Reconcile used/reserved energy from bound terminal evidence.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-097784e4fae3bee8",
+    "native-eaeaef49a42f0e52"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Typed accounting components; money/energy labels do not enforce external budgets by themselves.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Native cognitive-energy reservation/settlement proposals; no spending or provider permission.",
+  "examples": [
+    "energy-reserve-no-provider-authority",
+    "stale-energy-version-refused",
+    "energy-overspend-refused",
+    "used-energy-settled-with-unused-refund",
+    "wrong-terminal-lease-refused",
+    "terminal-overuse-refused"
+  ],
+  "module_id": "omegahive.tools.energy",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

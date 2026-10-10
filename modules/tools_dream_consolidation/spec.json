@@ -1,0 +1,53 @@
+{
+  "tool": "dream-consolidation",
+  "module": "tools_dream_consolidation",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-consolidation-propose",
+      "arguments": [
+        "request"
+      ],
+      "semantics": "Deduplicate an explicit reference set into a wake-review candidate; refuse protected/private/simulated sources.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-b15f8a1342f08e08"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Sleep-related paths have narrow evidence; dream organ remains an experimental proposal.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Protected-reference-aware deduplication candidate for wake review; no dream generation or destructive consolidation.",
+  "examples": [
+    "derived-reference-dedup",
+    "protected-reference-refused",
+    "dream-not-observation"
+  ],
+  "module_id": "omegahive.tools.dream_consolidation",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

@@ -1,0 +1,181 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "flourishing-dominates?": "tools-ethical-appraisal--flourishing-dominates?",
+    "flourishing-floor-reasons": "tools-ethical-appraisal--flourishing-floor-reasons"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "sha256": "3e67eb51f36d5fe11bc12b460e63057d92e9577bd7141c25fd4bbea17f0f8590"
+    },
+    {
+      "path": "historical-source:lib_omegaclaw_resident_epistemic_kernel.metta",
+      "sha256": "07f1b0d831fb0b020a2c1c45b8aee3dd64df87c8c3ddf00ef15d5e246b49b3f9"
+    }
+  ],
+  "equations": [
+    {
+      "function": "flourishing-all-beings-no-worse?",
+      "projected_function": "tools-ethical-appraisal--flourishing-all-beings-no-worse?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "57955e20d55ad08cd5fde60f10db08fc4a9a31947496fe29114bc2eeee7f786d"
+    },
+    {
+      "function": "flourishing-all-patterns-no-worse?",
+      "projected_function": "tools-ethical-appraisal--flourishing-all-patterns-no-worse?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "33bd71fbb67f87c5ca9a893723a431869dabcdcfb02550a0a30df63801605ff7"
+    },
+    {
+      "function": "flourishing-any-being-strict?",
+      "projected_function": "tools-ethical-appraisal--flourishing-any-being-strict?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "93b593f08a15eb561489e79b5a17f50b3f5af8fbf1cdf78aacc0cc8e608d6e37"
+    },
+    {
+      "function": "flourishing-any-pattern-strict?",
+      "projected_function": "tools-ethical-appraisal--flourishing-any-pattern-strict?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "d1fa499714a4c820d1d81002457f4ccd51866f0a44e2f1d0077a9aad6b01036b"
+    },
+    {
+      "function": "flourishing-being-id",
+      "projected_function": "tools-ethical-appraisal--flourishing-being-id",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "265151723a39767c946c66bbd0e87ce0a2af07614920fd8b1d9a28dfc8a5fb5b"
+    },
+    {
+      "function": "flourishing-claim-supported?",
+      "projected_function": "tools-ethical-appraisal--flourishing-claim-supported?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "9a0901c2312dcdc64debca2e02363a3343f3290aeb04be59419142b94a89c05b"
+    },
+    {
+      "function": "flourishing-direct-polarity?",
+      "projected_function": "tools-ethical-appraisal--flourishing-direct-polarity?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "9461e0ce1551b4ba59fdb51f51e1e8dc2992a84dc2d325c03faa4313cbdb7cf5"
+    },
+    {
+      "function": "flourishing-dominates?",
+      "projected_function": "tools-ethical-appraisal--flourishing-dominates?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "77938e10bee36a5860ddba9d6feae1b1ca815812a8bb59fae5ca8856df6058ed"
+    },
+    {
+      "function": "flourishing-edge-propagates?",
+      "projected_function": "tools-ethical-appraisal--flourishing-edge-propagates?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "5548ab3a5934ed0fe23c004ed05bdc050706573d3a3a01074c4453093e0af227"
+    },
+    {
+      "function": "flourishing-floor-reasons",
+      "projected_function": "tools-ethical-appraisal--flourishing-floor-reasons",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "3bb52c24b9f6467b549cf847221b4d375ab76af97db029d102f665bfe1330e13"
+    },
+    {
+      "function": "flourishing-has-polarity?",
+      "projected_function": "tools-ethical-appraisal--flourishing-has-polarity?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "c69ee950d0a28fd05831ea95fc0c120e945f487e54ad7c2c8576a6299d27898e"
+    },
+    {
+      "function": "flourishing-impact-status",
+      "projected_function": "tools-ethical-appraisal--flourishing-impact-status",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "0b45a5bcfa93ed9d7d4c5a106a9304e6a5e80c60e4b95bd3ced3ed32be9bf342"
+    },
+    {
+      "function": "flourishing-influence-valid?",
+      "projected_function": "tools-ethical-appraisal--flourishing-influence-valid?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "c7c662907dced520f63a7169cb899c0679b9f1296afa1319b849f8770a914b8d"
+    },
+    {
+      "function": "flourishing-list-within?",
+      "projected_function": "tools-ethical-appraisal--flourishing-list-within?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "befb91fc14b812ca6b46269ccbe19f17c97e865072b8da57700842118497d131"
+    },
+    {
+      "function": "flourishing-mapping-hash",
+      "projected_function": "tools-ethical-appraisal--flourishing-mapping-hash",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "c621c3b186637570817bbcbf2391eea438a7d7ed78b2162f37dd45cf28602968"
+    },
+    {
+      "function": "flourishing-one-hop?",
+      "projected_function": "tools-ethical-appraisal--flourishing-one-hop?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "6eaf412bbb4a2071659f754db06856fe846738dfb9054a7fe95e47f355797468"
+    },
+    {
+      "function": "flourishing-pattern-known?",
+      "projected_function": "tools-ethical-appraisal--flourishing-pattern-known?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "cee503245626feb91c1467639d40f51bce76c8e97d36b2490c18a0496d3750dc"
+    },
+    {
+      "function": "flourishing-source-class-valid?",
+      "projected_function": "tools-ethical-appraisal--flourishing-source-class-valid?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "7ae4a9e7137ade452e25f162ac13d80ac5ee868555bac4ee988803666b950ef6"
+    },
+    {
+      "function": "flourishing-source-valid?",
+      "projected_function": "tools-ethical-appraisal--flourishing-source-valid?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "5487a7e0695a0e70f5761830e2ede16cce1ac9dc804a82e3c52c334898901aa5"
+    },
+    {
+      "function": "flourishing-sources-valid-nonempty?",
+      "projected_function": "tools-ethical-appraisal--flourishing-sources-valid-nonempty?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "23f771494fe786e9b686ba9ed0b76501c524f2fbc1e404f644c4701fa3374d7d"
+    },
+    {
+      "function": "flourishing-sources-valid?",
+      "projected_function": "tools-ethical-appraisal--flourishing-sources-valid?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "51de0299c8a199971c375b5c8d1b4a223900fc2db514e7599b396cf176d9aa3a"
+    },
+    {
+      "function": "flourishing-status-comparable?",
+      "projected_function": "tools-ethical-appraisal--flourishing-status-comparable?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "470950ab2ab571a3fd2488cb4941d46232be43ba912fb027ae416738840ab794"
+    },
+    {
+      "function": "flourishing-status-no-worse?",
+      "projected_function": "tools-ethical-appraisal--flourishing-status-no-worse?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "1f873e65a6f0e6e9dece51e608dae731e49664f9e52d4ccfedb5221fa5db22a8"
+    },
+    {
+      "function": "flourishing-status-strictly-better?",
+      "projected_function": "tools-ethical-appraisal--flourishing-status-strictly-better?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "97397c33b92564e46b49e279828b5e6cbaaca3c796b5a04d33eb269c9f1c708d"
+    },
+    {
+      "function": "flourishing-stv-valid?",
+      "projected_function": "tools-ethical-appraisal--flourishing-stv-valid?",
+      "source": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "equation_sha256": "d222c4711816ed3681bbccc34deb4b1ea659c54032ab1a10e9ea3e86c833b5dd"
+    },
+    {
+      "function": "resident-epistemic-immune-epsilon",
+      "projected_function": "tools-ethical-appraisal--resident-epistemic-immune-epsilon",
+      "source": "historical-source:lib_omegaclaw_resident_epistemic_kernel.metta",
+      "equation_sha256": "3646aae82178658f63ac135320fc09fe1be35860487a0208a3f2861677e3d6bc"
+    },
+    {
+      "function": "resident-epistemic-immune-geq",
+      "projected_function": "tools-ethical-appraisal--resident-epistemic-immune-geq",
+      "source": "historical-source:lib_omegaclaw_resident_epistemic_kernel.metta",
+      "equation_sha256": "45e8a7633a7d8e3dd08a017efae87aa9295b0452f50e1cc8fd6f376ccc1aac80"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schema": "omega-tools-catalogue/0.1",
+  "title": "Tools",
+  "status": "all twenty private sample candidates prepared; not installed",
+  "tools": [
+    {
+      "id": "atom-recall",
+      "name": "Exact AtomSpace recall",
+      "category": "thought",
+      "adds": "Recall candidate references by explicit symbolic keys; reconcile with semantic search later.",
+      "claim_ceiling": "Native sample tested separately; neither whole-memory retrieval nor truth/authority.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_atom_recall",
+      "source_ids": [
+        "source-3b26203a1f005ce4",
+        "donor-v2_atom_recall"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "exact-native-donor",
+      "sample_scope": "Exact-key candidate recall; no semantic retrieval or whole-history context builder.",
+      "skills": [
+        "tools-atom-recall"
+      ],
+      "example_count": 5
+    },
+    {
+      "id": "attention",
+      "name": "Attention Bank and Focus",
+      "category": "thought",
+      "adds": "Allocate finite attention; decay salience; select relevant context and account for useful recall.",
+      "claim_ceiling": "Historical component evidence; continuing resident attention economy remains unproven.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_attention",
+      "source_ids": [
+        "source-5e5e7b79c6b1b85d",
+        "native-309b11d56ba12202",
+        "native-60871c82ee1fccb6"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Native rank/tie-break and wage/rent state proposals; no continuing attention daemon.",
+      "skills": [
+        "tools-attention-select",
+        "tools-attention-event"
+      ],
+      "example_count": 5
+    },
+    {
+      "id": "goal-compass",
+      "name": "Goal Weaver",
+      "category": "thought",
+      "adds": "Represent goal lifecycle, bound progress evidence, refuse stale transitions and identify the next direction.",
+      "claim_ceiling": "Native sample advisory only; no scheduler or authenticated completion.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_goal_compass",
+      "source_ids": [
+        "source-3a5c1952e8ad7e87",
+        "donor-v2_goal_compass"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "exact-native-donor",
+      "sample_scope": "Native lifecycle transition appraisal; existing Hive Goals retain orchestration.",
+      "skills": [
+        "tools-goal-step"
+      ],
+      "example_count": 7
+    },
+    {
+      "id": "living-intent",
+      "name": "LivingIntent and commitment continuity",
+      "category": "thought",
+      "adds": "Preserve why a goal matters, its current direction and commitments across episodes.",
+      "claim_ceiling": "Historical component evidence; enduring multi-goal agency remains unproven.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_living_intent",
+      "source_ids": [
+        "source-3a5c1952e8ad7e87",
+        "native-adc7f58eb7dfee95",
+        "native-60871c82ee1fccb6"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Current projection binding and stale-return refusal; no autonomous goal creation.",
+      "skills": [
+        "tools-intent-bind",
+        "tools-intent-return"
+      ],
+      "example_count": 4
+    },
+    {
+      "id": "standing-values",
+      "name": "Standing values and retention covenants",
+      "category": "thought",
+      "adds": "Separate nominated importance from adopted commitments; protect explicitly retained memories.",
+      "claim_ceiling": "Adoption must bind a real owner decision; identifiers and hashes alone do not authenticate.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_standing_values",
+      "source_ids": [
+        "source-a382864ee5afc0c6",
+        "native-9784a2e9c41c99fb",
+        "native-60871c82ee1fccb6"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Value-transition appraisal and content/access/retention checks; no authenticated adoption or deletion.",
+      "skills": [
+        "tools-value-transition",
+        "tools-retention-check"
+      ],
+      "example_count": 6
+    },
+    {
+      "id": "ethical-appraisal",
+      "name": "Flourishing and protected floors",
+      "category": "thought",
+      "adds": "Compare impacts across constituencies and dimensions without collapsing unknowns into one moral score.",
+      "claim_ceiling": "Fixture impacts and constituency coverage are incomplete; protected floors need accountable adoption.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_ethical_appraisal",
+      "source_ids": [
+        "source-3864c924cb3b4735",
+        "native-4574c83a357f2042",
+        "native-c752c0d63d1b758c"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Finite constituency dominance/incomparability and floor-conflict reporting; no universal ethics engine.",
+      "skills": [
+        "tools-ethical-compare"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "belief-governance",
+      "name": "Epistemic immune system",
+      "category": "thought",
+      "adds": "Track provenance, dispute, quarantine and revision independently from confidence.",
+      "claim_ceiling": "Experimental component contracts; governed memory is not necessarily truthful memory.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_belief_governance",
+      "source_ids": [
+        "source-731389b9e67a5663",
+        "native-79deb7acaf3757f8"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Coherence/support classification and overlap-aware revision; no proof of truth or canonical admission.",
+      "skills": [
+        "tools-belief-appraise",
+        "tools-provenance-revise"
+      ],
+      "example_count": 4
+    },
+    {
+      "id": "self-observation",
+      "name": "Revisable self-observation",
+      "category": "thought",
+      "adds": "Bind a self-model to actual observations and invoked capabilities rather than fluent self-description.",
+      "claim_ceiling": "Current evidence and stale/duplicate refusal needed; not consciousness evidence.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_self_observation",
+      "source_ids": [
+        "source-7418a42d1078d769",
+        "native-367718dd8f3b0c31"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Current-turn/focus receipt readback; no consciousness or identity claim.",
+      "skills": [
+        "tools-self-readback"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "ensemble",
+      "name": "Formal reasoning ensemble",
+      "category": "thought",
+      "adds": "Preserve competing derivations, provenance overlap and disagreement without inventing a winner.",
+      "claim_ceiling": "NAL/PLN donor interfaces and bounded components; calibration/integration outstanding.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_ensemble",
+      "source_ids": [
+        "source-760ba69e7c8c5e58",
+        "native-d3dbafafcb3165f6"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Typed claim-coordinate relationship classification; no reasoner activation or TV fusion.",
+      "skills": [
+        "tools-ensemble-compare"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "predictive-learning",
+      "name": "Predictive coding and concept formation",
+      "category": "thought",
+      "adds": "Record predictions before outcomes; update concepts from residuals with provenance.",
+      "claim_ceiling": "Prototype contracts; not a demonstrated lifelong learner.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_predictive_learning",
+      "source_ids": [
+        "source-9f16bfe390f76eaa"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Prediction-before-target binary Brier scoring; no trained world model or concept learner.",
+      "skills": [
+        "tools-prediction-score"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "scratch-plans",
+      "name": "Scratch AtomSpaces and planning",
+      "category": "thought",
+      "adds": "Explore hypotheses and task graphs in isolated spaces; explicitly promote accepted results.",
+      "claim_ceiling": "Scratch separation is not effect isolation; plugin must not start a second coordinator.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_scratch_plans",
+      "source_ids": [
+        "source-c4ed771c0ddc5af8"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Scope/version/expiry-bound promotion proposal; no persistent scratch manager or full planner.",
+      "skills": [
+        "tools-scratch-promote"
+      ],
+      "example_count": 4
+    },
+    {
+      "id": "novelty",
+      "name": "Curiosity and autonomous research",
+      "category": "thought",
+      "adds": "Nominate useful unknowns, spend bounded novelty effort and retire expired explorations.",
+      "claim_ceiling": "Research nomination cannot grant network, spending or publication authority.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_novelty",
+      "source_ids": [
+        "source-6960087067a5562f",
+        "native-92f6c3a76acfbd57",
+        "native-60871c82ee1fccb6",
+        "native-ff9f756fc5e41f20"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Source/quota/expiry-bound inspect-only opportunity proposal; no research executor or external permission.",
+      "skills": [
+        "tools-novelty-genesis",
+        "tools-novelty-inspect"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "dream-consolidation",
+      "name": "Sleep and dream consolidation",
+      "category": "thought",
+      "adds": "Consolidate derived views without rewriting original evidence; distinguish dreams from observations.",
+      "claim_ceiling": "Sleep-related paths have narrow evidence; dream organ remains an experimental proposal.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_dream_consolidation",
+      "source_ids": [
+        "source-b15f8a1342f08e08"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Protected-reference-aware deduplication candidate for wake review; no dream generation or destructive consolidation.",
+      "skills": [
+        "tools-consolidation-propose"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "energy",
+      "name": "Cognitive economics and resource reserves",
+      "category": "thought",
+      "adds": "Track cognitive effort, provider costs and reserve separately; reconcile terminal uncertainty.",
+      "claim_ceiling": "Typed accounting components; money/energy labels do not enforce external budgets by themselves.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_energy",
+      "source_ids": [
+        "source-097784e4fae3bee8",
+        "native-eaeaef49a42f0e52"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "projected-native-donor",
+      "sample_scope": "Native cognitive-energy reservation/settlement proposals; no spending or provider permission.",
+      "skills": [
+        "tools-energy-reserve",
+        "tools-energy-close"
+      ],
+      "example_count": 6
+    },
+    {
+      "id": "affect",
+      "name": "Affect, rest and proactivity",
+      "category": "thought",
+      "adds": "Represent fatigue, initiative and silence as inspectable agent state rather than engagement targets.",
+      "claim_ceiling": "Controller remains unassembled; affect cannot authorize an external action.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_affect",
+      "source_ids": [
+        "source-04c1ca169febdc58"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Debt/energy/availability-based rest/quiet-work suggestion; no complete affect or motivation controller.",
+      "skills": [
+        "tools-rest-appraise"
+      ],
+      "example_count": 4
+    },
+    {
+      "id": "skill-affordance",
+      "name": "Capability discovery and affordance",
+      "category": "action",
+      "adds": "Expose versioned skills, prerequisites, nomination, admission and execution evidence.",
+      "claim_ceiling": "Discovery is not permission; installation must remain distinct from grants.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_skill_affordance",
+      "source_ids": [
+        "source-f9de274f5546c07b"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Versioned descriptor/prerequisite nomination; no installer or automatic execution grant.",
+      "skills": [
+        "tools-skill-nominate"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "substrates",
+      "name": "AtomSpace substrate adapters",
+      "category": "thought",
+      "adds": "Expose compatible native spaces and inspect substrate capabilities rather than assuming parity.",
+      "claim_ceiling": "PeTTa current target; MORK/Jetta remain separate port/research work.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_substrates",
+      "source_ids": [
+        "source-779ed3b895fd9b55"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Declared feature-fit inspection; no backend migration, MORK/Jetta implementation or automatic runtime discovery.",
+      "skills": [
+        "tools-substrate-check"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "habitat-snapshot",
+      "name": "Habitat snapshot inspection",
+      "category": "action",
+      "adds": "Query supplied room observations while preserving snapshot revision and provenance.",
+      "claim_ceiling": "Synthetic native example; no sensor connection or physical control.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_habitat_snapshot",
+      "source_ids": [
+        "source-378d1476bc9d37e4",
+        "source-142a6e6bc055731f",
+        "source-630e063bf478b7b8",
+        "source-e46a02a03aeefdc9"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Room inspection over supplied synthetic snapshots; no real sensing.",
+      "skills": [
+        "tools-habitat-room"
+      ],
+      "example_count": 3
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant body module",
+      "category": "action",
+      "adds": "Sense devices, inspect house affordances, act through a physical adapter, and record outcomes.",
+      "claim_ceiling": "Existing optional module, disabled by default; port and exact effect policy review required.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_home_assistant",
+      "source_ids": [
+        "source-142a6e6bc055731f",
+        "source-630e063bf478b7b8",
+        "source-e46a02a03aeefdc9",
+        "native-home-bridge-de9efae8068d0947"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Fresh target/revision-bound on/off service proposal plus dormant donor mapper; no live device action.",
+      "skills": [
+        "tools-home-propose"
+      ],
+      "example_count": 4
+    },
+    {
+      "id": "living-home",
+      "name": "Aware Habitat to Living Home",
+      "category": "action",
+      "adds": "Develop physical awareness, consented household understanding, then delegated home management including networks, security, bills and shopping.",
+      "claim_ceiling": "Staged theory/product scope; relationships never authenticate users or grant authority.",
+      "stage": "prepared-sample-candidate",
+      "sample": "tools_living_home",
+      "source_ids": [
+        "source-49797251a5b16ca7",
+        "source-c3fef77033ec1205"
+      ],
+      "effect_authority": "none in this candidate",
+      "novelty": "not independently established",
+      "implementation_origin": "new-theory-derived-sample",
+      "sample_scope": "Staged readiness guidance preserving awareness/relationships/control destination; no household surveillance or management daemon.",
+      "skills": [
+        "tools-habitat-stage"
+      ],
+      "example_count": 3
+    }
+  ]
+}

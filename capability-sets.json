@@ -1,0 +1,1317 @@
+{
+  "schema": "omega-tools-capability-sets/v1",
+  "version": "0.1.0",
+  "sets": [
+    {
+      "id": "pln",
+      "label": "PLN",
+      "version": "0.1.0",
+      "family": "reasoner-family",
+      "features": [
+        "uncertain-inference",
+        "provenance",
+        "multi-step"
+      ],
+      "members": [
+        "belief-governance",
+        "ensemble"
+      ],
+      "slots": [
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "claim-comparison",
+          "role": "claim-comparison",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.ensemble",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "pln-inference",
+          "role": "pln-inference",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        },
+        {
+          "id": "reasoning-continuation",
+          "role": "reasoning-continuation",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        }
+      ],
+      "historical_donor_ids": [
+        "pln-quarantine",
+        "pln-anticage"
+      ],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "nal",
+      "label": "NAL",
+      "version": "0.1.0",
+      "family": "reasoner-family",
+      "features": [
+        "evidential-stamps",
+        "temporal",
+        "multi-step"
+      ],
+      "members": [
+        "belief-governance",
+        "ensemble",
+        "attention"
+      ],
+      "slots": [
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "claim-comparison",
+          "role": "claim-comparison",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.ensemble",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "attention",
+          "role": "attention",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.attention",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "nal-inference",
+          "role": "nal-inference",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        },
+        {
+          "id": "temporal-inference",
+          "role": "temporal-inference",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        },
+        {
+          "id": "reasoning-continuation",
+          "role": "reasoning-continuation",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        }
+      ],
+      "historical_donor_ids": [
+        "nal-kernel",
+        "nal6-parallel",
+        "nal7-temporal"
+      ],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "temporal",
+      "label": "Temporal reasoning",
+      "version": "0.1.0",
+      "family": "capability-set",
+      "features": [
+        "occurrence-time",
+        "valid-time",
+        "recorded-time"
+      ],
+      "members": [
+        "living-intent",
+        "predictive-learning"
+      ],
+      "slots": [
+        {
+          "id": "commitments",
+          "role": "commitments",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.living_intent",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "prediction-scoring",
+          "role": "prediction-scoring",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.predictive_learning",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "temporal-inference",
+          "role": "temporal-inference",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        }
+      ],
+      "historical_donor_ids": [
+        "nal7-temporal"
+      ],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "multi-step",
+      "label": "Multi-step reasoning",
+      "version": "0.1.0",
+      "family": "capability-set",
+      "features": [
+        "bounded-continuation",
+        "proof-lineage"
+      ],
+      "members": [
+        "scratch-plans",
+        "goal-compass",
+        "living-intent",
+        "energy"
+      ],
+      "slots": [
+        {
+          "id": "planning",
+          "role": "planning",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.scratch_plans",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "goals",
+          "role": "goals",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.goal_compass",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "commitments",
+          "role": "commitments",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.living_intent",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "resource-accounting",
+          "role": "resource-accounting",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.energy",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "reasoning-continuation",
+          "role": "reasoning-continuation",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "motivation",
+      "label": "Motivation",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "goals",
+        "commitments",
+        "curiosity",
+        "rest"
+      ],
+      "members": [
+        "goal-compass",
+        "living-intent",
+        "standing-values",
+        "novelty",
+        "energy",
+        "affect"
+      ],
+      "slots": [
+        {
+          "id": "goals",
+          "role": "goals",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.goal_compass",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "commitments",
+          "role": "commitments",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.living_intent",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "values",
+          "role": "values",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.standing_values",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "curiosity",
+          "role": "curiosity",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.novelty",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "resource-accounting",
+          "role": "resource-accounting",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.energy",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "rest",
+          "role": "rest",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.affect",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "memory",
+      "label": "Memory and continuity",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "recall",
+        "retention",
+        "consolidation"
+      ],
+      "members": [
+        "atom-recall",
+        "attention",
+        "belief-governance",
+        "dream-consolidation",
+        "standing-values"
+      ],
+      "slots": [
+        {
+          "id": "recall",
+          "role": "recall",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.atom_recall",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "attention",
+          "role": "attention",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.attention",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "consolidation",
+          "role": "consolidation",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.dream_consolidation",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "values",
+          "role": "values",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.standing_values",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "epistemic",
+      "label": "Beliefs and evidence",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "provenance",
+        "disagreement",
+        "retention"
+      ],
+      "members": [
+        "belief-governance",
+        "ensemble",
+        "standing-values"
+      ],
+      "slots": [
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "claim-comparison",
+          "role": "claim-comparison",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.ensemble",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "values",
+          "role": "values",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.standing_values",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "learning",
+      "label": "Learning",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "prediction",
+        "calibration",
+        "concept-learning"
+      ],
+      "members": [
+        "predictive-learning",
+        "belief-governance",
+        "dream-consolidation",
+        "novelty"
+      ],
+      "slots": [
+        {
+          "id": "prediction-scoring",
+          "role": "prediction-scoring",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.predictive_learning",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "consolidation",
+          "role": "consolidation",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.dream_consolidation",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "curiosity",
+          "role": "curiosity",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.novelty",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "concept-learning",
+          "role": "concept-learning",
+          "required": true,
+          "default": null,
+          "state": "extension-contract-proposed"
+        },
+        {
+          "id": "whole-mind-variant-proposal",
+          "role": "whole-mind-variant-proposal",
+          "required": false,
+          "default": null,
+          "state": "owner-proposal-indexed; runtime admission pending"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "ethics",
+      "label": "Values and ethics",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "constituencies",
+        "protected-floors",
+        "dispute"
+      ],
+      "members": [
+        "standing-values",
+        "ethical-appraisal",
+        "belief-governance"
+      ],
+      "slots": [
+        {
+          "id": "values",
+          "role": "values",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.standing_values",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "ethics",
+          "role": "ethics",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.ethical_appraisal",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "beliefs",
+          "role": "beliefs",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.belief_governance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "self",
+      "label": "Self and attention",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "observation",
+        "focus",
+        "rest"
+      ],
+      "members": [
+        "self-observation",
+        "attention",
+        "affect"
+      ],
+      "slots": [
+        {
+          "id": "self-model",
+          "role": "self-model",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.self_observation",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "attention",
+          "role": "attention",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.attention",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "rest",
+          "role": "rest",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.affect",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "habitat",
+      "label": "Habitat and home",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "physical-awareness",
+        "consent",
+        "action-proposals"
+      ],
+      "members": [
+        "habitat-snapshot",
+        "home-assistant",
+        "living-home",
+        "standing-values"
+      ],
+      "slots": [
+        {
+          "id": "room-snapshot",
+          "role": "room-snapshot",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.habitat_snapshot",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "device-proposal",
+          "role": "device-proposal",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.home_assistant",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "habitat-readiness",
+          "role": "habitat-readiness",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.living_home",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "values",
+          "role": "values",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.standing_values",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    },
+    {
+      "id": "substrates",
+      "label": "Substrates and capabilities",
+      "version": "0.1.0",
+      "family": "composition",
+      "features": [
+        "backend-fit",
+        "skill-discovery",
+        "scratch"
+      ],
+      "members": [
+        "substrates",
+        "skill-affordance",
+        "scratch-plans"
+      ],
+      "slots": [
+        {
+          "id": "substrate-fit",
+          "role": "substrate-fit",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.substrates",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "capability-discovery",
+          "role": "capability-discovery",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.skill_affordance",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        },
+        {
+          "id": "planning",
+          "role": "planning",
+          "required": true,
+          "default": {
+            "id": "omegahive.tools.scratch_plans",
+            "version": "0.1.0"
+          },
+          "state": "sample-available"
+        }
+      ],
+      "historical_donor_ids": [],
+      "activation": "explicit-per-component-review",
+      "effects": [],
+      "status": "composition-template; no engine activation implied"
+    }
+  ],
+  "implementations": [
+    {
+      "id": "omegahive.tools.atom_recall",
+      "version": "0.1.0",
+      "role": "recall",
+      "tool": "atom-recall",
+      "skills": [
+        "tools-atom-recall"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Exact-key candidate recall; no semantic retrieval or whole-history context builder."
+    },
+    {
+      "id": "omegahive.tools.attention",
+      "version": "0.1.0",
+      "role": "attention",
+      "tool": "attention",
+      "skills": [
+        "tools-attention-select",
+        "tools-attention-event"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": true,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Native rank/tie-break and wage/rent state proposals; no continuing attention daemon."
+    },
+    {
+      "id": "omegahive.tools.goal_compass",
+      "version": "0.1.0",
+      "role": "goals",
+      "tool": "goal-compass",
+      "skills": [
+        "tools-goal-step"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Native lifecycle transition appraisal; existing Hive Goals retain orchestration."
+    },
+    {
+      "id": "omegahive.tools.living_intent",
+      "version": "0.1.0",
+      "role": "commitments",
+      "tool": "living-intent",
+      "skills": [
+        "tools-intent-bind",
+        "tools-intent-return"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Current projection binding and stale-return refusal; no autonomous goal creation."
+    },
+    {
+      "id": "omegahive.tools.standing_values",
+      "version": "0.1.0",
+      "role": "values",
+      "tool": "standing-values",
+      "skills": [
+        "tools-value-transition",
+        "tools-retention-check"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Value-transition appraisal and content/access/retention checks; no authenticated adoption or deletion."
+    },
+    {
+      "id": "omegahive.tools.ethical_appraisal",
+      "version": "0.1.0",
+      "role": "ethics",
+      "tool": "ethical-appraisal",
+      "skills": [
+        "tools-ethical-compare"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Finite constituency dominance/incomparability and floor-conflict reporting; no universal ethics engine."
+    },
+    {
+      "id": "omegahive.tools.belief_governance",
+      "version": "0.1.0",
+      "role": "beliefs",
+      "tool": "belief-governance",
+      "skills": [
+        "tools-belief-appraise",
+        "tools-provenance-revise"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Coherence/support classification and overlap-aware revision; no proof of truth or canonical admission."
+    },
+    {
+      "id": "omegahive.tools.self_observation",
+      "version": "0.1.0",
+      "role": "self-model",
+      "tool": "self-observation",
+      "skills": [
+        "tools-self-readback"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Current-turn/focus receipt readback; no consciousness or identity claim."
+    },
+    {
+      "id": "omegahive.tools.ensemble",
+      "version": "0.1.0",
+      "role": "claim-comparison",
+      "tool": "ensemble",
+      "skills": [
+        "tools-ensemble-compare"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": true,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Typed claim-coordinate relationship classification; no reasoner activation or TV fusion."
+    },
+    {
+      "id": "omegahive.tools.predictive_learning",
+      "version": "0.1.0",
+      "role": "prediction-scoring",
+      "tool": "predictive-learning",
+      "skills": [
+        "tools-prediction-score"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": true,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Prediction-before-target binary Brier scoring; no trained world model or concept learner."
+    },
+    {
+      "id": "omegahive.tools.scratch_plans",
+      "version": "0.1.0",
+      "role": "planning",
+      "tool": "scratch-plans",
+      "skills": [
+        "tools-scratch-promote"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Scope/version/expiry-bound promotion proposal; no persistent scratch manager or full planner."
+    },
+    {
+      "id": "omegahive.tools.novelty",
+      "version": "0.1.0",
+      "role": "curiosity",
+      "tool": "novelty",
+      "skills": [
+        "tools-novelty-genesis",
+        "tools-novelty-inspect"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Source/quota/expiry-bound inspect-only opportunity proposal; no research executor or external permission."
+    },
+    {
+      "id": "omegahive.tools.dream_consolidation",
+      "version": "0.1.0",
+      "role": "consolidation",
+      "tool": "dream-consolidation",
+      "skills": [
+        "tools-consolidation-propose"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Protected-reference-aware deduplication candidate for wake review; no dream generation or destructive consolidation."
+    },
+    {
+      "id": "omegahive.tools.energy",
+      "version": "0.1.0",
+      "role": "resource-accounting",
+      "tool": "energy",
+      "skills": [
+        "tools-energy-reserve",
+        "tools-energy-close"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Native cognitive-energy reservation/settlement proposals; no spending or provider permission."
+    },
+    {
+      "id": "omegahive.tools.affect",
+      "version": "0.1.0",
+      "role": "rest",
+      "tool": "affect",
+      "skills": [
+        "tools-rest-appraise"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Debt/energy/availability-based rest/quiet-work suggestion; no complete affect or motivation controller."
+    },
+    {
+      "id": "omegahive.tools.skill_affordance",
+      "version": "0.1.0",
+      "role": "capability-discovery",
+      "tool": "skill-affordance",
+      "skills": [
+        "tools-skill-nominate"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Versioned descriptor/prerequisite nomination; no installer or automatic execution grant."
+    },
+    {
+      "id": "omegahive.tools.substrates",
+      "version": "0.1.0",
+      "role": "substrate-fit",
+      "tool": "substrates",
+      "skills": [
+        "tools-substrate-check"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Declared feature-fit inspection; no backend migration, MORK/Jetta implementation or automatic runtime discovery."
+    },
+    {
+      "id": "omegahive.tools.habitat_snapshot",
+      "version": "0.1.0",
+      "role": "room-snapshot",
+      "tool": "habitat-snapshot",
+      "skills": [
+        "tools-habitat-room"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Room inspection over supplied synthetic snapshots; no real sensing."
+    },
+    {
+      "id": "omegahive.tools.home_assistant",
+      "version": "0.1.0",
+      "role": "device-proposal",
+      "tool": "home-assistant",
+      "skills": [
+        "tools-home-propose"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Fresh target/revision-bound on/off service proposal plus dormant donor mapper; no live device action."
+    },
+    {
+      "id": "omegahive.tools.living_home",
+      "version": "0.1.0",
+      "role": "habitat-readiness",
+      "tool": "living-home",
+      "skills": [
+        "tools-habitat-stage"
+      ],
+      "state": "isolated-native-sample",
+      "host_shadow": false,
+      "effects": [],
+      "configuration_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {}
+      },
+      "scope": "Staged readiness guidance preserving awareness/relationships/control destination; no household surveillance or management daemon."
+    }
+  ],
+  "historical_donors": [
+    {
+      "id": "pln-quarantine",
+      "path": "historical-source:lib_omegaclaw_pln_v09_quarantine.metta",
+      "sha256": "2f594c4f4dd937cf4ae465f3ed725c924951c624a2d30876dbca2334c5877521",
+      "state": "OBSERVED historical adapter; not imported or executed by this catalogue",
+      "scope": "technical source reference only; preserve original donor identity and licensing on any future port"
+    },
+    {
+      "id": "pln-anticage",
+      "path": "historical-source:lib_omegaclaw_pln_anticage_adapter.metta",
+      "sha256": "cd5d2166bef831ca71691c7df8399046271e632a394ed9cdb1cdc9e524ee78e8",
+      "state": "OBSERVED historical adapter; not imported or executed by this catalogue",
+      "scope": "technical source reference only; preserve original donor identity and licensing on any future port"
+    },
+    {
+      "id": "nal-kernel",
+      "path": "historical-source:lib_omegaclaw_nal_kernel_quarantine.metta",
+      "sha256": "34b3f7ccd388780f6d4915dde942ca3983ff57ee7427ebb6e15515039b7d80b5",
+      "state": "OBSERVED historical adapter; not imported or executed by this catalogue",
+      "scope": "technical source reference only; preserve original donor identity and licensing on any future port"
+    },
+    {
+      "id": "nal6-parallel",
+      "path": "historical-source:lib_omegaclaw_nal6_parallel_qualification.metta",
+      "sha256": "238997421ac0136d86bc8beb1a56aaf1fa6817a4aeb7baff87927cb857e15143",
+      "state": "OBSERVED historical adapter; not imported or executed by this catalogue",
+      "scope": "technical source reference only; preserve original donor identity and licensing on any future port"
+    },
+    {
+      "id": "nal7-temporal",
+      "path": "historical-source:lib_omegaclaw_nal7_temporal_staging.metta",
+      "sha256": "472d60cdd78da475fcb24ed3303b2c2b37131ae7c92d5adc6106a9b89cf9eb1f",
+      "state": "OBSERVED historical adapter; not imported or executed by this catalogue",
+      "scope": "technical source reference only; preserve original donor identity and licensing on any future port"
+    }
+  ],
+  "extension_contracts": {
+    "pln-inference": "Return PLN-specific typed proposals with premises, rule/version, evidence ancestry and bounds; no implicit NAL truth conversion.",
+    "nal-inference": "Return NAL-specific typed proposals, frequency/confidence and evidential stamps; no implicit PLN conversion.",
+    "temporal-inference": "Separate occurrence, valid and recorded time; declare interval semantics, provenance and clock assumptions.",
+    "reasoning-continuation": "Declare max steps/time, cycle handling, checkpoint/resume identity and proof/evidence lineage; no inference-to-action grant.",
+    "concept-learning": "Declare prediction-before-observation boundary, learning state revision, residual/provenance and calibration evidence.",
+    "whole-mind-variant-proposal": {
+      "description": "Consume Learn-owned packages as whole-mind variant promotion proposals; no learning engine, evaluator, deployment or adoption.",
+      "state": "proposal-contract; no compatibility/admission claim",
+      "input_schema": "coordination/omegaevolve/service-consumer/input.schema.json",
+      "result_schema": "coordination/omegaevolve/service-consumer/result.schema.json",
+      "manifest": {
+        "source_root": "historical-source:OmegaDot",
+        "path": "coordination/omegaevolve/catalogue-submission/manifest.json",
+        "sha256": "7f38ae7db10eac60e3f3155a01970a1fc8497c9d8a45038d3ec1071842498337"
+      },
+      "effects": []
+    }
+  },
+  "policy": "Sets are recipes, not grants. Unbound slots remain explicit. Local recipes may combine sets and substitute exact versioned implementations; external implementation registration and execution require separate review.",
+  "additional_families": [
+    {
+      "id": "metta-foundations",
+      "label": "MeTTa / AtomSpace Foundations",
+      "catalogue": "foundations/catalogue.json",
+      "manifest": "foundations/manifest.json",
+      "slots": [
+        "metta-result-exploration",
+        "atomspace-pattern-query",
+        "job-local-space-recipes",
+        "metta-result-uniqueness",
+        "atomspace-result-count"
+      ],
+      "activation": "explicit-per-component-review",
+      "state": "offline-recipe-candidate"
+    }
+  ],
+  "owner_registrations": [
+    {
+      "id": "omegaevolve.learn_consumer",
+      "version": "0.1.0",
+      "family": "learning",
+      "slot": "whole-mind-variant-proposal",
+      "index_state": "source-bound-proposal",
+      "descriptor": {
+        "id": "omegaevolve.learn_consumer",
+        "version": "0.1.0",
+        "role": "whole-mind-variant-proposal",
+        "state": "extension-proposal",
+        "effects": [],
+        "configuration_schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {}
+        },
+        "scope": "Consume Learn-owned packages as whole-mind variant promotion proposals; no learning engine, evaluator, deployment or adoption."
+      },
+      "manifest": {
+        "source_root": "historical-source:OmegaDot",
+        "path": "coordination/omegaevolve/catalogue-submission/manifest.json",
+        "sha256": "7f38ae7db10eac60e3f3155a01970a1fc8497c9d8a45038d3ec1071842498337"
+      },
+      "source_pins": {
+        "coordination/omegaevolve/service-consumer/api.py": "a40fddd35dd16d3666589e231cb6f1c60a99bb3c5e06f8708c799df56bba9429",
+        "coordination/omegaevolve/service-consumer/consumer.py": "45224f1a6d01fafcbd452599e4c599ae9b2a13f50b8a4a0897813ef0a7957359",
+        "coordination/omegaevolve/service-consumer/input.schema.json": "2b47aeba7f016fe5e540098d12a5a8165c3dc27ce3ac96ec4906d4f9617b801d",
+        "coordination/omegaevolve/service-consumer/result.schema.json": "fa2ab922886a7a68786fc9fb593fd451b25eae23b32598276392644bd60b2d09",
+        "coordination/omegaevolve/service-consumer/test_api.py": "7106ef1a7b85b31c6f560f162f7a5659c1ce3162f63eca1fc7aeeb7dd430fa26",
+        "coordination/omegaevolve/service-consumer/test_consumer.py": "5b0e1a83d16ae2e7d8fb67b1164858cae01663ffcf4df6ef24f0d8b67ca48875",
+        "omegalearn/core.py": "d43a5887b7b5a7be431047dbc934cfb254f83244d370afeba0eead5ced8948da",
+        "omegalearn/__init__.py": "7f4d9e17b8b4a1a8b4ca5c1d2987392fe72d3492422fbadc2c061db74afb9baf"
+      },
+      "input_schema": "coordination/omegaevolve/service-consumer/input.schema.json",
+      "result_schema": "coordination/omegaevolve/service-consumer/result.schema.json",
+      "licence": "LicenseRef-SNET-Project",
+      "submitted_licence": "Project licence (SNET owns stack IP)",
+      "licence_decision": {
+        "id": "omegaevolve.learn_consumer",
+        "version": "0.1.0",
+        "licence": "LicenseRef-SNET-Project",
+        "source": "coordination/PLATFORM_REPLIES_20261004_1630.md",
+        "sha256": "4141bc8dcc5378d5fd997c77141f7fe2114c881bbb50bed36f7ef2072afd69e4",
+        "section": "Per owner / Evolve",
+        "terms": "Platform records SNET ownership and project licence policy; full terms and external redistribution permission not supplied or inferred.",
+        "submitted_licence": "Project licence (SNET owns stack IP)"
+      },
+      "host_contract_claim": "PLATFORM_SEAM_CONTRACTS_DRAFT_20261004.md r2.6 S6 binding",
+      "consumes": [
+        "omegalearn/event/1",
+        "omegalearn/package/1",
+        "hive:S6-attachment-custody",
+        "hive:S4-boot-receipt",
+        "bench:independent-evaluation"
+      ],
+      "effects": [],
+      "conformance_suite": "tests-evolve-service-consumer",
+      "qualification": {
+        "claimed_owner": {
+          "level": "L0",
+          "core_consumer_checks": 24,
+          "typed_boundary_checks": 10,
+          "discovery_checks": 16,
+          "combined_checks": 50,
+          "result": "50 passed in 0.15s",
+          "jsonschema_version": "4.26.0"
+        },
+        "independently_verified": "exact source byte bindings only; no semantic or Lab pass"
+      },
+      "runtime_admitted": false,
+      "runtime_enabled": false,
+      "authority": "none",
+      "blockers": [
+        "host Lab conformance not independently established",
+        "trusted host dependency wiring not established",
+        "aggregate input/output resource bounds not declared by transport schemas"
+      ],
+      "catalogue_base_sha256": "a1b2513c1affce0fd55d55ff6867d2af3ea36dcecb76e837782fe668c92cc9c7",
+      "static_review": {
+        "entrypoint": "propose(payload, *, ledger, verify_delivery, verify_evaluation)",
+        "trusted_context": "host injects custody/evaluation dependencies; payload does not supply them",
+        "adoption": "proposal only; library never supplies owner authority",
+        "schema_bounds": "closed objects observed; no aggregate request/resource envelope observed; static review only"
+      },
+      "host_requirements": {
+        "source": "coordination/PLATFORM_SEAM_CONTRACTS_DRAFT_20261004.md",
+        "source_sha256": "0c0409daf73edfe0ce5bb58d0c86ba31e048c37edff7db58b0dd4d558eef2806",
+        "revision": "r2.6 through r2.10 read; Root S4/S6 requirements unchanged",
+        "implemented": "UNKNOWN; owner direction only",
+        "S4": "Boot-registered skills separate from dynamic workflow definitions. Callable proves structural invocation only; policy/provider/budget rechecked independently. Missing receipt remains unknown.",
+        "S6": "Program-owned exact binding {kind,id,version,artifact_id,revision,digest}, included in request hash and attachment; BIND_ACCEPTS_BINDING=True required. Host passes ctx.actor.attachment.binding; rollback detach and reattach old binding.",
+        "S3": "If requests used: from_goal,title,idempotency_key required; contract optional; retry cannot double-allocate goal/budget.",
+        "D7": "Actual registered Lab suite and recorded admission; same model/evidence/budget comparative Bench baseline.",
+        "previous_source_sha256": "e1e1c47c0741cb922f17c702464972951ec619acbdfe11b030ad4e2dcaa7970c",
+        "review_finding_hook": "If bound findings are reviewed: receiving goal host-stored binding.validate selects enabled program, never artifact kind/creator/text. Async optional validator receives exact bound revision with read-only reviewer actor and declared capabilities. Missing/disabled hook allows whole:true only; timeout/exception refuses. No extra capabilities."
+      },
+      "declaration_history": {
+        "previous_manifest_sha256": "5510b4c788e2f688f64fec2d1c38a6f7eae787288cc6773f0532f9f32bc0b274",
+        "previous_submitted_licence": null,
+        "previous_record": "evidence/evolve-registration-before-declaration-update.json",
+        "review": "licence and host_contract declaration changed; exact eight code/schema/test pins unchanged. Static metadata review only; no admission.",
+        "current_submission_sha256": "b8916c57ff82fc4c664657e6a7f8665aaf35a7306ccf2ec2250d0da551d63ce8"
+      }
+    }
+  ]
+}

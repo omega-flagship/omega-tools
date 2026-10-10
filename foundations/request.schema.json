@@ -1,0 +1,480 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Closed foundation recipe input; recipe_api.validate also checks declared variable slots, reserved identifiers and aggregate limits",
+  "$defs": {
+    "literal": {
+      "type": "object",
+      "properties": {
+        "literal": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+        }
+      },
+      "required": [
+        "literal"
+      ],
+      "additionalProperties": false
+    },
+    "patternTerm": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "literal": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+            }
+          },
+          "required": [
+            "literal"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "variable": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+            }
+          },
+          "required": [
+            "variable"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-foundation-request/v1"
+        },
+        "recipe": {
+          "const": "branch-collect"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "values": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/literal"
+              },
+              "minItems": 0,
+              "maxItems": 32
+            }
+          },
+          "required": [
+            "values"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-foundation-request/v1"
+        },
+        "recipe": {
+          "const": "pattern-join"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "edges": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/literal"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 0,
+              "maxItems": 32
+            },
+            "variables": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+              },
+              "minItems": 0,
+              "maxItems": 6
+            },
+            "patterns": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/patternTerm"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 1,
+              "maxItems": 3
+            },
+            "project": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/patternTerm"
+              },
+              "minItems": 1,
+              "maxItems": 6
+            }
+          },
+          "required": [
+            "edges",
+            "variables",
+            "patterns",
+            "project"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-foundation-request/v1"
+        },
+        "recipe": {
+          "const": "local-space"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "edges": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/literal"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 0,
+              "maxItems": 32
+            },
+            "variables": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+              },
+              "minItems": 0,
+              "maxItems": 6
+            },
+            "patterns": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/patternTerm"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "project": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/patternTerm"
+              },
+              "minItems": 1,
+              "maxItems": 6
+            },
+            "retract": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/literal"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 0,
+              "maxItems": 32
+            }
+          },
+          "required": [
+            "edges",
+            "variables",
+            "patterns",
+            "project",
+            "retract"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-foundation-request/v1"
+        },
+        "recipe": {
+          "const": "branch-unique"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "values": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/literal"
+              },
+              "minItems": 0,
+              "maxItems": 32
+            }
+          },
+          "required": [
+            "values"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-foundation-request/v1"
+        },
+        "recipe": {
+          "const": "pattern-count"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "edges": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/literal"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 0,
+              "maxItems": 32
+            },
+            "variables": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+              },
+              "minItems": 0,
+              "maxItems": 6
+            },
+            "patterns": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/patternTerm"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 1,
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "edges",
+            "variables",
+            "patterns"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "parallel-map"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "tasks": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_-]{0,47}$",
+                    "maxLength": 48
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": -10000,
+                    "maximum": 10000
+                  },
+                  "increment": {
+                    "type": "integer",
+                    "minimum": -100,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "id",
+                  "value",
+                  "increment"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "tasks"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "mutex-counter"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "initial": {
+              "type": "integer",
+              "minimum": -10000,
+              "maximum": 10000
+            },
+            "increments": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 100
+              }
+            }
+          },
+          "required": [
+            "initial",
+            "increments"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "transaction-counter"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "initial": {
+              "type": "integer",
+              "minimum": -10000,
+              "maximum": 10000
+            },
+            "delta": {
+              "type": "integer",
+              "minimum": -100,
+              "maximum": 100
+            },
+            "commit": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "initial",
+            "delta",
+            "commit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

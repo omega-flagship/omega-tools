@@ -1,0 +1,181 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "standing-value-transition-v1": "tools-standing-values--standing-value-transition-v1",
+    "retention-guard-operation-v1": "tools-standing-values--retention-guard-operation-v1"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_standing_value.metta",
+      "sha256": "6e3ce0fa781ad2beec002640c2ce85ba9081a6cc9b9c5b85737b2a9f2a403725"
+    },
+    {
+      "path": "historical-source:lib_omegaclaw_contracts.metta",
+      "sha256": "86a8e998aec33506ad0211e53d2aa88d05746b9d590dc3b3c34690a2e45126c0"
+    }
+  ],
+  "equations": [
+    {
+      "function": "contract-present?",
+      "projected_function": "tools-standing-values--contract-present?",
+      "source": "historical-source:lib_omegaclaw_contracts.metta",
+      "equation_sha256": "6b009767f69ff56f1d8d2ac6b0a6c6fabeaab180d116b04c07103eb9e0626006"
+    },
+    {
+      "function": "retention-covenant-valid?",
+      "projected_function": "tools-standing-values--retention-covenant-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "193821073827d9dd7c826767742e7a791d3a8538f9737a588f4f87686fe3a172"
+    },
+    {
+      "function": "retention-exact-transform?",
+      "projected_function": "tools-standing-values--retention-exact-transform?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "94c2f951f01ec9608681aa149e2fa03704c91f0639d9fb15f8a719bbccddfbf8"
+    },
+    {
+      "function": "retention-exact-transforms-valid?",
+      "projected_function": "tools-standing-values--retention-exact-transforms-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "a665bdf493bd58dfe897c815b7d2dfbc861617f408c28a077bb5a01a05496306"
+    },
+    {
+      "function": "retention-guard-operation-bound",
+      "projected_function": "tools-standing-values--retention-guard-operation-bound",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "9ba655727241b047acd6e1346f80b973b94930a604d017a9bc09551ab7192e6c"
+    },
+    {
+      "function": "retention-guard-operation-v1",
+      "projected_function": "tools-standing-values--retention-guard-operation-v1",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "7ab149e7eaa675e44bebdd7003c13d70416e1279bbb5ad234341986bb183d2f5"
+    },
+    {
+      "function": "retention-member?",
+      "projected_function": "tools-standing-values--retention-member?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "7658d4fbba883b903d057d24a12e5191d56456351a72c486890ae52ce21dbdb7"
+    },
+    {
+      "function": "retention-mode-transforms-valid?",
+      "projected_function": "tools-standing-values--retention-mode-transforms-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "8419989f87bd6b1f75bb993844623b28562255f75e5f20bc2631b1289e6b2c4f"
+    },
+    {
+      "function": "retention-mode-valid?",
+      "projected_function": "tools-standing-values--retention-mode-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "95b7cdb150fd8421819ce445a13dfe4bc3354054d5e07bdf926b35248f8905b5"
+    },
+    {
+      "function": "retention-preserve-allowed?",
+      "projected_function": "tools-standing-values--retention-preserve-allowed?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "b335d493161b22da4e77b2bc56ec9cbc6c7dbd904842e29f2eaf8b28cebc496e"
+    },
+    {
+      "function": "retention-recovery-witness-valid?",
+      "projected_function": "tools-standing-values--retention-recovery-witness-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "aa0e39e5a32f45632d61a89c75a6c56844472364e691e11ee853e7b6a65899ee"
+    },
+    {
+      "function": "retention-release-condition-valid?",
+      "projected_function": "tools-standing-values--retention-release-condition-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "4d15b569a15a49a927f3f723cf178f913201c2b5da48534cab79871c31a9dcd0"
+    },
+    {
+      "function": "standing-value-adopt-valid?",
+      "projected_function": "tools-standing-values--standing-value-adopt-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "eb4f0fefdfacf591373376c8a2bba8bf858bb6e1da4046ac45cfcb1fcc72dec7"
+    },
+    {
+      "function": "standing-value-authority-valid-for?",
+      "projected_function": "tools-standing-values--standing-value-authority-valid-for?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "d5365382d142c50d9950ee4fcc7aa09d19b7f92fb58783e2078c3361f1d89fcd"
+    },
+    {
+      "function": "standing-value-id",
+      "projected_function": "tools-standing-values--standing-value-id",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "71ca91c7c05c3d7bf58236dbe4f0dd0c85f5cba6c86ffd88eb4bd240b73faa5f"
+    },
+    {
+      "function": "standing-value-jurisdiction",
+      "projected_function": "tools-standing-values--standing-value-jurisdiction",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "9ad65fefc873723b225bf7697bdf2fb3b56648291dec84c408e2fb4ca6f64425"
+    },
+    {
+      "function": "standing-value-jurisdiction-valid?",
+      "projected_function": "tools-standing-values--standing-value-jurisdiction-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "686d9caa92627949ed180484a14f05c6da4d7b4492ca59261652273c924c56c5"
+    },
+    {
+      "function": "standing-value-predecessor",
+      "projected_function": "tools-standing-values--standing-value-predecessor",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "6c6c0f55494485202c985759dfedc07982cef5f1511ee0bc6650473f5796fcbb"
+    },
+    {
+      "function": "standing-value-release-valid?",
+      "projected_function": "tools-standing-values--standing-value-release-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "d2058e74fc6158ccfba8bf94549d2e2acb86a90d8469a6df558e4e239fff437c"
+    },
+    {
+      "function": "standing-value-revise-valid?",
+      "projected_function": "tools-standing-values--standing-value-revise-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "62f9d6500d900a2effe93be5719d8c35dda560bb3529f1f5ecef09271f9c9e76"
+    },
+    {
+      "function": "standing-value-same-subject-and-scope?",
+      "projected_function": "tools-standing-values--standing-value-same-subject-and-scope?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "fc95048aae5ccd479d71f57a3b3e6096f9ed7e477633feb7316e15d8ccab5ef3"
+    },
+    {
+      "function": "standing-value-status",
+      "projected_function": "tools-standing-values--standing-value-status",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "ff873b061c9d4302690cb3a41f359de7321e8927264afec9c42f4da8690fbc8c"
+    },
+    {
+      "function": "standing-value-status-valid?",
+      "projected_function": "tools-standing-values--standing-value-status-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "a398cbae3a9e2b6c207e92909d85a4f3a99035e8589cb92c0ebda7dfdb6deca2"
+    },
+    {
+      "function": "standing-value-subject",
+      "projected_function": "tools-standing-values--standing-value-subject",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "fe7cf6ac8a591c589cb076b3b0e6de48868b9d14cdcb508810fe82f7dfdd7e5c"
+    },
+    {
+      "function": "standing-value-transition-result",
+      "projected_function": "tools-standing-values--standing-value-transition-result",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "06ead08079e83605a5c67ff6626796cff3ee1071803c43049dc8780a239813dc"
+    },
+    {
+      "function": "standing-value-transition-v1",
+      "projected_function": "tools-standing-values--standing-value-transition-v1",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "1f2fc03e26e1eacee5335d28ce0e6ffa26cff6e49fdc49fc3f5cf8fd8fac55aa"
+    },
+    {
+      "function": "standing-value-valid?",
+      "projected_function": "tools-standing-values--standing-value-valid?",
+      "source": "historical-source:lib_omegaclaw_standing_value.metta",
+      "equation_sha256": "2cf1be07354786c73f4d495df11d1e1d2c22b9398f65a560c04bf9087b35b0c4"
+    }
+  ]
+}

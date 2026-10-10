@@ -1,0 +1,80 @@
+{
+  "tool": "attention",
+  "module": "tools_attention",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-attention-select",
+      "arguments": [
+        "mode",
+        "state",
+        "candidates",
+        "limit",
+        "input-ref",
+        "state-digest",
+        "observation-digest"
+      ],
+      "semantics": "Native Focus ranking with stable ordinal tie-break; attention is not truth or importance.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": "../../admission.json#/skills/tools-attention-select"
+    },
+    {
+      "name": "tools-attention-event",
+      "arguments": [
+        "state",
+        "event",
+        "admission"
+      ],
+      "semantics": "Preview wage/rent/replay accounting on supplied state; no persistence.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": "../../admission.json#/skills/tools-attention-event"
+    }
+  ],
+  "source_ids": [
+    "source-5e5e7b79c6b1b85d",
+    "native-309b11d56ba12202",
+    "native-60871c82ee1fccb6"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Historical component evidence; continuing resident attention economy remains unproven.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Native rank/tie-break and wage/rent state proposals; no continuing attention daemon.",
+  "examples": [
+    "native-attention-changes-selection",
+    "disabled-baseline-selects-b",
+    "duplicate-ordinals-refused",
+    "useful-recall-earns-wage",
+    "quarantined-recall-earns-no-wage"
+  ],
+  "module_id": "omegahive.tools.attention",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "first-slice-candidate"
+}

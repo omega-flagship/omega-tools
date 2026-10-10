@@ -1,0 +1,56 @@
+{
+  "tool": "self-observation",
+  "module": "tools_self_observation",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-self-readback",
+      "arguments": [
+        "turn",
+        "focus",
+        "evidence-set"
+      ],
+      "semantics": "Distinguish invoked, scheduled, refused and unavailable from current source-bound receipts.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-7418a42d1078d769",
+    "native-367718dd8f3b0c31"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Current evidence and stale/duplicate refusal needed; not consciousness evidence.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Current-turn/focus receipt readback; no consciousness or identity claim.",
+  "examples": [
+    "invocation-readback-grounded",
+    "stale-turn-not-current",
+    "missing-invocation-not-ran"
+  ],
+  "module_id": "omegahive.tools.self_observation",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

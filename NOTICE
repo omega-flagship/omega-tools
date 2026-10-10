@@ -1,0 +1,40 @@
+Omega Tools
+Copyright 2026 OmegaDot Platform contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+It is an app for OmegaHive, which builds on OmegaClaw Core.
+
+It includes code derived from OmegaClaw Core, originally released under the MIT License.
+The release this repository was prepared from shipped that notice as its LICENSE; it is reproduced
+below and continues to apply to the code derived from it.
+
+---------------------------------------------------------------------------
+MIT License
+
+Copyright (c) 2026 Patrick Hammer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+PeTTa
+
+The typed MeTTa recipes in foundations/ run on PeTTa (MIT License, Copyright (c) 2025 Patrick Hammer) and use
+its standard builtins. PeTTa itself is not included; the recipes pin the PeTTa commit and source files they
+were checked against (foundations/manifest.json, foundations/concurrency/manifest.json). PeTTa's licence is
+reproduced in foundations/LICENSE.PeTTa and foundations/concurrency/LICENSE.PeTTa.

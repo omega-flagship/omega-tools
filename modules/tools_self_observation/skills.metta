@@ -1,0 +1,1 @@
+(= (tools-self-readback $turn $focus $evidence-set) (ToolsSampleResultV1 self-observation (tools-self-observation--so-current-mechanism-readback $turn $focus $evidence-set) inspect-simulate authority-none))

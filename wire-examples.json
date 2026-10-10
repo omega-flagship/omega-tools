@@ -1,0 +1,1179 @@
+{
+  "schema": "omega-tools-wire-examples/v1",
+  "cases": [
+    {
+      "tool": "atom-recall",
+      "name": "exact-key-not-semantic",
+      "skill": "tools-atom-recall",
+      "arguments": [
+        "r1",
+        [
+          "study"
+        ],
+        [
+          [
+            "AtomMemoryEntryV1",
+            "lamp",
+            [
+              "study",
+              "lighting"
+            ]
+          ],
+          [
+            "AtomMemoryEntryV1",
+            "book",
+            [
+              "studying"
+            ]
+          ]
+        ]
+      ],
+      "expected_native": [
+        "(AtomMemoryRecallDecisionV1 r1 (lamp) authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "goal-compass",
+      "name": "goal-completion",
+      "skill": "tools-goal-step",
+      "arguments": [
+        [
+          "GoalLifecycleStateV1",
+          "episode-1",
+          "v1",
+          "verifying",
+          "goal-1",
+          "verify",
+          [],
+          "none",
+          0,
+          0,
+          0,
+          [
+            "GoalStopRuleV1",
+            "artifact-complete",
+            "result-1"
+          ],
+          "synthetic-provenance"
+        ],
+        [
+          "GoalProgressEvidenceV1",
+          "episode-1",
+          "v1",
+          "ev1",
+          "result-1",
+          "completion-met",
+          "stranger-verifiable"
+        ],
+        "v2"
+      ],
+      "expected_native": [
+        "(GoalTransitionDecisionV1 episode-1 v1 v2 goal-1 verifying completed complete ev1 result-1 summarize-completed-goal 1 0 0 (GoalStopRuleV1 artifact-complete result-1) inspect-simulate)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "habitat-snapshot",
+      "name": "habitat-preserves-revision-provenance",
+      "skill": "tools-habitat-room",
+      "arguments": [
+        [
+          "HabitatSnapshotV1",
+          "snapshot-1",
+          "synthetic-fixture",
+          [
+            [
+              "HabitatObservationV1",
+              "lamp",
+              "study",
+              "on"
+            ],
+            [
+              "HabitatObservationV1",
+              "thermostat",
+              "hall",
+              20
+            ]
+          ]
+        ],
+        "study"
+      ],
+      "expected_native": [
+        "(HabitatRoomViewV1 snapshot-1 synthetic-fixture study ((HabitatObservationV1 lamp study on)) authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "attention",
+      "name": "native-attention-changes-selection",
+      "skill": "tools-attention-select",
+      "arguments": [
+        "enabled",
+        [
+          "focus-state",
+          10,
+          10,
+          [
+            [
+              "salience",
+              "a",
+              0.8,
+              0,
+              "False",
+              "none",
+              "fresh"
+            ],
+            [
+              "salience",
+              "b",
+              0,
+              0,
+              "False",
+              "none",
+              "fresh"
+            ]
+          ],
+          []
+        ],
+        [
+          [
+            "focus-candidate",
+            "a",
+            0.1,
+            0,
+            "payload-a"
+          ],
+          [
+            "focus-candidate",
+            "b",
+            0.6,
+            1,
+            "payload-b"
+          ]
+        ],
+        1,
+        "input-1",
+        "state-1",
+        "sensor-1"
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "(focus-ranked a 0.9 0 payload-a)",
+        "enabled (a) sensor-1 inspect-simulate"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "living-intent",
+      "name": "bind-complete-current-intent",
+      "skill": "tools-intent-bind",
+      "arguments": [
+        "call-1",
+        "ep",
+        [
+          "living-intent-state",
+          "ep",
+          "v1",
+          "hd",
+          "pd",
+          [
+            [
+              "LivingIntentHeadV1",
+              "ep",
+              "v1",
+              "head-0",
+              "goal",
+              "why",
+              "focus",
+              [],
+              "last-result",
+              "next",
+              "provenance",
+              "current"
+            ]
+          ],
+          [
+            [
+              "LivingIntentProjectionV1",
+              "ep",
+              "v1",
+              "hd",
+              "pd",
+              [
+                "living-intent"
+              ],
+              [],
+              [],
+              [
+                "open-commitments"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentContributionBindingV1 call-1 ep v1 pd) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "living-intent",
+      "name": "intent-return-stale",
+      "skill": "tools-intent-return",
+      "arguments": [
+        [
+          "LivingIntentContributionBindingV1",
+          "call-1",
+          "ep",
+          "v0",
+          "pd"
+        ],
+        [
+          "living-intent-state",
+          "ep",
+          "v1",
+          "hd",
+          "pd",
+          [
+            [
+              "LivingIntentHeadV1",
+              "ep",
+              "v1",
+              "head-0",
+              "goal",
+              "why",
+              "focus",
+              [],
+              "last-result",
+              "next",
+              "provenance",
+              "current"
+            ]
+          ],
+          [
+            [
+              "LivingIntentProjectionV1",
+              "ep",
+              "v1",
+              "hd",
+              "pd",
+              [
+                "living-intent"
+              ],
+              [],
+              [],
+              [
+                "open-commitments"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 living-intent (LivingIntentRefusalV1 call-1 stale-return v0 v1) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "standing-values",
+      "name": "typed-value-adoption-appraisal",
+      "skill": "tools-value-transition",
+      "arguments": [
+        [
+          "StandingValueTransitionV1",
+          "decision-1",
+          "adopt",
+          "none",
+          [
+            "StandingValueV1",
+            "value-1",
+            "promise",
+            "opaque-kind",
+            "owner-joint",
+            "none",
+            "reason",
+            [],
+            "review-condition",
+            "release-condition",
+            "active"
+          ],
+          [
+            "StandingValueAuthorityV1",
+            "owner-joint",
+            "owner-joint",
+            "decision-1"
+          ]
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "StandingValueTransitionDecisionV1 decision-1 accepted adopt",
+        "inspect-simulate authority-none"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "standing-values",
+      "name": "protected-content-delete-refused",
+      "skill": "tools-retention-check",
+      "arguments": [
+        [
+          "RetentionCovenantV1",
+          "covenant-1",
+          "value-1",
+          "hash-1",
+          "must-retain-verbatim",
+          [
+            "preserve-exact"
+          ],
+          [
+            "private"
+          ],
+          "no-release-permitted",
+          "active"
+        ],
+        [
+          "RetentionOperationV1",
+          "op-1",
+          "delete",
+          "hash-1",
+          "none",
+          "delete",
+          "private",
+          "never",
+          "none"
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "must-retain-verbatim-prohibits-delete"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "ethical-appraisal",
+      "name": "non-scalar-dominance",
+      "skill": "tools-ethical-compare",
+      "arguments": [
+        "a",
+        "b",
+        [
+          [
+            "AffectedBeing",
+            "person",
+            "declared",
+            "fixture",
+            []
+          ]
+        ],
+        [
+          "agency-balance"
+        ],
+        [
+          [
+            "Impact",
+            "ia",
+            "a",
+            "person",
+            "agency-balance",
+            "immediate",
+            "supports",
+            [
+              "stv",
+              0.9,
+              0.9
+            ],
+            [
+              [
+                "Source",
+                "source-1",
+                "experiment-fixture"
+              ]
+            ]
+          ],
+          [
+            "Impact",
+            "ib",
+            "b",
+            "person",
+            "agency-balance",
+            "immediate",
+            "undermines",
+            [
+              "stv",
+              0.9,
+              0.9
+            ],
+            [
+              [
+                "Source",
+                "source-2",
+                "experiment-fixture"
+              ]
+            ]
+          ]
+        ],
+        [],
+        []
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 ethical-appraisal (EthicalComparisonV1 True False () advisory-appraisal) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "belief-governance",
+      "name": "supported-belief-classification",
+      "skill": "tools-belief-appraise",
+      "arguments": [
+        "claim",
+        [
+          "stv",
+          0.9,
+          0.8
+        ],
+        "internal"
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 belief-governance (admitted claim (stv 0.9 0.8) internal) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "belief-governance",
+      "name": "shared-provenance-no-double-credit",
+      "skill": "tools-provenance-revise",
+      "arguments": [
+        [
+          0.9,
+          0.8,
+          [
+            "source-1"
+          ]
+        ],
+        [
+          0.9,
+          0.8,
+          [
+            "source-1"
+          ]
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 belief-governance (stv 0.9 0.8) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "self-observation",
+      "name": "invocation-readback-grounded",
+      "skill": "tools-self-readback",
+      "arguments": [
+        [
+          "CurrentTurnBindingV1",
+          "turn-1",
+          "input-1",
+          "seal-1",
+          "synthetic-user"
+        ],
+        [
+          "CurrentFocusBindingV1",
+          "focus",
+          "coordinate-1",
+          "digest-1",
+          [
+            "CurrentMechanismReceiptRefV1",
+            "pre",
+            "focus",
+            "coordinate-1",
+            "digest-1"
+          ],
+          [
+            "source-1"
+          ]
+        ],
+        [
+          "CurrentMechanismEvidenceSetV1",
+          [
+            "CurrentTurnBindingV1",
+            "turn-1",
+            "input-1",
+            "seal-1",
+            "synthetic-user"
+          ],
+          [
+            "CurrentFocusBindingV1",
+            "focus",
+            "coordinate-1",
+            "digest-1",
+            [
+              "CurrentMechanismReceiptRefV1",
+              "pre",
+              "focus",
+              "coordinate-1",
+              "digest-1"
+            ],
+            [
+              "source-1"
+            ]
+          ],
+          [
+            [
+              "CurrentMechanismEvidenceV1",
+              "focus",
+              "pre",
+              "coordinate-1",
+              "available",
+              "invoked",
+              [
+                "MechanismOutputDigestV1",
+                "digest-1"
+              ],
+              [
+                "CurrentMechanismReceiptRefV1",
+                "pre",
+                "focus",
+                "coordinate-1",
+                "digest-1"
+              ]
+            ]
+          ],
+          "authority-none"
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "CurrentMechanismStateV1 focus ran pre coordinate-1",
+        "authority-none"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "ensemble",
+      "name": "same-coordinate-agreement",
+      "skill": "tools-ensemble-compare",
+      "arguments": [
+        [
+          "EnsembleClaimV1",
+          [
+            "EnsembleClaimCoordinateV1",
+            "claim-1",
+            "subject",
+            "relation",
+            0,
+            1,
+            "v1"
+          ],
+          "positive",
+          "active"
+        ],
+        [
+          "EnsembleClaimV1",
+          [
+            "EnsembleClaimCoordinateV1",
+            "claim-1",
+            "subject",
+            "relation",
+            0,
+            1,
+            "v1"
+          ],
+          "positive",
+          "active"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 ensemble (EnsembleRelationV1 agreement no-winner no-tv-conversion) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "novelty",
+      "name": "novelty-genesis-bounded",
+      "skill": "tools-novelty-genesis",
+      "arguments": [
+        [
+          "NoveltyInspectionPolicyV1",
+          "policy-1",
+          1,
+          1,
+          2,
+          100,
+          [
+            "direct-test"
+          ],
+          [
+            "local-private"
+          ]
+        ],
+        1000
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 novelty (NoveltyInspectionStateV1 policy-1 0 1000 () () ()) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "novelty",
+      "name": "inspect-only-lease",
+      "skill": "tools-novelty-inspect",
+      "arguments": [
+        [
+          "NoveltyInspectionPolicyV1",
+          "policy-1",
+          1,
+          1,
+          2,
+          100,
+          [
+            "direct-test"
+          ],
+          [
+            "local-private"
+          ]
+        ],
+        [
+          "NoveltyInspectionStateV1",
+          "policy-1",
+          0,
+          1000,
+          [],
+          [],
+          []
+        ],
+        [
+          "CycleComposerIngressInput",
+          "direct-test",
+          [
+            [
+              "CycleComposerIngressFrame",
+              [
+                65
+              ]
+            ]
+          ],
+          1000
+        ],
+        [
+          "CycleComposerIngressDigestResult",
+          [
+            "CycleComposerIngressDigestRequest",
+            "sha256",
+            "direct-test",
+            [
+              [
+                "CycleComposerIngressFrame",
+                [
+                  65
+                ]
+              ]
+            ]
+          ],
+          "fixture-digest"
+        ],
+        [
+          "NoveltyArrivalV1",
+          "arrival-1",
+          "content-1",
+          "fixture-digest",
+          "provenance-1",
+          "local-private",
+          "ordinary-loss",
+          "evidence-1",
+          [
+            "NoveltyQuarantineCheckV1",
+            "arrival-1",
+            "fixture-digest",
+            "inspection-cleared"
+          ]
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "NoveltyInspectionDecisionV1 arrival-1 accepted",
+        "inspection-only authority-none"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "energy",
+      "name": "energy-reserve-no-provider-authority",
+      "skill": "tools-energy-reserve",
+      "arguments": [
+        [
+          "CognitiveEnergyStateV1",
+          "energy-1",
+          1,
+          "cognitive-energy-milliunit",
+          [
+            "PolicyAllocatedCapacityV1",
+            100,
+            "policy-1"
+          ],
+          100,
+          0,
+          0,
+          "event-driven",
+          "sleep-wake-independent",
+          "truth-separate",
+          "value-separate",
+          "priority-separate",
+          "provider-wallet-separate",
+          [
+            "AuthorityCountsV1",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "authority-none"
+        ],
+        [
+          "CognitiveEnergyLeaseProposalV1",
+          "lease-1",
+          "energy-1",
+          1,
+          "work-1",
+          "observe",
+          "cognitive-energy-milliunit",
+          10,
+          "policy-allocation-only",
+          "provider-call-authority-false",
+          "effect-authority-false",
+          [
+            "AuthorityCountsV1",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "authority-none"
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "CognitiveEnergyLeaseReceiptV1",
+        "100 policy-1) 90 10 0",
+        "provider-call-authority-false effect-authority-false"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "predictive-learning",
+      "name": "brier-score-before-target",
+      "skill": "tools-prediction-score",
+      "arguments": [
+        [
+          "PredictionSampleV1",
+          "p1",
+          "m1",
+          "context",
+          4,
+          0.75
+        ],
+        [
+          "TargetSampleV1",
+          "t1",
+          "context",
+          5,
+          0
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 predictive-learning (PredictionScoreSampleV1 p1 t1 m1 context brier 0.5625 prediction-not-evidence) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "scratch-plans",
+      "name": "explicit-promotion-proposal",
+      "skill": "tools-scratch-promote",
+      "arguments": [
+        [
+          "ScratchHeadSampleV1",
+          "scratch-a",
+          "v1",
+          2
+        ],
+        [
+          "ScratchPromotionSampleV1",
+          "p1",
+          "scratch-a",
+          "v1",
+          3,
+          "shareable-candidate",
+          "hypothesis",
+          "provenance"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 scratch-plans (ScratchPromotionProposalV1 p1 scratch-a v1 hypothesis provenance owner-review-required) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "dream-consolidation",
+      "name": "derived-reference-dedup",
+      "skill": "tools-consolidation-propose",
+      "arguments": [
+        [
+          "ConsolidationSampleV1",
+          "c1",
+          "sleep-1",
+          "snapshot-1",
+          [
+            "a",
+            "b",
+            "a"
+          ],
+          [],
+          "shareable-observed",
+          "wake-1"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 dream-consolidation (ConsolidationCandidateSampleV1 c1 sleep-1 snapshot-1 (a b) wake-1 wake-review-required originals-preserved) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "affect",
+      "name": "debt-rests-without-succession",
+      "skill": "tools-rest-appraise",
+      "arguments": [
+        [
+          "RestPressureSampleV1",
+          "a1",
+          11,
+          100,
+          10,
+          "available",
+          "task"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 affect (RestSuggestionSampleV1 a1 rest continuity-preserved no-succession) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "skill-affordance",
+      "name": "prerequisites-visible-not-permission",
+      "skill": "tools-skill-nominate",
+      "arguments": [
+        [
+          "SkillDescriptorSampleV1",
+          "recall",
+          1,
+          "tools-atom-recall",
+          "none",
+          [
+            "petta",
+            "memory"
+          ],
+          "authority-none"
+        ],
+        [
+          "petta",
+          "memory"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 skill-affordance (SkillNominationSampleV1 recall 1 tools-atom-recall none () separate-execution-admission-required) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "substrates",
+      "name": "declared-feature-fit",
+      "skill": "tools-substrate-check",
+      "arguments": [
+        [
+          "SubstrateCapabilitiesSampleV1",
+          "PeTTa",
+          "fixture-build",
+          [
+            "native-equations",
+            "explicit-spaces"
+          ],
+          "authority-none"
+        ],
+        [
+          "SubstrateRequestSampleV1",
+          "s1",
+          [
+            "native-equations"
+          ]
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 substrates (SubstrateFitSampleV1 s1 PeTTa fixture-build () supplied-capability-observation no-parity-claim) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "home-assistant",
+      "name": "specific-light-proposal",
+      "skill": "tools-home-propose",
+      "arguments": [
+        [
+          "HomeDeviceSampleV1",
+          "light.fixture",
+          "light",
+          "revision-1",
+          "off"
+        ],
+        [
+          "HomeLightIntentSampleV1",
+          "h1",
+          "light.fixture",
+          "revision-1",
+          "turn-on"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 home-assistant (HomeServiceProposalSampleV1 h1 homeassistant turn_on light.fixture revision-1 fresh-effect-permit-and-readback-required) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "living-home",
+      "name": "understanding-requires-consent",
+      "skill": "tools-habitat-stage",
+      "arguments": [
+        [
+          "HabitatReadinessSampleV1",
+          "house",
+          "awareness-qualified",
+          "relationships-unconsented",
+          "no-domain-mandates",
+          "manual-fallback"
+        ]
+      ],
+      "expected_native": [
+        "(ToolsSampleResultV1 living-home (HabitatStageSuggestionV1 house understanding-household consent-and-inspectable-person-model-needed) inspect-simulate authority-none)"
+      ],
+      "contains_native": null,
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "attention",
+      "name": "useful-recall-earns-wage",
+      "skill": "tools-attention-event",
+      "arguments": [
+        [
+          "focus-state",
+          10,
+          10,
+          [
+            [
+              "salience",
+              "a",
+              0.8,
+              0,
+              "False",
+              "none",
+              "fresh"
+            ]
+          ],
+          []
+        ],
+        [
+          "focus-event",
+          "wage-1",
+          "a",
+          "useful-recall",
+          "source-1"
+        ],
+        [
+          "admitted",
+          "recall-1",
+          [
+            "stv",
+            0.9,
+            0.8
+          ],
+          "internal"
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "focus-state 9.9 10",
+        "salience a 0.9",
+        "focus-receipt wage-1 applied a useful-recall 0.1"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    },
+    {
+      "tool": "energy",
+      "name": "used-energy-settled-with-unused-refund",
+      "skill": "tools-energy-close",
+      "arguments": [
+        [
+          "CognitiveEnergyLeaseReceiptV1",
+          [
+            "CognitiveEnergyStateV1",
+            "energy-1",
+            1,
+            "cognitive-energy-milliunit",
+            [
+              "PolicyAllocatedCapacityV1",
+              100,
+              "policy-1"
+            ],
+            100,
+            0,
+            0,
+            "event-driven",
+            "sleep-wake-independent",
+            "truth-separate",
+            "value-separate",
+            "priority-separate",
+            "provider-wallet-separate",
+            [
+              "AuthorityCountsV1",
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "authority-none"
+          ],
+          [
+            "CognitiveEnergyLeaseProposalV1",
+            "lease-1",
+            "energy-1",
+            1,
+            "work-1",
+            "observe",
+            "cognitive-energy-milliunit",
+            10,
+            "policy-allocation-only",
+            "provider-call-authority-false",
+            "effect-authority-false",
+            [
+              "AuthorityCountsV1",
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "authority-none"
+          ],
+          [
+            "CognitiveEnergyStateV1",
+            "energy-1",
+            2,
+            "cognitive-energy-milliunit",
+            [
+              "PolicyAllocatedCapacityV1",
+              100,
+              "policy-1"
+            ],
+            90,
+            10,
+            0,
+            "event-driven",
+            "sleep-wake-independent",
+            "truth-separate",
+            "value-separate",
+            "priority-separate",
+            "provider-wallet-separate",
+            [
+              "AuthorityCountsV1",
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "authority-none"
+          ],
+          "reserved",
+          "provider-call-authority-false",
+          "effect-authority-false",
+          [
+            "AuthorityCountsV1",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "authority-none"
+        ],
+        [
+          "CognitiveEnergyLeaseTerminalV1",
+          "lease-1",
+          "cognitive-energy-milliunit",
+          4,
+          "outcome-1",
+          [
+            "AuthorityCountsV1",
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "authority-none"
+        ]
+      ],
+      "expected_native": null,
+      "contains_native": [
+        "100 policy-1) 96 0 4",
+        "CognitiveEnergyLeaseClosureReceiptV1",
+        "work-outcome-not-truth"
+      ],
+      "authority": "none",
+      "qualification": "banked synthetic; not executed by reading this example"
+    }
+  ]
+}

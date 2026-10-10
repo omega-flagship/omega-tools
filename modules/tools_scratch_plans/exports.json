@@ -1,0 +1,105 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "31f8897dd807946bed718396681ef5a03ce097b298440463ec70e9858dd871e7",
+    "catalog.metta": "30b3eea1aac694de32cb143ee6e54826c1859a90704a6c1cd080136de7136fd4",
+    "signatures.metta": "f5645ebda3f60f5ee6c5bfdb23e6f40babde13c9f176806eaba137948f369c91",
+    "skills.metta": "7d31e062f3bb92bbdc1707f4976693ad75bf31b1c39a7b247780a08570094bbd",
+    "src/law.metta": "982323da334c7bc09bd3a198952125825f39ab9633cd69f70f08059dfaf76f93"
+  },
+  "callables": [
+    {
+      "name": "tools-scratch-plans--promote",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-scratch-promote",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ScratchHeadSampleV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ScratchPromotionProposalV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ScratchPromotionSampleV1",
+      "arities": [
+        7
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

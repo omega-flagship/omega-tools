@@ -1,0 +1,371 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "novelty-inspection-grant-v1": "tools-novelty--novelty-inspection-grant-v1",
+    "novelty-inspection-genesis-v1": "tools-novelty--novelty-inspection-genesis-v1"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "sha256": "3325bae69dacf5f12d6fd32c3d3390c591392663de9f59f24a4606d70794af9a"
+    },
+    {
+      "path": "historical-source:lib_omegaclaw_contracts.metta",
+      "sha256": "86a8e998aec33506ad0211e53d2aa88d05746b9d590dc3b3c34690a2e45126c0"
+    },
+    {
+      "path": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "sha256": "fa70f4b9ff75f7b892e8a17956da408ca804c96d462bb6acc105c1cfcd97ee18"
+    }
+  ],
+  "equations": [
+    {
+      "function": "cci-byte-valid?",
+      "projected_function": "tools-novelty--cci-byte-valid?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "cb2921f67b10bd5d2580d32e9797a9d21764181148af54fa1e48e4fac28b89fd"
+    },
+    {
+      "function": "cci-bytes-valid?",
+      "projected_function": "tools-novelty--cci-bytes-valid?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "7d19c159f0eb4e5a1f57e3e8b178cff55b086b1521a23ba2507d5ff2478932b4"
+    },
+    {
+      "function": "cci-frame-valid-with-limit?",
+      "projected_function": "tools-novelty--cci-frame-valid-with-limit?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "5f8c76ce46037f81f28f8ed57518ae027259ae797b6948857b550786e43f3e2c"
+    },
+    {
+      "function": "cci-frames-valid-with-limits?",
+      "projected_function": "tools-novelty--cci-frames-valid-with-limits?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "c3ba8b20b1f4bfa8e597561291955f3fb1f63790b954fc20d2098e4c971f0c2b"
+    },
+    {
+      "function": "cci-frames-valid?",
+      "projected_function": "tools-novelty--cci-frames-valid?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "f45997d8d892d9d4c6bb1dc7178e4e639bc09629a412ccbd09cb46d5eeef9969"
+    },
+    {
+      "function": "cci-nonnegative-integer?",
+      "projected_function": "tools-novelty--cci-nonnegative-integer?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "176bb9a4a16e93b825cd8abadd6baad92a6f8f9e8761e1278e42a81b59333267"
+    },
+    {
+      "function": "cci-source-valid?",
+      "projected_function": "tools-novelty--cci-source-valid?",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "314084d4e0c7e1cf8503e5fa41b5a9cdc95c5e9b5cdc92cda3b393da77162baf"
+    },
+    {
+      "function": "contract-present?",
+      "projected_function": "tools-novelty--contract-present?",
+      "source": "historical-source:lib_omegaclaw_contracts.metta",
+      "equation_sha256": "6b009767f69ff56f1d8d2ac6b0a6c6fabeaab180d116b04c07103eb9e0626006"
+    },
+    {
+      "function": "cycle-composer-ingress-digest-request",
+      "projected_function": "tools-novelty--cycle-composer-ingress-digest-request",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "e7556b7405df400b80b104cabedcfdd1ae2f2eb8b92b321263fdb2eef5b6682e"
+    },
+    {
+      "function": "cycle-composer-ingress-fact",
+      "projected_function": "tools-novelty--cycle-composer-ingress-fact",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "f7c08e75ac6030072ee9635159fe0e9c08a6e4a5e187c6cac43e924ce4395a09"
+    },
+    {
+      "function": "cycle-composer-ingress-refusal",
+      "projected_function": "tools-novelty--cycle-composer-ingress-refusal",
+      "source": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "equation_sha256": "5e980fe30e32c5438fe2f6a9d91dd08a03d94a84c66fbccf1a4d6a1d3f5ed200"
+    },
+    {
+      "function": "novelty-active-digest?",
+      "projected_function": "tools-novelty--novelty-active-digest?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "64e66a958dd162b73e489bdf41f88cd718c655b6cd552398265a67695f61183a"
+    },
+    {
+      "function": "novelty-append",
+      "projected_function": "tools-novelty--novelty-append",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "3385898056e582aa9a79588a48111bdbab54a1f4548cd7a9687b5dc581ed8304"
+    },
+    {
+      "function": "novelty-arrival-access",
+      "projected_function": "tools-novelty--novelty-arrival-access",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "0208b4124e6cb43a8114185ede79890094da9b4ef5561a436a07e7f7f98f8c8f"
+    },
+    {
+      "function": "novelty-arrival-digest",
+      "projected_function": "tools-novelty--novelty-arrival-digest",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "964efaf2e4d559b95c7ae9178b7087323d16645c824f6b5c2b274639e03cb6dd"
+    },
+    {
+      "function": "novelty-arrival-evidence",
+      "projected_function": "tools-novelty--novelty-arrival-evidence",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "0a7e281dc83d409d5501f41d76f87b8259b8a058692240ba6d9c350e944076bd"
+    },
+    {
+      "function": "novelty-arrival-id",
+      "projected_function": "tools-novelty--novelty-arrival-id",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "712dd0909749b6cac5b0fa768ac7d80a0a039d6d6771b5a2b08c192ae628fbeb"
+    },
+    {
+      "function": "novelty-arrival-ref",
+      "projected_function": "tools-novelty--novelty-arrival-ref",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "cf263865d00e6c74497d45d338a9980d9cd0becb029f89659ff2e242d8bbf84b"
+    },
+    {
+      "function": "novelty-arrival-valid-for-digest?",
+      "projected_function": "tools-novelty--novelty-arrival-valid-for-digest?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "eee0b449df7d35976945b64eed3504c467a8407555429b2457a84e36713ac3b3"
+    },
+    {
+      "function": "novelty-charge-count",
+      "projected_function": "tools-novelty--novelty-charge-count",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "22314c5264e9fe0760f9dcb85ec8313be9887f98c05ef831390111bd71047359"
+    },
+    {
+      "function": "novelty-charge-source",
+      "projected_function": "tools-novelty--novelty-charge-source",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "fb4a1ebfe45bae7f09e6561d84193db10f0e7c96869b9b371ebeff7aa70d17d6"
+    },
+    {
+      "function": "novelty-charges-valid?",
+      "projected_function": "tools-novelty--novelty-charges-valid?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "9ce00b0782a740e22ec2088fee6ff2170e4998f0b9ba32cfb724bb1ed5dd3722"
+    },
+    {
+      "function": "novelty-content-evidence-seen?",
+      "projected_function": "tools-novelty--novelty-content-evidence-seen?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "d5ca0199c85c8ce3784e00db54093bb2d3bf9eccc2b30a83d0663f1a0df86214"
+    },
+    {
+      "function": "novelty-grant-digest",
+      "projected_function": "tools-novelty--novelty-grant-digest",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "028198def13128be3eeb7415ef96b8bb08e8a3219b74b8d28cb45018f4fca73f"
+    },
+    {
+      "function": "novelty-grant-expires-at",
+      "projected_function": "tools-novelty--novelty-grant-expires-at",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "1f14f270073f9170da0cc2f10cfc923861aee03e4faf0791e32aafb0b796e4ae"
+    },
+    {
+      "function": "novelty-grant-id",
+      "projected_function": "tools-novelty--novelty-grant-id",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "2cc6af97d2b16079adc2a2072f4fdb4f05d6b2182ab30cdf54bdc264fd2e7e82"
+    },
+    {
+      "function": "novelty-grant-id-member?",
+      "projected_function": "tools-novelty--novelty-grant-id-member?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "c3f48d8de7b69caad78b93b3f8bbd9bcf1276ce86884e6443787090aac2e9802"
+    },
+    {
+      "function": "novelty-grant-valid-for?",
+      "projected_function": "tools-novelty--novelty-grant-valid-for?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "8618c85cbbf8e23313d56ec2c3282cff95504c23f3f7821c1245a12d859d5c36"
+    },
+    {
+      "function": "novelty-grants-valid?",
+      "projected_function": "tools-novelty--novelty-grants-valid?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "3b96f2ee07d79a0f6955d5fa823c92672b3a558ccf0ab62752f0f101bad9dfa7"
+    },
+    {
+      "function": "novelty-increment-charge",
+      "projected_function": "tools-novelty--novelty-increment-charge",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "8b49766ec8babc6f8afd4d9b94f8583dbfe47bbfffb6de5acd58c82c55c938ec"
+    },
+    {
+      "function": "novelty-ingress-source",
+      "projected_function": "tools-novelty--novelty-ingress-source",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "dd0a3e368ddf3a10a8a2fd569ed90ea87c56582399e73420a64a577597fe7e14"
+    },
+    {
+      "function": "novelty-inspection-genesis-v1",
+      "projected_function": "tools-novelty--novelty-inspection-genesis-v1",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "187e8fd57e3b72083877258c7c12229300bc94ef5c3778db67b4832ae4bc74f6"
+    },
+    {
+      "function": "novelty-inspection-grant-bound-v1",
+      "projected_function": "tools-novelty--novelty-inspection-grant-bound-v1",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "bbd6a833b30ed41a46d8e40a842899b9ad2ea83b3a25145dfef59562711fa7b9"
+    },
+    {
+      "function": "novelty-inspection-grant-v1",
+      "projected_function": "tools-novelty--novelty-inspection-grant-v1",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "b901e38d8cd87dee8150317418981c46b20caf73c752ed14f33b38a2dd0ef404"
+    },
+    {
+      "function": "novelty-inspection-refusal",
+      "projected_function": "tools-novelty--novelty-inspection-refusal",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "bcf8cd0ca60e18232b33a2e1257741823e13a89683aeccd8db89fe62c355528a"
+    },
+    {
+      "function": "novelty-list-unique?",
+      "projected_function": "tools-novelty--novelty-list-unique?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "de7f6cf3e824cbe1c0d0ef50dd01685ef1c0376131e1f14950a4f61e856bf751"
+    },
+    {
+      "function": "novelty-member?",
+      "projected_function": "tools-novelty--novelty-member?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "2bd51a7fb274366586d15021f613dd2c9f4b6fb5635bfb9d867f661e2a0cf567"
+    },
+    {
+      "function": "novelty-nonnegative-integer?",
+      "projected_function": "tools-novelty--novelty-nonnegative-integer?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "b285144de3d76275d484be1ed1dcd73a2f30165a00ec5e91ebbbc62903ab71b7"
+    },
+    {
+      "function": "novelty-policy-access",
+      "projected_function": "tools-novelty--novelty-policy-access",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "0079eb77dd0640e6c3b257c7f50cfdd516a04253b9a9246a882962ffdba72a4b"
+    },
+    {
+      "function": "novelty-policy-grant-cycles",
+      "projected_function": "tools-novelty--novelty-policy-grant-cycles",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "1b3fa86ccee340aa1da26b303e2e555eff27977236e87ae682d0b71f64b9074d"
+    },
+    {
+      "function": "novelty-policy-grant-nanos",
+      "projected_function": "tools-novelty--novelty-policy-grant-nanos",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "4621c68561188c4663b9275755371e44559bfdc948b289ba4bab956cb22fa04c"
+    },
+    {
+      "function": "novelty-policy-id",
+      "projected_function": "tools-novelty--novelty-policy-id",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "c0b471683bd614deab499bdd228e60c429eccce4365c2346dbd74df4b852d9af"
+    },
+    {
+      "function": "novelty-policy-max-active",
+      "projected_function": "tools-novelty--novelty-policy-max-active",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "e43c7bb9a501d8a16e82a6569b0908961472c6b8b5b835e7e34c78f767cef46a"
+    },
+    {
+      "function": "novelty-policy-source-limit",
+      "projected_function": "tools-novelty--novelty-policy-source-limit",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "30873eee20b0e2fb5b81e1fe46a2f8381bd11d47de6ed7bf5cc3839349aef2f4"
+    },
+    {
+      "function": "novelty-policy-sources",
+      "projected_function": "tools-novelty--novelty-policy-sources",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "7719b356b7aae25ee1cfe0408196fb3904d1b764df377d26afe1d38735d58676"
+    },
+    {
+      "function": "novelty-policy-valid?",
+      "projected_function": "tools-novelty--novelty-policy-valid?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "a63b8fd87a5e1a52d4ded7d3ccf217c1a62768f74ca8051853d51ea1f2e51dee"
+    },
+    {
+      "function": "novelty-positive-integer?",
+      "projected_function": "tools-novelty--novelty-positive-integer?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "c95ed2a2fae82ffd4a6b283864532a1a722058f515624e187365395c6865f645"
+    },
+    {
+      "function": "novelty-present-list?",
+      "projected_function": "tools-novelty--novelty-present-list?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "ab10ebedc42b7ceb2bf94ff01414c18faccd8e82fd6ad6f5cc3f2269bda5e04c"
+    },
+    {
+      "function": "novelty-retain-at-observation",
+      "projected_function": "tools-novelty--novelty-retain-at-observation",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "ec98a63019bfcffc8260ec272282824140dbcba43695518c7d9a7e2b25517fb6"
+    },
+    {
+      "function": "novelty-seen-digest",
+      "projected_function": "tools-novelty--novelty-seen-digest",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "67d77fcc7c97f9fe1590d293fbcd33062105b5aa72fa7e371eb8cbb5b0da2f07"
+    },
+    {
+      "function": "novelty-seen-evidence",
+      "projected_function": "tools-novelty--novelty-seen-evidence",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "e176018e84dd433dfa853bb3813d7ecae085b3f6fce80a67c0a11d40f5218354"
+    },
+    {
+      "function": "novelty-seen-id",
+      "projected_function": "tools-novelty--novelty-seen-id",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "bb14a9463b308807a0022a7a3882c8435727f0ea0bf8a934db56f60654f0486c"
+    },
+    {
+      "function": "novelty-seen-id-member?",
+      "projected_function": "tools-novelty--novelty-seen-id-member?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "cb2502191d8ba6f0fa2ad36fe4392d8419824af5442e94d19d0f88dabb645512"
+    },
+    {
+      "function": "novelty-seen-shape?",
+      "projected_function": "tools-novelty--novelty-seen-shape?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "423754fb786da6d123a977a50d5ff216596815357cf263abbb00069d5665802c"
+    },
+    {
+      "function": "novelty-seen-valid?",
+      "projected_function": "tools-novelty--novelty-seen-valid?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "78ed9caa5b3fb73ff55b61c41d433d0d71a34fc5722381ebbc93effa9f20e2fb"
+    },
+    {
+      "function": "novelty-source-charge-count",
+      "projected_function": "tools-novelty--novelty-source-charge-count",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "99d99456169b118a7f3c0ead5648c034eefabd022dcd659f97147d5863d0e1e9"
+    },
+    {
+      "function": "novelty-source-charge-member?",
+      "projected_function": "tools-novelty--novelty-source-charge-member?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "e87bdc789e51197620aebdb790c6eeb615ecf3cd00d6f2699c67870c30fae4b2"
+    },
+    {
+      "function": "novelty-state-valid-for?",
+      "projected_function": "tools-novelty--novelty-state-valid-for?",
+      "source": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "equation_sha256": "d612cb821328850992964aceed4bbeb6b6b939b32b57fe0d355264e9d56324db"
+    }
+  ]
+}

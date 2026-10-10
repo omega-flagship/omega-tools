@@ -1,0 +1,54 @@
+{
+  "tool": "predictive-learning",
+  "module": "tools_predictive_learning",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-prediction-score",
+      "arguments": [
+        "prediction",
+        "target"
+      ],
+      "semantics": "Binary prequential Brier scoring; reject target leakage, mismatched context and invalid probabilities.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": "../../admission.json#/skills/tools-prediction-score"
+    }
+  ],
+  "source_ids": [
+    "source-9f16bfe390f76eaa"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Prototype contracts; not a demonstrated lifelong learner.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Prediction-before-target binary Brier scoring; no trained world model or concept learner.",
+  "examples": [
+    "brier-score-before-target",
+    "target-leakage-refused",
+    "mismatched-context-refused"
+  ],
+  "module_id": "omegahive.tools.predictive_learning",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "first-slice-candidate"
+}

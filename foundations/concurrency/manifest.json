@@ -1,0 +1,91 @@
+{
+  "id": "omegahive.tools.concurrency-recipes",
+  "version": "0.1.1-candidate",
+  "parent_pack": "omegahive.tools.metta-foundations",
+  "classification": "typed recipe around engine builtins",
+  "status": "private offline review candidate; not installed or admitted",
+  "provides": [
+    "parallel-map",
+    "mutex-counter",
+    "transaction-counter"
+  ],
+  "consumes": [
+    "runtime:petta",
+    "sandbox:run"
+  ],
+  "effects": [
+    "job-local-write"
+  ],
+  "authority": "none",
+  "default_enabled": false,
+  "engine": {
+    "id": "PeTTa",
+    "commit": "ae66fa8e41dcd5539d614706bd4e5cfb34f9608d",
+    "licence": "MIT",
+    "attribution": "Patrick Hammer, 2025; standard builtins are not OmegaDot inventions",
+    "source_pins": {
+      "src/translator.pl": "628b0de73489bc1518a255bb061929b2fe5183ff28318fa495802228bd290a63",
+      "src/spaces.pl": "907d362c72bcfe82c03b44e14b1632449b327fa3c0dcdb5743051e827f7c9557",
+      "src/metta.pl": "11285f8180b0af7fbb9ec98ab1a369826607c57ca2735213d052abefe2b4f6ad",
+      "python/petta/__init__.py": "948d610e6ce4f5a15be3a8dd4f45a6cd10cf68d5cf1213bb96c514a35c355485",
+      "python/helper.pl": "da780bbf5c348960f192643305ad4014eec58fa028b9e7c2c11585eac35c5313",
+      "LICENSE": "451e08f082f06f100facd2ef99f3c661155a7a433af091889d4c04e264838ce5"
+    },
+    "runtime_source_pins": {
+      "SWI-Prolog library(thread):concurrent_and/2": {
+        "module": "thread",
+        "predicate": "concurrent_and/2",
+        "source_sha256": "bf007d4752f446205dfda66ffc3638d5a8c977fdb802a58073836e3a1167a217"
+      }
+    }
+  },
+  "origin": {
+    "builtin_author": "PatrickHammer",
+    "licence": "MIT",
+    "omega_contribution": "Closed typed recipes, deterministic projection, examples and qualification; not the builtin algorithms",
+    "example": "examples/mutex_and_transaction.metta",
+    "example_sha256": "2ac119368505b8ea95c7bf1aa9d7560b29109221d7d7d85a3032f30376eac20f"
+  },
+  "bounds": {
+    "tasks_max": 8,
+    "input_initial_absolute_max": 10000,
+    "delta_absolute_max": 100,
+    "native_parent_seconds_max": 2,
+    "parent_inferences_max": 1000000,
+    "shared_job_seconds": 7,
+    "shared_process_cpu_seconds": 5,
+    "child_inference_budget": "not provided; finite fixed arithmetic/update branches only",
+    "partial_results": false
+  },
+  "held": [
+    "arbitrary parallel expressions",
+    "persistent or caller-selected AtomSpaces",
+    "external-effect transactions",
+    "cross-mind scheduler",
+    "automatic parallel recall deployment"
+  ],
+  "source_pins": {
+    "LICENSE.PeTTa": "451e08f082f06f100facd2ef99f3c661155a7a433af091889d4c04e264838ce5",
+    "check_conformance.py": "b5a33dba6e79de988ea4327df0fb1cde8138d8521f81c5716d14e9a099d6f814",
+    "examples.json": "3e076fa8cddcb817cdab93852b0e49af92f53921ce279bfa8ce5cdd1c9639d59",
+    "recipe_api.py": "9413ccd6089250b921b017280b1242bea97b326aa6414566832bbcbff02658f8",
+    "request.schema.json": "fe2527feec4e09dfa4752abfeceb8e88aacf51b63f8bcb5e17748fe099297a66",
+    "result.schema.json": "547592fe14aa38736431a715b141a29a5d1cf0e1558091a1de59adfb085d0a5f",
+    "runner.py": "9179925d7aedb66be842b2df47936a887935c5f16bd937b62c8bf77f45e5ec7b",
+    "runtime_guard.py": "d058c76e6d00531eb386f1b8d7035056edaa67c05b0a66e2ba3c900f7f8ccf47",
+    "runtime_pin.json": "a6f8c42f97360fa59bbd5abe2d6af6c3381a9c3cc99142c8c36108969f3f3eab",
+    "worker.py": "7736e3ee124fbc59ebf413afa98dda1c64dc7276504f78c5701741fd3fbc8acb"
+  },
+  "qualification_suite": "omega-tools-concurrency-r1",
+  "slots": [
+    "parallel-symbolic-branches",
+    "synchronized-job-updates",
+    "logical-job-transactions"
+  ],
+  "input_schema": "request.schema.json",
+  "result_schema": "result.schema.json",
+  "qualification": {
+    "level": "static corrected candidate; native/target checks pending",
+    "source": "Kimi tools-062-delta fix-first; original native evidence not successor acceptance"
+  }
+}

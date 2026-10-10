@@ -1,0 +1,958 @@
+{
+  "schema": "omega-tools-foundation-examples/v1",
+  "cases": [
+    {
+      "id": "branch-order-and-multiplicity",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-collect",
+        "input": {
+          "values": [
+            {
+              "literal": "alpha"
+            },
+            {
+              "literal": "beta"
+            },
+            {
+              "literal": "alpha"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (\"alpha\" \"beta\" \"alpha\"))"
+      ]
+    },
+    {
+      "id": "empty-branches",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-collect",
+        "input": {
+          "values": []
+        }
+      },
+      "expected": [
+        "(FoundationResult ())"
+      ]
+    },
+    {
+      "id": "two-edge-join",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-join",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "b"
+              },
+              {
+                "literal": "c"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "d"
+              }
+            ],
+            [
+              {
+                "literal": "d"
+              },
+              {
+                "literal": "e"
+              }
+            ]
+          ],
+          "variables": [
+            "from",
+            "via",
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "from"
+              },
+              {
+                "variable": "via"
+              }
+            ],
+            [
+              {
+                "variable": "via"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ],
+          "project": [
+            {
+              "variable": "from"
+            },
+            {
+              "variable": "to"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult ((FoundationBinding \"a\" \"c\") (FoundationBinding \"a\" \"e\")))"
+      ]
+    },
+    {
+      "id": "literal-restricted-binding",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-join",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "c"
+              },
+              {
+                "literal": "d"
+              }
+            ]
+          ],
+          "variables": [
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ],
+          "project": [
+            {
+              "variable": "to"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult ((FoundationBinding \"b\")))"
+      ]
+    },
+    {
+      "id": "empty-join",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-join",
+        "input": {
+          "edges": [],
+          "variables": [
+            "from",
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "from"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ],
+          "project": [
+            {
+              "variable": "from"
+            },
+            {
+              "variable": "to"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult ())"
+      ]
+    },
+    {
+      "id": "local-retract-and-duplicate-semantics",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "local-space",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "b"
+              },
+              {
+                "literal": "c"
+              }
+            ]
+          ],
+          "retract": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ]
+          ],
+          "variables": [
+            "from",
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "from"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ],
+          "project": [
+            {
+              "variable": "from"
+            },
+            {
+              "variable": "to"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (Before ((FoundationBinding \"a\" \"b\") (FoundationBinding \"a\" \"b\") (FoundationBinding \"b\" \"c\"))) (After ((FoundationBinding \"b\" \"c\"))))"
+      ]
+    },
+    {
+      "id": "local-empty-next-job",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "local-space",
+        "input": {
+          "edges": [],
+          "retract": [],
+          "variables": [
+            "from",
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "from"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ],
+          "project": [
+            {
+              "variable": "from"
+            },
+            {
+              "variable": "to"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (Before ()) (After ()))"
+      ]
+    },
+    {
+      "id": "unique-order-and-multiplicity",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-unique",
+        "input": {
+          "values": [
+            {
+              "literal": "b"
+            },
+            {
+              "literal": "a"
+            },
+            {
+              "literal": "b"
+            },
+            {
+              "literal": "c"
+            },
+            {
+              "literal": "a"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (\"b\" \"a\" \"c\"))"
+      ]
+    },
+    {
+      "id": "unique-empty",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-unique",
+        "input": {
+          "values": []
+        }
+      },
+      "expected": [
+        "(FoundationResult ())"
+      ]
+    },
+    {
+      "id": "unique-singleton",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-unique",
+        "input": {
+          "values": [
+            {
+              "literal": "a"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (\"a\"))"
+      ]
+    },
+    {
+      "id": "unique-all-duplicates",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "branch-unique",
+        "input": {
+          "values": [
+            {
+              "literal": "a"
+            },
+            {
+              "literal": "a"
+            },
+            {
+              "literal": "a"
+            }
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (\"a\"))"
+      ]
+    },
+    {
+      "id": "count-empty",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [],
+          "variables": [
+            "a",
+            "b"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "a"
+              },
+              {
+                "variable": "b"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 0))"
+      ]
+    },
+    {
+      "id": "count-duplicates",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ]
+          ],
+          "variables": [
+            "a",
+            "b"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "a"
+              },
+              {
+                "variable": "b"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 3))"
+      ]
+    },
+    {
+      "id": "count-two-step-join",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "b"
+              },
+              {
+                "literal": "c"
+              }
+            ],
+            [
+              {
+                "literal": "b"
+              },
+              {
+                "literal": "d"
+              }
+            ]
+          ],
+          "variables": [
+            "from",
+            "via",
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "from"
+              },
+              {
+                "variable": "via"
+              }
+            ],
+            [
+              {
+                "variable": "via"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 2))"
+      ]
+    },
+    {
+      "id": "count-literal-restriction",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "c"
+              }
+            ],
+            [
+              {
+                "literal": "b"
+              },
+              {
+                "literal": "d"
+              }
+            ]
+          ],
+          "variables": [
+            "to"
+          ],
+          "patterns": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "variable": "to"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 2))"
+      ]
+    },
+    {
+      "id": "count-no-variables",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ]
+          ],
+          "variables": [],
+          "patterns": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "b"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 2))"
+      ]
+    },
+    {
+      "id": "count-without-binding-list",
+      "request": {
+        "schema": "omega-tools-foundation-request/v1",
+        "recipe": "pattern-count",
+        "input": {
+          "edges": [
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ],
+            [
+              {
+                "literal": "a"
+              },
+              {
+                "literal": "a"
+              }
+            ]
+          ],
+          "variables": [
+            "a",
+            "b",
+            "c"
+          ],
+          "patterns": [
+            [
+              {
+                "variable": "a"
+              },
+              {
+                "variable": "b"
+              }
+            ],
+            [
+              {
+                "variable": "b"
+              },
+              {
+                "variable": "c"
+              }
+            ]
+          ]
+        }
+      },
+      "expected": [
+        "(FoundationResult (FoundationCount 256))"
+      ]
+    },
+    {
+      "id": "parallel-greenhouse",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "parallel-map",
+        "input": {
+          "tasks": [
+            {
+              "id": "north",
+              "value": 18,
+              "increment": 2
+            },
+            {
+              "id": "south",
+              "value": 21,
+              "increment": -1
+            }
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "parallel-map",
+        "rows": [
+          {
+            "id": "north",
+            "value": 20
+          },
+          {
+            "id": "south",
+            "value": 20
+          }
+        ]
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "parallel-workshop",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "parallel-map",
+        "input": {
+          "tasks": [
+            {
+              "id": "stock",
+              "value": 9,
+              "increment": -2
+            },
+            {
+              "id": "incoming",
+              "value": 3,
+              "increment": 4
+            },
+            {
+              "id": "empty",
+              "value": 0,
+              "increment": 0
+            }
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "parallel-map",
+        "rows": [
+          {
+            "id": "stock",
+            "value": 7
+          },
+          {
+            "id": "incoming",
+            "value": 7
+          },
+          {
+            "id": "empty",
+            "value": 0
+          }
+        ]
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "mutex-five-workers",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "mutex-counter",
+        "input": {
+          "initial": 37,
+          "increments": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "mutex-counter",
+        "initial": 37,
+        "value": 42
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "mutex-mixed-updates",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "mutex-counter",
+        "input": {
+          "initial": 0,
+          "increments": [
+            5,
+            -2,
+            3,
+            -1,
+            0,
+            4,
+            -4,
+            1
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "mutex-counter",
+        "initial": 0,
+        "value": 6
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "transaction-commit",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "transaction-counter",
+        "input": {
+          "initial": 42,
+          "delta": 5,
+          "commit": true
+        }
+      },
+      "expected": {
+        "recipe": "transaction-counter",
+        "initial": 42,
+        "value": 47,
+        "committed": true
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "transaction-rollback",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "transaction-counter",
+        "input": {
+          "initial": 42,
+          "delta": 5,
+          "commit": false
+        }
+      },
+      "expected": {
+        "recipe": "transaction-counter",
+        "initial": 42,
+        "value": 42,
+        "committed": false
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    }
+  ]
+}

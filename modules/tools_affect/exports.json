@@ -1,0 +1,99 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "d35f9947b99d555de0b0bb90d7a6f21a5c7c0f79f7a5ad0addab075031ba66a3",
+    "catalog.metta": "5567ae16b487f10197cca8eb797ca8b46ebcd6107eea2389b55fc4826bd476e2",
+    "signatures.metta": "445e94213e160de6ef4b5df8ec7f3bdfcc277105f31a952a63e7db07818811f8",
+    "skills.metta": "8f95bcfd314cffacdefc9d41caf797dfe416b1e5acdc93502f8974c06a3b70d5",
+    "src/law.metta": "f1e90037d182d98ff99b038e232ab658c9a57fdca514e9e648cb59362e171b9b"
+  },
+  "callables": [
+    {
+      "name": "tools-affect--appraise",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-rest-appraise",
+      "arities": [
+        1
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RestPressureSampleV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RestSuggestionSampleV1",
+      "arities": [
+        3,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

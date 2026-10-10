@@ -1,0 +1,105 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "00e7c37f8945121a98fdfac1224547d29cd78f6a8a2f2a7c65e60bf380c47e85",
+    "catalog.metta": "d300fe211901e33c5a95e04740b904921c81b976df708d0acdb7c327a9a2379d",
+    "signatures.metta": "fa6d271bdf6df4cd2ab2c986d27adf632df07cac5fc7887b04e460f0bc540712",
+    "skills.metta": "97dabcac36068df62235b751bb55d531c78e38fe3f1735f1ab7c04809f90abfe",
+    "src/law.metta": "de5436af85e7b31e12c6670b94dcd8f4fa9db66ce7028f0deb4481e9d01a9dcf"
+  },
+  "callables": [
+    {
+      "name": "tools-home-assistant--propose",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-home-propose",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HomeDeviceSampleV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HomeLightIntentSampleV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HomeServiceProposalSampleV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

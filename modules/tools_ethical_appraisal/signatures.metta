@@ -1,0 +1,1 @@
+(SkillSignature tools-ethical-compare (Arg metta-raw left) (Arg metta-raw right) (Arg metta-raw beings) (Arg metta-raw patterns) (Arg metta-raw impacts) (Arg metta-raw influences) (Arg metta-raw floors))

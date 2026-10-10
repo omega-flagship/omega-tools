@@ -1,0 +1,18 @@
+{
+  "id": "omega-tools",
+  "name": "Tools",
+  "version": "0.6.3",
+  "contract": "0.2",
+  "description": "20 advisory modules, 12 sets and eight typed transient MeTTa recipes; exact host grants and release pins required.",
+  "module": "program.py",
+  "capabilities": [
+    "sandbox:run"
+  ],
+  "icon": "spark",
+  "app": {
+    "open_stage": "map",
+    "theme": {
+      "motif": "constellation"
+    }
+  }
+}

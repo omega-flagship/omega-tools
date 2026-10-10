@@ -1,0 +1,240 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "70bf6f14ff4344f364201430a8e56aeded6689b4a037d03bee9c92ff2c4a6dcc",
+    "catalog.metta": "bd8123f2e6311a69f0755653a8a0337ba149327af3d1fabecf9281c684331685",
+    "signatures.metta": "b386e7e7bdba65f5155611030c5750e999b86a0c70c7863a0d8fe98974cebae3",
+    "skills.metta": "9f2db27e9a45c2c8a903c29649f59729e2372b12760755acdd0fc439fe49c5fd",
+    "src/law.metta": "985d9e2c3a1da980c54583351f24b59f6783359c587eee0966bdc3f7fe5c32a7"
+  },
+  "callables": [
+    {
+      "name": "tools-belief-appraise",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-abs",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-admit",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-c2w",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-c2w-capped",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-epsilon",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-exact-intersection-size",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-exact-intersection-size-with-seen",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-exact-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-exact-unique-size",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-exact-unique-size-with-seen",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-geq",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-jaccard",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-max",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-min",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-profile",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-support-admit",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-support-floor",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-tcon",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--immune-w2c",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-belief-governance--prov-revise",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-provenance-revise",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "abs-math",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "admitted",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "quarantined",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "rejected",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "stv",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "union-atom",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

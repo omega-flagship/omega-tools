@@ -1,0 +1,76 @@
+{
+  "tool": "novelty",
+  "module": "tools_novelty",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-novelty-genesis",
+      "arguments": [
+        "policy",
+        "observation-time"
+      ],
+      "semantics": "Create an inspect-only quota/expiry state proposal.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    },
+    {
+      "name": "tools-novelty-inspect",
+      "arguments": [
+        "policy",
+        "state",
+        "ingress",
+        "digest-result",
+        "arrival"
+      ],
+      "semantics": "Propose a bounded inspect-only opportunity; no premise, value, resource or capability grant.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-6960087067a5562f",
+    "native-92f6c3a76acfbd57",
+    "native-60871c82ee1fccb6",
+    "native-ff9f756fc5e41f20"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Research nomination cannot grant network, spending or publication authority.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Source/quota/expiry-bound inspect-only opportunity proposal; no research executor or external permission.",
+  "examples": [
+    "novelty-genesis-bounded",
+    "inspect-only-lease",
+    "unlisted-source-refused"
+  ],
+  "module_id": "omegahive.tools.novelty",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

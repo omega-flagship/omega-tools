@@ -1,0 +1,20 @@
+id = "omegahive.tools.living_intent"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-intent-bind", "skill:tools-intent-return"]
+requires = ["runtime:petta"]
+
+[market]
+title = "LivingIntent and commitment continuity"
+summary = "Current projection binding and stale-return refusal; no autonomous goal creation."
+family = "living-intent"
+origin = "donor"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

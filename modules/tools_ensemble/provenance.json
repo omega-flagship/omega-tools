@@ -1,0 +1,68 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "omegav2-ee-claim-relation": "tools-ensemble--omegav2-ee-claim-relation"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "sha256": "8bf1bb4ec9409644045ca02f5604614b9b9271cd69e73aad32af4a6b0c7b4d76"
+    }
+  ],
+  "equations": [
+    {
+      "function": "omegav2-ee-claim-coordinate",
+      "projected_function": "tools-ensemble--omegav2-ee-claim-coordinate",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "1d5afaf2919c05b5d34ab2d007ad60ab29066b8b75d5338f88356c97ad7b2b34"
+    },
+    {
+      "function": "omegav2-ee-claim-polarity",
+      "projected_function": "tools-ensemble--omegav2-ee-claim-polarity",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "d973ce51ab306cae5a9ca8415f7327ae4774265f551ff45415ee19a8ef197a4f"
+    },
+    {
+      "function": "omegav2-ee-claim-relation",
+      "projected_function": "tools-ensemble--omegav2-ee-claim-relation",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "213a34c7b180d82b827bcf74107e7228182f312e51bf98f0650e94bad6349711"
+    },
+    {
+      "function": "omegav2-ee-claim-status-known?",
+      "projected_function": "tools-ensemble--omegav2-ee-claim-status-known?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "1b8e62e9fa0abe5ec019d8179db04491a87c08e2b78eef47e1b7323850e20fa2"
+    },
+    {
+      "function": "omegav2-ee-claim-valid?",
+      "projected_function": "tools-ensemble--omegav2-ee-claim-valid?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "7298f458fc1dc4c173524f6368d8d526ffe81e74fa088de520d69d2736ceb819"
+    },
+    {
+      "function": "omegav2-ee-nonnegative-integer?",
+      "projected_function": "tools-ensemble--omegav2-ee-nonnegative-integer?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "209b5004c1ce031f5c350053096652a1150f42422f237d12ffd01db75a366bdb"
+    },
+    {
+      "function": "omegav2-ee-opposite-polarity?",
+      "projected_function": "tools-ensemble--omegav2-ee-opposite-polarity?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "3535ae93aeb2a73b8eab7f4f55fb78fec8d6b1cf077b1a7304aa46e3b7d30034"
+    },
+    {
+      "function": "omegav2-ee-polarity-known?",
+      "projected_function": "tools-ensemble--omegav2-ee-polarity-known?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "612f54808e7d5831f6c5a688a524c41e2b095ee8284e2291c58a5af3239183a4"
+    },
+    {
+      "function": "omegav2-ee-present?",
+      "projected_function": "tools-ensemble--omegav2-ee-present?",
+      "source": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "equation_sha256": "13e5cc2970f216cd8e9c978add56409dfb2155945a775460ed93d52ffc20e257"
+    }
+  ]
+}

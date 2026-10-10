@@ -1,0 +1,146 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "dbb2914af5be85b6305bef142c2fe5cf3f615664b3bac9835fce1a949b4ec679",
+    "catalog.metta": "32c6bdbe46b3337fda043678b34212ed6f7390c006fd21c0f79b859ac171399c",
+    "signatures.metta": "5feb2d51cbf3107044fbfbac305091441379700ab4e56c9093238a8506de4d93",
+    "skills.metta": "4e7ce9921abe9d9da1da10f111263a8b7456e1fb442ff7b8059ab6cc1ae2c34b",
+    "src/law.metta": "cead43da2f4cdceca1d25b6f98af473527cb486b8e8ec4e807229edec55f9f82"
+  },
+  "callables": [
+    {
+      "name": "tools-ensemble--omegav2-ee-claim-coordinate",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-claim-polarity",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-claim-relation",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-claim-status-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-claim-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-nonnegative-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-opposite-polarity?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-polarity-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble--omegav2-ee-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ensemble-compare",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "EnsembleClaimCoordinateV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "EnsembleClaimV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "EnsembleRelationV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

@@ -1,0 +1,553 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "3e78fb76fca7d4d88ac8d3de945b3bfd6c84c8c279e853a0ae7af3dc75a79a72",
+    "catalog.metta": "ede08788be434fd31a377afeab750ee63a303a5b3007a0f33f8670d092bc5e40",
+    "signatures.metta": "19c4f0dfa27a6a6cfa503c0718b98964a29a8e6dd11b7bf43d78132856900dce",
+    "skills.metta": "4aaa147c634fbeaec2229bd261d518b2ed4195664f07a0111887d742e3e5e987",
+    "src/law.metta": "acb60e38139883d73d147950dc85875a346b318b86ab15847d67ba6b1a6783b3"
+  },
+  "callables": [
+    {
+      "name": "tools-novelty--cci-byte-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-bytes-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-frame-valid-with-limit?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-frames-valid-with-limits?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-frames-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-nonnegative-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cci-source-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--contract-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cycle-composer-ingress-digest-request",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--cycle-composer-ingress-fact",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--cycle-composer-ingress-refusal",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-active-digest?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-append",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-access",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-digest",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-evidence",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-ref",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-arrival-valid-for-digest?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-charge-count",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-charge-source",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-charges-valid?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-content-evidence-seen?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grant-digest",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grant-expires-at",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grant-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grant-id-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grant-valid-for?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-grants-valid?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-increment-charge",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-ingress-source",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-inspection-genesis-v1",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-inspection-grant-bound-v1",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-inspection-grant-v1",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-inspection-refusal",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-list-unique?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-nonnegative-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-access",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-grant-cycles",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-grant-nanos",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-max-active",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-source-limit",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-sources",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-policy-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-positive-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-present-list?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-retain-at-observation",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-digest",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-evidence",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-id-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-shape?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-seen-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-source-charge-count",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-source-charge-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty--novelty-state-valid-for?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty-genesis",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-novelty-inspect",
+      "arities": [
+        5
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CycleComposerIngressDigestRequest",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CycleComposerIngressDigestResult",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CycleComposerIngressFrame",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CycleComposerIngressInput",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CycleComposerIngressRefusal",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "InboundFact",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyArrivalV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyGrantV1",
+      "arities": [
+        11
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyInspectionDecisionV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyInspectionPolicyV1",
+      "arities": [
+        7
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyInspectionRefusalV1",
+      "arities": [
+        3,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyInspectionStateV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltyQuarantineCheckV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltySeenArrivalV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "NoveltySourceChargeV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3,
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "novelty-grant",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "size-atom",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

@@ -1,0 +1,54 @@
+{
+  "tool": "substrates",
+  "module": "tools_substrates",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-substrate-check",
+      "arguments": [
+        "capabilities",
+        "request"
+      ],
+      "semantics": "Compare declared required features with a pinned substrate capability observation; no migration or ambient runtime probe.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-779ed3b895fd9b55"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "PeTTa current target; MORK/Jetta remain separate port/research work.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Declared feature-fit inspection; no backend migration, MORK/Jetta implementation or automatic runtime discovery.",
+  "examples": [
+    "declared-feature-fit",
+    "missing-mork-feature-not-invented",
+    "bad-substrate-shape-refused"
+  ],
+  "module_id": "omegahive.tools.substrates",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

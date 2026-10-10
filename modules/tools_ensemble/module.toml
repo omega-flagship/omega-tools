@@ -1,0 +1,20 @@
+id = "omegahive.tools.ensemble"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-ensemble-compare"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Formal reasoning ensemble"
+summary = "Typed claim-coordinate relationship classification; no reasoner activation or TV fusion."
+family = "ensemble"
+origin = "donor"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

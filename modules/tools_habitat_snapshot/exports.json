@@ -1,0 +1,102 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "0c8a2fe3ad12e54083e1f234b89f3c37becf96ccd6da229a039523417a12505e",
+    "catalog.metta": "53d24efafb26e2faf030c92cddce94c51536aeb7f5a363d4641ac5886b427713",
+    "signatures.metta": "bb1c7e2164b92efe60b31e48be0e93e6ef2c909903b53e0d191769bddd9c2a70",
+    "skills.metta": "e69ab522da48a2f02c0174e73ee1d78db8e51bc0f635da50065a149578de3db8"
+  },
+  "callables": [
+    {
+      "name": "tools-habitat-can-grant-effect?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-habitat-entry-room",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-habitat-filter",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-habitat-room",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HabitatObservationV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HabitatRoomViewV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HabitatSnapshotV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

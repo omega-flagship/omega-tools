@@ -1,0 +1,194 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "f1fb7e017b29ba95abbe9025617061ff6870239ad2a0693e9de0f1db48842857",
+    "catalog.metta": "1c7ef4e078ba2b370cc560a4b31de2881343aed69b9d4b6ad90280ea0389656c",
+    "signatures.metta": "9ed16b97a88cc4cf098a710ac85b931c8aef1ab21104e0bd138aefb1b0c4918c",
+    "skills.metta": "6ad7937a416527f82d8b56dcc2228ae4814a8f1ce3202866af2f6ae91d6207bb",
+    "src/law.metta": "49c5f1da501145c8efa84f445274b3d3ce0e4d5bce0b17d786b6dc05f1145baa"
+  },
+  "callables": [
+    {
+      "name": "tools-energy--omegav2-cognitive-energy-close-v1",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-cognitive-energy-lease-proposal-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-cognitive-energy-lease-receipt-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-cognitive-energy-reserve-v1",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-cognitive-energy-state-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-ew-known-work-mode?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-ew-ref-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-ew-safe-nonnegative-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy--omegav2-ew-safe-positive-integer?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-energy-close",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-energy-reserve",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "AuthorityCountsV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyLeaseClosureReceiptV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyLeaseProposalV1",
+      "arities": [
+        12
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyLeaseReceiptV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyLeaseRefusalV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyLeaseTerminalV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CognitiveEnergyStateV1",
+      "arities": [
+        15
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "PolicyAllocatedCapacityV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

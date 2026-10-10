@@ -1,0 +1,20 @@
+id = "omegahive.tools.belief_governance"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-belief-appraise", "skill:tools-provenance-revise"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Epistemic immune system"
+summary = "Coherence/support classification and overlap-aware revision; no proof of truth or canonical admission."
+family = "belief-governance"
+origin = "donor"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

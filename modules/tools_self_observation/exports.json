@@ -1,0 +1,251 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "82152f0d62f56605f15a32c709638c0eb1adf8eab13a5eaf5def4506a825cb62",
+    "catalog.metta": "3c741523c08e50a7064d0804a5fe3b3313825bd8cd29618dd6d5ee7fd1c65a49",
+    "signatures.metta": "ab88036c6b8c52b0f9a919357cda26b7255a8c8a7f13d5f3784af6bff4ddccb9",
+    "skills.metta": "6ae6a627466013f5351eaa9f85367d9fbc189375124760820eb7584c2e7a6571",
+    "src/law.metta": "da6940a14b092f645505d10871e6bb8dccf40a7aa4bf46691b7c250aba2fc31d"
+  },
+  "callables": [
+    {
+      "name": "tools-self-observation--so-current-mechanism-readback",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-evidence-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-evidence-ids",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-evidence-list-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-evidence-ref",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-evidence-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-focus-binding-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-focus-evidence-present?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-list-unique?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-receipt-refs",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-state-from-evidence",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-states",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-turn-binding-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-self-observation--so-readback-within?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-self-readback",
+      "arities": [
+        3
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentFocusBindingV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismEvidenceSetV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismEvidenceV1",
+      "arities": [
+        7
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismGeneralizationV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismReadbackRefusalV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismReadbackV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismReceiptRefV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismStateRefusalV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentMechanismStateV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "CurrentTurnBindingV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MechanismOutputDigestV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MechanismRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

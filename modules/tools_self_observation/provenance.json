@@ -1,0 +1,110 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "so-current-mechanism-readback": "tools-self-observation--so-current-mechanism-readback"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "sha256": "7720691ab1a7c2a4fc98de882119ab75f00adea655103430685e9518b20c519f"
+    }
+  ],
+  "equations": [
+    {
+      "function": "so-current-mechanism-readback",
+      "projected_function": "tools-self-observation--so-current-mechanism-readback",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "1aaad9eba9ec2a43090862af4fab1ed308d97566dc4c1fc0d4234432a95f0024"
+    },
+    {
+      "function": "so-readback-evidence-id",
+      "projected_function": "tools-self-observation--so-readback-evidence-id",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "c5f64aa8e67ead1505a6b0919cbd8dd7fe0789c8799170f7ff5dee087f39a7cd"
+    },
+    {
+      "function": "so-readback-evidence-ids",
+      "projected_function": "tools-self-observation--so-readback-evidence-ids",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "76eae6e59fdf91ecac84fbe06e1474effff4229330eddedc2895fe423f746849"
+    },
+    {
+      "function": "so-readback-evidence-list-valid?",
+      "projected_function": "tools-self-observation--so-readback-evidence-list-valid?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "0428e365c095d1de6bcc08bff7fdbb66754a46ee31209d03018f3b5de0691b85"
+    },
+    {
+      "function": "so-readback-evidence-ref",
+      "projected_function": "tools-self-observation--so-readback-evidence-ref",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "31e5cc0c3ade5e0c90a5e7d47a417ecb0463060996f5617e532620e37c22eb44"
+    },
+    {
+      "function": "so-readback-evidence-valid?",
+      "projected_function": "tools-self-observation--so-readback-evidence-valid?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "f14b7c19fab683d7ce6b1324ce024fa1acbb7c7e753ec544132d2fec6b5e924c"
+    },
+    {
+      "function": "so-readback-focus-binding-valid?",
+      "projected_function": "tools-self-observation--so-readback-focus-binding-valid?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "6ff03c8438e64a6639dab2704ee578a8f4794a0180f985fd567839ce0ea61dad"
+    },
+    {
+      "function": "so-readback-focus-evidence-present?",
+      "projected_function": "tools-self-observation--so-readback-focus-evidence-present?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "cfb55494e1d377f01c7721c1f916b0dfbbccb69f764c2ebbe700dbdd68887d07"
+    },
+    {
+      "function": "so-readback-list-unique?",
+      "projected_function": "tools-self-observation--so-readback-list-unique?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "814f2ffa11812cb4781fe6cd3352ff1a37e9dcf36bebb976db688bad0ce8b22c"
+    },
+    {
+      "function": "so-readback-member?",
+      "projected_function": "tools-self-observation--so-readback-member?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "7e6380cc68fd92e18ff3bc2f3486cac330efb6eabe72124f260b035392052138"
+    },
+    {
+      "function": "so-readback-present?",
+      "projected_function": "tools-self-observation--so-readback-present?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "97d9010de1edaf130f37826778b5c70e3c32ce26e2919d0693abc4f966e75d3a"
+    },
+    {
+      "function": "so-readback-receipt-refs",
+      "projected_function": "tools-self-observation--so-readback-receipt-refs",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "1c0e0f257eb2186993d205532f2764db4067c8dccd7d783d259b2c821ccb3252"
+    },
+    {
+      "function": "so-readback-state-from-evidence",
+      "projected_function": "tools-self-observation--so-readback-state-from-evidence",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "1078a9689280b9926e04fed4874b5591d2005845f89c23ff4340e3c50e78ac86"
+    },
+    {
+      "function": "so-readback-states",
+      "projected_function": "tools-self-observation--so-readback-states",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "43a56e24a0593fca402e15f45b790c303c6b4bac80cc4455f581587a9a6f7568"
+    },
+    {
+      "function": "so-readback-turn-binding-valid?",
+      "projected_function": "tools-self-observation--so-readback-turn-binding-valid?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "af6a26886202213c932440f4cc6d032df4a7ce1a1255b15760900c2e143bcfc0"
+    },
+    {
+      "function": "so-readback-within?",
+      "projected_function": "tools-self-observation--so-readback-within?",
+      "source": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "equation_sha256": "8bdc3efa85ff45c646a158a65b872994e235c27b39bd51a1bc956a46f0ed69d6"
+    }
+  ]
+}

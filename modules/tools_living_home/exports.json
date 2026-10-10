@@ -1,0 +1,99 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "a250a7c05efa42d3480f40621f67dd82577fe74e90d9b11f6b81a4cacc7bba31",
+    "catalog.metta": "980e7bb936d5f518e0d8dfbefd989917788e9066dfc09bf36acb26d0eac9f17c",
+    "signatures.metta": "c985428f86d76dc58452bf6615dd773175d91ed17c4ad32eb75958ec70cb4c2b",
+    "skills.metta": "22b328bdd7bfeaa88185567cf01004dfc3532cf4362f6dd45c9f9298aef11b53",
+    "src/law.metta": "9084beae33f74bdd01d9ed46d33dbb63ec34915b8209fe7c64db69a7a053aeb5"
+  },
+  "callables": [
+    {
+      "name": "tools-habitat-stage",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-living-home--stage",
+      "arities": [
+        1
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HabitatReadinessSampleV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "HabitatStageSuggestionV1",
+      "arities": [
+        3,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

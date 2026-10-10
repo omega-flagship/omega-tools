@@ -1,0 +1,54 @@
+{
+  "tool": "living-home",
+  "module": "tools_living_home",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-habitat-stage",
+      "arguments": [
+        "readiness"
+      ],
+      "semantics": "Describe the next stage in the physical-awareness/household-understanding/delegated-management arc; policy and relationship knowledge stay separate.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-49797251a5b16ca7",
+    "source-c3fef77033ec1205"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Staged theory/product scope; relationships never authenticate users or grant authority.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Staged readiness guidance preserving awareness/relationships/control destination; no household surveillance or management daemon.",
+  "examples": [
+    "understanding-requires-consent",
+    "living-home-retains-destination",
+    "fallback-required"
+  ],
+  "module_id": "omegahive.tools.living_home",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "catalogue-only-physical-contract-required"
+}

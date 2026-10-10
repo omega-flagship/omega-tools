@@ -1,0 +1,58 @@
+{
+  "tool": "atom-recall",
+  "module": "tools_atom_recall",
+  "version": "0.1.0",
+  "origin": "exact-native-donor",
+  "skills": [
+    {
+      "name": "tools-atom-recall",
+      "arguments": [
+        "request-id",
+        "query-keys",
+        "entries"
+      ],
+      "semantics": "Recall candidate references by explicit symbolic keys; reconcile with semantic search later.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-3b26203a1f005ce4",
+    "donor-v2_atom_recall"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Native sample tested separately; neither whole-memory retrieval nor truth/authority.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Exact-key candidate recall; no semantic retrieval or whole-history context builder.",
+  "examples": [
+    "exact-key-not-semantic",
+    "recall-multi-key-order",
+    "recall-empty",
+    "recall-no-match",
+    "recall-cannot-authorize"
+  ],
+  "module_id": "omegahive.tools.atom_recall",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

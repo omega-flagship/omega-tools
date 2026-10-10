@@ -1,0 +1,296 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "ef1aa5379f74c74816d9a6a0861c586c47a3f0aaa6bcc9ee6fe9d265d858e3bd",
+    "catalog.metta": "8f712ddba3a5a2cb4a75f933ffa7b47d404725acf49740a759dd0c456c5fa360",
+    "signatures.metta": "9c0ea4860959d5696be524fd12b5e8cc343c58ff176d31475973fc78fe8b0f48",
+    "skills.metta": "3f42d25eb5abeee320a142de011d3f2e5eb040073d9b486d2873ca0e690a1af3",
+    "src/law.metta": "93a0957883f90c609ceaa88fb788a5bcb6da4204dfbf5a259ffda6cc4de1afc4"
+  },
+  "callables": [
+    {
+      "name": "tools-ethical-appraisal--flourishing-all-beings-no-worse?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-all-patterns-no-worse?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-any-being-strict?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-any-pattern-strict?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-being-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-claim-supported?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-direct-polarity?",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-dominates?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-edge-propagates?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-floor-reasons",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-has-polarity?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-impact-status",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-influence-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-list-within?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-mapping-hash",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-one-hop?",
+      "arities": [
+        6
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-pattern-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-source-class-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-source-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-sources-valid-nonempty?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-sources-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-status-comparable?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-status-no-worse?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-status-strictly-better?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--flourishing-stv-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--resident-epistemic-immune-epsilon",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-ethical-appraisal--resident-epistemic-immune-geq",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-ethical-compare",
+      "arities": [
+        7
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "AffectedBeing",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "EthicalComparisonV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "GovernanceFloor",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Impact",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Influence",
+      "arities": [
+        9
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Source",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "floor-conflict",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "get-metatype",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "stv",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

@@ -1,0 +1,20 @@
+id = "omegahive.tools.standing_values"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-value-transition", "skill:tools-retention-check"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Standing values and retention covenants"
+summary = "Value-transition appraisal and content/access/retention checks; no authenticated adoption or deletion."
+family = "standing-values"
+origin = "donor"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

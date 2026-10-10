@@ -1,0 +1,5 @@
+{
+  "module": "thread",
+  "predicate": "concurrent_and/2",
+  "source_sha256": "bf007d4752f446205dfda66ffc3638d5a8c977fdb802a58073836e3a1167a217"
+}

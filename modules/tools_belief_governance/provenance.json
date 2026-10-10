@@ -1,0 +1,147 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "immune-admit": "tools-belief-governance--immune-admit",
+    "prov-revise": "tools-belief-governance--prov-revise"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_immune.metta",
+      "sha256": "53d245a310206fad9108fe5a9d9c82bb941c4df0f829ff3ca30e3e9752a642bb"
+    }
+  ],
+  "equations": [
+    {
+      "function": "immune-abs",
+      "projected_function": "tools-belief-governance--immune-abs",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "20ecea2376e9bc15f0f72e64b7ac8552716f4bf42f19246963f25b992aa1c82b"
+    },
+    {
+      "function": "immune-admit",
+      "projected_function": "tools-belief-governance--immune-admit",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "4401cc28f87bbea79664c0e2d46705976ca247ba1cfce9e4d7e913037bad6f16"
+    },
+    {
+      "function": "immune-c2w",
+      "projected_function": "tools-belief-governance--immune-c2w",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "e79432fbf57b86954bebfdab520aa6878d13e6b32938d7bc99f8ac878a88f08d"
+    },
+    {
+      "function": "immune-c2w-capped",
+      "projected_function": "tools-belief-governance--immune-c2w-capped",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "ccd2383010996c1258781b5478d14d84615a9f53296916d3253f1400ca120d9c"
+    },
+    {
+      "function": "immune-epsilon",
+      "projected_function": "tools-belief-governance--immune-epsilon",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "f8f081e05b0e4faee9045d10bd7662126e43493ecf8aebdd60ce46d3b5f30a13"
+    },
+    {
+      "function": "immune-exact-intersection-size",
+      "projected_function": "tools-belief-governance--immune-exact-intersection-size",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "627558506070ff4d3d7ee6a17886bb3d0502724b2d7fcf8a771ee99743683519"
+    },
+    {
+      "function": "immune-exact-intersection-size-with-seen",
+      "projected_function": "tools-belief-governance--immune-exact-intersection-size-with-seen",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "8d27c7d512cc9bfa1aaf1556afbd58c7b7379c1cc08951bbc6f6d58020d872b6"
+    },
+    {
+      "function": "immune-exact-member?",
+      "projected_function": "tools-belief-governance--immune-exact-member?",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "0f6bffcc5e7d7d441beabb9a028878051a6c98a38272f15b351b1e87e89af1ae"
+    },
+    {
+      "function": "immune-exact-unique-size",
+      "projected_function": "tools-belief-governance--immune-exact-unique-size",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "1c335bc523e907fd63b6e6d388a4bb306e2b58d044d8392e0c5438beccec5c30"
+    },
+    {
+      "function": "immune-exact-unique-size-with-seen",
+      "projected_function": "tools-belief-governance--immune-exact-unique-size-with-seen",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "2f8ae9ddc1cf256bdc75af9cec58ab58bd087fe4f4ef185c7a80f12c50467ba8"
+    },
+    {
+      "function": "immune-geq",
+      "projected_function": "tools-belief-governance--immune-geq",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "82ad92c5dd32a143d0a4bc5e2d326c3b86de7220bdeb11b502221d2f83bdcac8"
+    },
+    {
+      "function": "immune-jaccard",
+      "projected_function": "tools-belief-governance--immune-jaccard",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "0ef95c685d96aa6b6268fee170bc4c9f6d47b530670ded8b4ba27060222aeb45"
+    },
+    {
+      "function": "immune-max",
+      "projected_function": "tools-belief-governance--immune-max",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "68ec5faeb0545bb542bbc7bd24ac51d702ff5896fa01ca90fb62588f874f9876"
+    },
+    {
+      "function": "immune-min",
+      "projected_function": "tools-belief-governance--immune-min",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "0fdcd9d3ac6dcbd6e64788912ac199716db9603ddc6022a67c00b27a4bb9e738"
+    },
+    {
+      "function": "immune-profile",
+      "projected_function": "tools-belief-governance--immune-profile",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "77dd91d9a500e57bb4dee52cc809ecd07fcf748f1c9164a517bc385d5c77b1b3"
+    },
+    {
+      "function": "immune-profile",
+      "projected_function": "tools-belief-governance--immune-profile",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "d815fa87c64c5b13401e82b58d645437d62097f0174df5bf713ceb3f6eb2d278"
+    },
+    {
+      "function": "immune-profile",
+      "projected_function": "tools-belief-governance--immune-profile",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "b2ec8d414b9ea7583af25ca6f549b12c89e6687e081251730238b8a9b51fff2f"
+    },
+    {
+      "function": "immune-support-admit",
+      "projected_function": "tools-belief-governance--immune-support-admit",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "020d2510cc3af4bf12fbc0e06075c56efbb7ac5e5221532e0602b22bff59196d"
+    },
+    {
+      "function": "immune-support-floor",
+      "projected_function": "tools-belief-governance--immune-support-floor",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "6c5bd535ac321ab7e888325e0fe47fbb44a565934a01aeb572c06018f7666009"
+    },
+    {
+      "function": "immune-tcon",
+      "projected_function": "tools-belief-governance--immune-tcon",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "6cf9831734c2faea98e8b316effb47c3256b0678daaabb8f785f53e5eea4862a"
+    },
+    {
+      "function": "immune-w2c",
+      "projected_function": "tools-belief-governance--immune-w2c",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "e6e4cc30efa1371c6b9c5a3a65ac94d108ca06496677569aeca8c3b89a40e079"
+    },
+    {
+      "function": "prov-revise",
+      "projected_function": "tools-belief-governance--prov-revise",
+      "source": "historical-source:lib_omegaclaw_immune.metta",
+      "equation_sha256": "5bba550f67dafdb95ec9020e129dcf45415aff88441c21582caabdfd03e19875"
+    }
+  ]
+}

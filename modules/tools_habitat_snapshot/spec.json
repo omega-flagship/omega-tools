@@ -1,0 +1,57 @@
+{
+  "tool": "habitat-snapshot",
+  "module": "tools_habitat_snapshot",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-habitat-room",
+      "arguments": [
+        "snapshot",
+        "room"
+      ],
+      "semantics": "Query supplied room observations while preserving snapshot revision and provenance.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-378d1476bc9d37e4",
+    "source-142a6e6bc055731f",
+    "source-630e063bf478b7b8",
+    "source-e46a02a03aeefdc9"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Synthetic native example; no sensor connection or physical control.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Room inspection over supplied synthetic snapshots; no real sensing.",
+  "examples": [
+    "habitat-preserves-revision-provenance",
+    "habitat-unknown-room-empty",
+    "habitat-cannot-authorize"
+  ],
+  "module_id": "omegahive.tools.habitat_snapshot",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "catalogue-only-physical-contract-required"
+}

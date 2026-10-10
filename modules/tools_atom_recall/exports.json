@@ -1,0 +1,459 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "2d4b3ae4038d820c209e35c20eca7d2d71369fe0a45cfc2b8a311d9a5d2b91e9",
+    "catalog.metta": "01bfd605f48c66223dc294079ec619ae973f456cf7d763e98fe7b67d598fbc91",
+    "signatures.metta": "19d63702d9f9d5a2157a2380347ea26d4eb869de8af6cab6945624274b7d48cb",
+    "skills.metta": "77e3ba09afdb21da85c4bd6dff33f6f1db569890fc3cf199ce040fac232d90ad",
+    "src/law.metta": "4efd99cb48df41888fc76602593e537cf82b76d25d754aab624c7ee3eb8c6896"
+  },
+  "callables": [
+    {
+      "name": "atom-memory-entry-keys",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "atom-memory-entry-ref",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "atom-memory-recall-refs",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "atom-memory-recall-v1",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "memory-any-key-present?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "memory-recall-access-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-atom-entry-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-can-grant-effect?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-candidate-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-candidate-source-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-chroma-eligibility-join-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-chroma-identifier-valid?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "memory-recall-chroma-measurement-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-dynamic-page-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-dynamic-page-policy-v2",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-eligible-source-record",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "memory-recall-identifier-codepoints-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-loss-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-relevance-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-source-pair-policy-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-source-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-symbol-first-code?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-symbol-tail-code?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "memory-recall-symbol-tail-codes-valid?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "memory-recall-text-equals?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "memory-ref-present?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-atom-recall",
+      "arities": [
+        3
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "AtomMemoryEntryV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "AtomMemoryRecallDecisionV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallAtomEntryPolicyDecisionV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallAtomEntryPolicyNominationV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallAtomEntryPolicyRefusalV1",
+      "arities": [
+        2,
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidatePolicyDecisionV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidatePolicyNominationV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidatePolicyRefusalV1",
+      "arities": [
+        2,
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidateSourcePolicyDecisionV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidateSourcePolicyNominationV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallCandidateSourcePolicyRefusalV1",
+      "arities": [
+        2,
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaEligibilityJoinDecisionV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaEligibilityJoinNominationV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaEligibilityJoinRefusalV1",
+      "arities": [
+        2,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaMeasurementPolicyDecisionV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaMeasurementPolicyNominationV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallChromaMeasurementPolicyRefusalV1",
+      "arities": [
+        2,
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageDecisionV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageDecisionV2",
+      "arities": [
+        10
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageNominationV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageNominationV2",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageRefusalV1",
+      "arities": [
+        2,
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallDynamicPageRefusalV2",
+      "arities": [
+        2,
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallEligibleAtomV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallIdentifierCodepointsV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallIntegerV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallSourcePairPolicyDecisionV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallSourcePairPolicyNominationV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallSourcePairPolicyRefusalV1",
+      "arities": [
+        2,
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "MemoryRecallTextV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillCardLine",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "none",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

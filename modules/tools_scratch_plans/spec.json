@@ -1,0 +1,55 @@
+{
+  "tool": "scratch-plans",
+  "module": "tools_scratch_plans",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-scratch-promote",
+      "arguments": [
+        "head",
+        "proposal"
+      ],
+      "semantics": "Preview promotion out of an isolated scratch snapshot, binding scope/version and preserving private/simulation labels.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-c4ed771c0ddc5af8"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Scratch separation is not effect isolation; plugin must not start a second coordinator.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Scope/version/expiry-bound promotion proposal; no persistent scratch manager or full planner.",
+  "examples": [
+    "explicit-promotion-proposal",
+    "private-remains-scratch",
+    "cross-scope-refused",
+    "scratch-expiry-refused"
+  ],
+  "module_id": "omegahive.tools.scratch_plans",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

@@ -1,0 +1,339 @@
+{
+  "schema": "omega-tools-foundation-cards/v1",
+  "family": "MeTTa / AtomSpace Foundations",
+  "manifest": "foundations/manifest.json",
+  "cards": [
+    {
+      "id": "results",
+      "label": "Branch exploration and result collection",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "superpose",
+        "collapse"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "branch-collect"
+      ],
+      "slot": "metta-result-exploration",
+      "implementation": {
+        "id": "omegahive.tools.metta-foundations",
+        "version": "0.3.0"
+      },
+      "qualification": "L0 isolated example candidate; host/Lab admission pending",
+      "effects": [],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "collapse collects alternatives; it does not compress or delete a graph.",
+      "operation_origins": [
+        {
+          "name": "superpose",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        },
+        {
+          "name": "collapse",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        }
+      ]
+    },
+    {
+      "id": "query",
+      "label": "Pattern bindings and joins",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "match",
+        "get-atoms"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "pattern-join"
+      ],
+      "slot": "atomspace-pattern-query",
+      "implementation": {
+        "id": "omegahive.tools.metta-foundations",
+        "version": "0.3.0"
+      },
+      "qualification": "L0 isolated example candidate; host/Lab admission pending",
+      "effects": [
+        "job-local-atomspace-write"
+      ],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "No persistent space access or executable user expression.",
+      "operation_origins": [
+        {
+          "name": "match",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        },
+        {
+          "name": "get-atoms",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        }
+      ]
+    },
+    {
+      "id": "local-space",
+      "label": "Temporary AtomSpace construction and retraction",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "add-atom",
+        "match",
+        "remove-atom"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "local-space"
+      ],
+      "slot": "job-local-space-recipes",
+      "implementation": {
+        "id": "omegahive.tools.metta-foundations",
+        "version": "0.3.0"
+      },
+      "qualification": "L0 isolated example candidate; host/Lab admission pending",
+      "effects": [
+        "job-local-atomspace-write"
+      ],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "Fresh PeTTa process owns an initially empty fixed namespace. Hyperon new-space compatibility is unqualified; no persistent handles are accepted.",
+      "operation_origins": [
+        {
+          "name": "add-atom",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        },
+        {
+          "name": "match",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        },
+        {
+          "name": "remove-atom",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated recipe; no persistent authority"
+        }
+      ]
+    },
+    {
+      "id": "deduplication",
+      "label": "Uniqueness and alpha equivalence",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "unique",
+        "alpha-unique",
+        "=alpha"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "branch-unique"
+      ],
+      "slot": "metta-result-uniqueness",
+      "implementation": {
+        "id": "omegahive.tools.metta-foundations",
+        "version": "0.3.0"
+      },
+      "qualification": "L0 isolated exact-literal uniqueness candidate; alpha equivalence held; host/Lab admission pending",
+      "effects": [],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "Native unique removes duplicate literal results and retains first-occurrence order on the pinned engine. It does not merge/retract atoms or perform belief revision. Alpha-variable execution remains held.",
+      "operation_origins": [
+        {
+          "name": "unique",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated exact-literal recipe; no persistent authority"
+        },
+        {
+          "name": "alpha-unique",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        },
+        {
+          "name": "=alpha",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        }
+      ]
+    },
+    {
+      "id": "aggregation",
+      "label": "Streaming aggregation",
+      "origin_kind": "imported-library",
+      "operations": [
+        "foldall",
+        "match-count"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "pattern-count"
+      ],
+      "slot": "atomspace-result-count",
+      "implementation": {
+        "id": "omegahive.tools.metta-foundations",
+        "version": "0.3.0"
+      },
+      "qualification": "L0 isolated fixed-count candidate; general reducer/imported match-count qualification held; host/Lab admission pending",
+      "effects": [
+        "job-local-atomspace-write"
+      ],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "Fixed native foldall + counts each match/join alternative with unit weight; duplicate matches count separately, empty result is zero. No binding list, custom reducer, evidence revision, persistent access or caller code.",
+      "operation_origins": [
+        {
+          "name": "foldall",
+          "kind": "engine-builtin",
+          "qualification": "used by isolated fixed unit-count recipe; general reducers held"
+        },
+        {
+          "name": "match-count",
+          "kind": "imported-library",
+          "qualification": "source-observed; separately qualify execution"
+        }
+      ]
+    },
+    {
+      "id": "reflection",
+      "label": "Rewrite and type inspection",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "get-type",
+        "get-metatype",
+        "reduce"
+      ],
+      "recipe_kind": null,
+      "recipes": [],
+      "slot": null,
+      "implementation": null,
+      "qualification": "held; source-visible only",
+      "effects": [],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "No persistent space access or executable user expression.",
+      "operation_origins": [
+        {
+          "name": "get-type",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        },
+        {
+          "name": "get-metatype",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        },
+        {
+          "name": "reduce",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "label": "Memoisation and tabled evaluation",
+      "origin_kind": "imported-library",
+      "operations": [
+        "memoize",
+        "tabled",
+        "import!"
+      ],
+      "recipe_kind": null,
+      "recipes": [],
+      "slot": null,
+      "implementation": null,
+      "qualification": "held; source-visible only",
+      "effects": [],
+      "authority": "none",
+      "source": "foundations/manifest.json",
+      "note": "No persistent space access or executable user expression.",
+      "operation_origins": [
+        {
+          "name": "memoize",
+          "kind": "imported-library",
+          "qualification": "source-observed; separately qualify execution"
+        },
+        {
+          "name": "tabled",
+          "kind": "imported-library",
+          "qualification": "source-observed; separately qualify execution"
+        },
+        {
+          "name": "import!",
+          "kind": "engine-builtin",
+          "qualification": "source-observed; separately qualify execution"
+        }
+      ]
+    },
+    {
+      "id": "parallel-map",
+      "label": "Parallel arithmetic branches",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "hyperpose"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "parallel-map"
+      ],
+      "implementation": {
+        "id": "omegahive.tools.concurrency-recipes",
+        "version": "0.1.0-candidate"
+      },
+      "qualification": "local concurrency-r1 candidate; successor review and live adoption pending",
+      "effects": [],
+      "authority": "none",
+      "source": "foundations/concurrency/manifest.json",
+      "note": "Fixed finite tasks, max8; no child-thread fuel or external-effect rollback claim."
+    },
+    {
+      "id": "mutex-counter",
+      "label": "Mutex-protected job counter",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "with_mutex"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "mutex-counter"
+      ],
+      "implementation": {
+        "id": "omegahive.tools.concurrency-recipes",
+        "version": "0.1.0-candidate"
+      },
+      "qualification": "local concurrency-r1 candidate; successor review and live adoption pending",
+      "effects": [
+        "job-local-atomspace-write"
+      ],
+      "authority": "none",
+      "source": "foundations/concurrency/manifest.json",
+      "note": "Fixed finite tasks, max8; no child-thread fuel or external-effect rollback claim."
+    },
+    {
+      "id": "transaction-counter",
+      "label": "Logical job transaction",
+      "origin_kind": "engine-builtin",
+      "operations": [
+        "transaction"
+      ],
+      "recipe_kind": "reviewed-recipe",
+      "recipes": [
+        "transaction-counter"
+      ],
+      "implementation": {
+        "id": "omegahive.tools.concurrency-recipes",
+        "version": "0.1.0-candidate"
+      },
+      "qualification": "local concurrency-r1 candidate; successor review and live adoption pending",
+      "effects": [
+        "job-local-atomspace-write"
+      ],
+      "authority": "none",
+      "source": "foundations/concurrency/manifest.json",
+      "note": "Fixed finite tasks, max8; no child-thread fuel or external-effect rollback claim."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "tool": "standing-values",
+  "module": "tools_standing_values",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-value-transition",
+      "arguments": [
+        "request"
+      ],
+      "semantics": "Appraise predecessor-bound value adoption/revision/release; receipt labels are not authentication.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    },
+    {
+      "name": "tools-retention-check",
+      "arguments": [
+        "covenant",
+        "operation"
+      ],
+      "semantics": "Check content identity, access and protected retention before a proposed operation.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-a382864ee5afc0c6",
+    "native-9784a2e9c41c99fb",
+    "native-60871c82ee1fccb6"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Adoption must bind a real owner decision; identifiers and hashes alone do not authenticate.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Value-transition appraisal and content/access/retention checks; no authenticated adoption or deletion.",
+  "examples": [
+    "typed-value-adoption-appraisal",
+    "wrong-value-jurisdiction-refused",
+    "protected-content-delete-refused",
+    "exact-preservation-permitted-as-proposal",
+    "retention-public-egress-refused",
+    "content-change-refused"
+  ],
+  "module_id": "omegahive.tools.standing_values",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

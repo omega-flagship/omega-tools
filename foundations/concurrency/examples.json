@@ -1,0 +1,177 @@
+{
+  "schema": "omega-tools-concurrency-examples/v1",
+  "cases": [
+    {
+      "id": "parallel-greenhouse",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "parallel-map",
+        "input": {
+          "tasks": [
+            {
+              "id": "north",
+              "value": 18,
+              "increment": 2
+            },
+            {
+              "id": "south",
+              "value": 21,
+              "increment": -1
+            }
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "parallel-map",
+        "rows": [
+          {
+            "id": "north",
+            "value": 20
+          },
+          {
+            "id": "south",
+            "value": 20
+          }
+        ]
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "parallel-workshop",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "parallel-map",
+        "input": {
+          "tasks": [
+            {
+              "id": "stock",
+              "value": 9,
+              "increment": -2
+            },
+            {
+              "id": "incoming",
+              "value": 3,
+              "increment": 4
+            },
+            {
+              "id": "empty",
+              "value": 0,
+              "increment": 0
+            }
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "parallel-map",
+        "rows": [
+          {
+            "id": "stock",
+            "value": 7
+          },
+          {
+            "id": "incoming",
+            "value": 7
+          },
+          {
+            "id": "empty",
+            "value": 0
+          }
+        ]
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "mutex-five-workers",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "mutex-counter",
+        "input": {
+          "initial": 37,
+          "increments": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "mutex-counter",
+        "initial": 37,
+        "value": 42
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "mutex-mixed-updates",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "mutex-counter",
+        "input": {
+          "initial": 0,
+          "increments": [
+            5,
+            -2,
+            3,
+            -1,
+            0,
+            4,
+            -4,
+            1
+          ]
+        }
+      },
+      "expected": {
+        "recipe": "mutex-counter",
+        "initial": 0,
+        "value": 6
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "transaction-commit",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "transaction-counter",
+        "input": {
+          "initial": 42,
+          "delta": 5,
+          "commit": true
+        }
+      },
+      "expected": {
+        "recipe": "transaction-counter",
+        "initial": 42,
+        "value": 47,
+        "committed": true
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    },
+    {
+      "id": "transaction-rollback",
+      "request": {
+        "schema": "omega-tools-concurrency-request/v1",
+        "recipe": "transaction-counter",
+        "input": {
+          "initial": 42,
+          "delta": 5,
+          "commit": false
+        }
+      },
+      "expected": {
+        "recipe": "transaction-counter",
+        "initial": 42,
+        "value": 42,
+        "committed": false
+      },
+      "synthetic": true,
+      "load_state": "offline-review-only"
+    }
+  ]
+}

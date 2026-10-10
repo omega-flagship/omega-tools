@@ -1,0 +1,20 @@
+id = "omegahive.tools.scratch_plans"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-scratch-promote"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Scratch AtomSpaces and planning"
+summary = "Scope/version/expiry-bound promotion proposal; no persistent scratch manager or full planner."
+family = "scratch-plans"
+origin = "sample"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

@@ -1,0 +1,58 @@
+{
+  "tool": "home-assistant",
+  "module": "tools_home_assistant",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-home-propose",
+      "arguments": [
+        "observation",
+        "intent"
+      ],
+      "semantics": "Bind a supported light service proposal to explicit target, observation revision and domain; no actuator invocation.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-142a6e6bc055731f",
+    "source-630e063bf478b7b8",
+    "source-e46a02a03aeefdc9",
+    "native-home-bridge-de9efae8068d0947"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Existing optional module, disabled by default; port and exact effect policy review required.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Fresh target/revision-bound on/off service proposal plus dormant donor mapper; no live device action.",
+  "examples": [
+    "specific-light-proposal",
+    "stale-home-refused",
+    "wrong-home-target-refused",
+    "unimplemented-effect-not-suggested"
+  ],
+  "module_id": "omegahive.tools.home_assistant",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "catalogue-only-physical-contract-required"
+}

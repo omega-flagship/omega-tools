@@ -1,0 +1,20 @@
+id = "omegahive.tools.home_assistant"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-home-propose"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Home Assistant body module"
+summary = "Fresh target/revision-bound on/off service proposal plus dormant donor mapper; no live device action."
+family = "home-assistant"
+origin = "sample"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

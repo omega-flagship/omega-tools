@@ -1,0 +1,73 @@
+{
+  "tool": "belief-governance",
+  "module": "tools_belief_governance",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-belief-appraise",
+      "arguments": [
+        "belief",
+        "truth-value",
+        "context"
+      ],
+      "semantics": "Two-gate coherence/support classification; high confidence is not proof of a true premise.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    },
+    {
+      "name": "tools-provenance-revise",
+      "arguments": [
+        "left",
+        "right"
+      ],
+      "semantics": "Discount overlap during revision; no shared-memory admission.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-731389b9e67a5663",
+    "native-79deb7acaf3757f8"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Experimental component contracts; governed memory is not necessarily truthful memory.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Coherence/support classification and overlap-aware revision; no proof of truth or canonical admission.",
+  "examples": [
+    "supported-belief-classification",
+    "ambiguity-quarantine",
+    "low-support-refusal",
+    "shared-provenance-no-double-credit"
+  ],
+  "module_id": "omegahive.tools.belief_governance",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

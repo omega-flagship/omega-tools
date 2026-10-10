@@ -1,0 +1,61 @@
+{
+  "tool": "ethical-appraisal",
+  "module": "tools_ethical_appraisal",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-ethical-compare",
+      "arguments": [
+        "left",
+        "right",
+        "beings",
+        "patterns",
+        "impacts",
+        "influences",
+        "floors"
+      ],
+      "semantics": "Report non-scalar dominance/incomparability and floor conflicts; impact input is supplied evidence.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-3864c924cb3b4735",
+    "native-4574c83a357f2042",
+    "native-c752c0d63d1b758c"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Fixture impacts and constituency coverage are incomplete; protected floors need accountable adoption.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Finite constituency dominance/incomparability and floor-conflict reporting; no universal ethics engine.",
+  "examples": [
+    "non-scalar-dominance",
+    "unknown-impact-incomparable",
+    "protected-floor-reported"
+  ],
+  "module_id": "omegahive.tools.ethical_appraisal",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

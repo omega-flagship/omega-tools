@@ -1,0 +1,1235 @@
+{
+  "version": "omega-tools-inert-input-v2",
+  "status": "full advisory sample schema; exact host qualification pending",
+  "wire": "JSON trees: constructor arrays, list arrays, finite numbers and bounded bare symbols; no expression text",
+  "limits": {
+    "max_input_bytes": 8192,
+    "max_input_nodes": 512,
+    "max_input_depth": 12
+  },
+  "types": {
+    "ref": {
+      "kind": "symbol"
+    },
+    "number": {
+      "kind": "number",
+      "min": 0,
+      "max": 1000000
+    },
+    "integer": {
+      "kind": "integer",
+      "min": 0,
+      "max": 1000000
+    },
+    "probability": {
+      "kind": "number",
+      "min": 0,
+      "max": 1
+    },
+    "mode": {
+      "kind": "enum",
+      "values": [
+        "enabled",
+        "disabled"
+      ]
+    },
+    "native-bool": {
+      "kind": "enum",
+      "values": [
+        "True",
+        "False"
+      ]
+    },
+    "salience": {
+      "kind": "construct",
+      "head": "salience",
+      "fields": [
+        "ref",
+        "number",
+        "number",
+        "native-bool",
+        "ref",
+        "ref"
+      ]
+    },
+    "saliences": {
+      "kind": "list",
+      "max": 64,
+      "item": "salience"
+    },
+    "empty-history": {
+      "kind": "list",
+      "max": 0,
+      "item": "ref"
+    },
+    "state": {
+      "kind": "construct",
+      "head": "focus-state",
+      "fields": [
+        "number",
+        "number",
+        "saliences",
+        "empty-history"
+      ]
+    },
+    "candidate": {
+      "kind": "construct",
+      "head": "focus-candidate",
+      "fields": [
+        "ref",
+        "number",
+        "integer",
+        "ref"
+      ]
+    },
+    "candidates": {
+      "kind": "list",
+      "max": 64,
+      "item": "candidate"
+    },
+    "limit": {
+      "kind": "integer",
+      "min": 0,
+      "max": 64
+    },
+    "event": {
+      "kind": "construct",
+      "head": "focus-event",
+      "fields": [
+        "ref",
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "useful-recall",
+            "retrieval-without-use"
+          ]
+        },
+        "ref"
+      ]
+    },
+    "stv": {
+      "kind": "construct",
+      "head": "stv",
+      "fields": [
+        "probability",
+        "probability"
+      ]
+    },
+    "admission": {
+      "kind": "union",
+      "choices": [
+        {
+          "kind": "construct",
+          "head": "admitted",
+          "fields": [
+            "ref",
+            "stv",
+            "ref"
+          ]
+        },
+        {
+          "kind": "construct",
+          "head": "quarantined",
+          "fields": [
+            "ref",
+            "ref",
+            "stv",
+            "ref"
+          ]
+        },
+        {
+          "kind": "construct",
+          "head": "rejected",
+          "fields": [
+            "ref",
+            "ref",
+            "stv",
+            "ref"
+          ]
+        }
+      ]
+    },
+    "coordinate": {
+      "kind": "construct",
+      "head": "EnsembleClaimCoordinateV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "integer",
+        "integer",
+        "ref"
+      ]
+    },
+    "claim": {
+      "kind": "construct",
+      "head": "EnsembleClaimV1",
+      "fields": [
+        "coordinate",
+        {
+          "kind": "enum",
+          "values": [
+            "positive",
+            "negative"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "active",
+            "stale",
+            "retracted",
+            "superseded"
+          ]
+        }
+      ]
+    },
+    "prediction": {
+      "kind": "construct",
+      "head": "PredictionSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "integer",
+        "probability"
+      ]
+    },
+    "target": {
+      "kind": "construct",
+      "head": "TargetSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "integer",
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 1
+        }
+      ]
+    },
+    "refs": {
+      "kind": "list",
+      "max": 64,
+      "item": "ref"
+    },
+    "quoted": {
+      "kind": "quoted",
+      "max": 128
+    },
+    "atom-entry": {
+      "kind": "construct",
+      "head": "AtomMemoryEntryV1",
+      "fields": [
+        "ref",
+        "refs"
+      ]
+    },
+    "goal-stop": {
+      "kind": "construct",
+      "head": "GoalStopRuleV1",
+      "fields": [
+        "ref",
+        "ref"
+      ]
+    },
+    "goal-state": {
+      "kind": "construct",
+      "head": "GoalLifecycleStateV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "ref",
+        "integer",
+        "integer",
+        "integer",
+        "goal-stop",
+        "ref"
+      ]
+    },
+    "goal-evidence": {
+      "kind": "construct",
+      "head": "GoalProgressEvidenceV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "intent-head": {
+      "kind": "construct",
+      "head": "LivingIntentHeadV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "intent-projection": {
+      "kind": "construct",
+      "head": "LivingIntentProjectionV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "refs",
+        "refs",
+        "refs"
+      ]
+    },
+    "intent-state": {
+      "kind": "construct",
+      "head": "living-intent-state",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "intent-head"
+        },
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "intent-projection"
+        }
+      ]
+    },
+    "intent-binding": {
+      "kind": "construct",
+      "head": "LivingIntentContributionBindingV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "value": {
+      "kind": "construct",
+      "head": "StandingValueV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "value-authority": {
+      "kind": "construct",
+      "head": "StandingValueAuthorityV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "value-transition": {
+      "kind": "construct",
+      "head": "StandingValueTransitionV1",
+      "fields": [
+        "ref",
+        "ref",
+        {
+          "kind": "union",
+          "choices": [
+            {
+              "kind": "enum",
+              "values": [
+                "none"
+              ]
+            },
+            "value"
+          ]
+        },
+        "value",
+        "value-authority"
+      ]
+    },
+    "retention": {
+      "kind": "construct",
+      "head": "RetentionCovenantV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "refs",
+        "ref",
+        "ref"
+      ]
+    },
+    "retention-operation": {
+      "kind": "construct",
+      "head": "RetentionOperationV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "source": {
+      "kind": "construct",
+      "head": "Source",
+      "fields": [
+        "ref",
+        "ref"
+      ]
+    },
+    "sources": {
+      "kind": "list",
+      "max": 64,
+      "item": "source"
+    },
+    "being": {
+      "kind": "construct",
+      "head": "AffectedBeing",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "refs"
+      ]
+    },
+    "impact": {
+      "kind": "construct",
+      "head": "Impact",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "stv",
+        "sources"
+      ]
+    },
+    "floor": {
+      "kind": "construct",
+      "head": "GovernanceFloor",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "sources"
+      ]
+    },
+    "provenance-truth": {
+      "kind": "tuple",
+      "fields": [
+        "probability",
+        "probability",
+        "refs"
+      ]
+    },
+    "turn": {
+      "kind": "construct",
+      "head": "CurrentTurnBindingV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "mechanism-receipt": {
+      "kind": "construct",
+      "head": "CurrentMechanismReceiptRefV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "focus": {
+      "kind": "construct",
+      "head": "CurrentFocusBindingV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "mechanism-receipt",
+        "refs"
+      ]
+    },
+    "mechanism-output": {
+      "kind": "union",
+      "choices": [
+        {
+          "kind": "enum",
+          "values": [
+            "none"
+          ]
+        },
+        {
+          "kind": "construct",
+          "head": "MechanismOutputDigestV1",
+          "fields": [
+            "ref"
+          ]
+        }
+      ]
+    },
+    "mechanism-evidence": {
+      "kind": "construct",
+      "head": "CurrentMechanismEvidenceV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "mechanism-output",
+        "mechanism-receipt"
+      ]
+    },
+    "mechanism-set": {
+      "kind": "construct",
+      "head": "CurrentMechanismEvidenceSetV1",
+      "fields": [
+        "turn",
+        "focus",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "mechanism-evidence"
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "novelty-policy": {
+      "kind": "construct",
+      "head": "NoveltyInspectionPolicyV1",
+      "fields": [
+        "ref",
+        "integer",
+        "integer",
+        "integer",
+        "integer",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "quoted"
+        },
+        "refs"
+      ]
+    },
+    "novelty-state": {
+      "kind": "construct",
+      "head": "NoveltyInspectionStateV1",
+      "fields": [
+        "ref",
+        "integer",
+        "integer",
+        "empty-history",
+        "empty-history",
+        "empty-history"
+      ]
+    },
+    "byte": {
+      "kind": "integer",
+      "min": 0,
+      "max": 255
+    },
+    "ingress-frame": {
+      "kind": "construct",
+      "head": "CycleComposerIngressFrame",
+      "fields": [
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "byte"
+        }
+      ]
+    },
+    "ingress": {
+      "kind": "construct",
+      "head": "CycleComposerIngressInput",
+      "fields": [
+        "quoted",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "ingress-frame"
+        },
+        "integer"
+      ]
+    },
+    "digest-request": {
+      "kind": "construct",
+      "head": "CycleComposerIngressDigestRequest",
+      "fields": [
+        {
+          "kind": "enum",
+          "values": [
+            "sha256"
+          ]
+        },
+        "quoted",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "ingress-frame"
+        }
+      ]
+    },
+    "digest-result": {
+      "kind": "construct",
+      "head": "CycleComposerIngressDigestResult",
+      "fields": [
+        "digest-request",
+        "quoted"
+      ]
+    },
+    "quarantine": {
+      "kind": "construct",
+      "head": "NoveltyQuarantineCheckV1",
+      "fields": [
+        "ref",
+        "quoted",
+        "ref"
+      ]
+    },
+    "arrival": {
+      "kind": "construct",
+      "head": "NoveltyArrivalV1",
+      "fields": [
+        "ref",
+        "ref",
+        "quoted",
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "quarantine"
+      ]
+    },
+    "zero-counts": {
+      "kind": "construct",
+      "head": "AuthorityCountsV1",
+      "fields": [
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 0
+        },
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 0
+        },
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 0
+        },
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 0
+        },
+        {
+          "kind": "integer",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    "capacity": {
+      "kind": "construct",
+      "head": "PolicyAllocatedCapacityV1",
+      "fields": [
+        "integer",
+        "ref"
+      ]
+    },
+    "energy-state": {
+      "kind": "construct",
+      "head": "CognitiveEnergyStateV1",
+      "fields": [
+        "ref",
+        "integer",
+        {
+          "kind": "enum",
+          "values": [
+            "cognitive-energy-milliunit"
+          ]
+        },
+        "capacity",
+        "integer",
+        "integer",
+        "integer",
+        {
+          "kind": "enum",
+          "values": [
+            "event-driven"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "sleep-wake-independent"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "truth-separate"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "value-separate"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "priority-separate"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "provider-wallet-separate"
+          ]
+        },
+        "zero-counts",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "energy-proposal": {
+      "kind": "construct",
+      "head": "CognitiveEnergyLeaseProposalV1",
+      "fields": [
+        "ref",
+        "ref",
+        "integer",
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "infer",
+            "observe",
+            "act",
+            "expand",
+            "retain",
+            "maintain",
+            "rest"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "cognitive-energy-milliunit"
+          ]
+        },
+        "integer",
+        {
+          "kind": "enum",
+          "values": [
+            "policy-allocation-only"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "provider-call-authority-false"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "effect-authority-false"
+          ]
+        },
+        "zero-counts",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "energy-receipt": {
+      "kind": "construct",
+      "head": "CognitiveEnergyLeaseReceiptV1",
+      "fields": [
+        "energy-state",
+        "energy-proposal",
+        "energy-state",
+        {
+          "kind": "enum",
+          "values": [
+            "reserved"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "provider-call-authority-false"
+          ]
+        },
+        {
+          "kind": "enum",
+          "values": [
+            "effect-authority-false"
+          ]
+        },
+        "zero-counts",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "energy-terminal": {
+      "kind": "construct",
+      "head": "CognitiveEnergyLeaseTerminalV1",
+      "fields": [
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "cognitive-energy-milliunit"
+          ]
+        },
+        "integer",
+        "ref",
+        "zero-counts",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "scratch-head": {
+      "kind": "construct",
+      "head": "ScratchHeadSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "integer"
+      ]
+    },
+    "scratch-promotion": {
+      "kind": "construct",
+      "head": "ScratchPromotionSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "integer",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "consolidation": {
+      "kind": "construct",
+      "head": "ConsolidationSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "refs",
+        "refs",
+        "ref",
+        "ref"
+      ]
+    },
+    "rest-pressure": {
+      "kind": "construct",
+      "head": "RestPressureSampleV1",
+      "fields": [
+        "ref",
+        "integer",
+        "integer",
+        "integer",
+        {
+          "kind": "enum",
+          "values": [
+            "available",
+            "unavailable"
+          ]
+        },
+        "ref"
+      ]
+    },
+    "skill-descriptor": {
+      "kind": "construct",
+      "head": "SkillDescriptorSampleV1",
+      "fields": [
+        "ref",
+        "integer",
+        "ref",
+        "ref",
+        "refs",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "substrate": {
+      "kind": "construct",
+      "head": "SubstrateCapabilitiesSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "refs",
+        {
+          "kind": "enum",
+          "values": [
+            "authority-none"
+          ]
+        }
+      ]
+    },
+    "substrate-request": {
+      "kind": "construct",
+      "head": "SubstrateRequestSampleV1",
+      "fields": [
+        "ref",
+        "refs"
+      ]
+    },
+    "habitat-observation": {
+      "kind": "construct",
+      "head": "HabitatObservationV1",
+      "fields": [
+        "ref",
+        "ref",
+        {
+          "kind": "union",
+          "choices": [
+            "ref",
+            "number"
+          ]
+        }
+      ]
+    },
+    "habitat-snapshot": {
+      "kind": "construct",
+      "head": "HabitatSnapshotV1",
+      "fields": [
+        "ref",
+        "ref",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "habitat-observation"
+        }
+      ]
+    },
+    "home-device": {
+      "kind": "construct",
+      "head": "HomeDeviceSampleV1",
+      "fields": [
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "light"
+          ]
+        },
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "on",
+            "off"
+          ]
+        }
+      ]
+    },
+    "home-intent": {
+      "kind": "construct",
+      "head": "HomeLightIntentSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        {
+          "kind": "enum",
+          "values": [
+            "turn-on",
+            "turn-off"
+          ]
+        }
+      ]
+    },
+    "habitat-readiness": {
+      "kind": "construct",
+      "head": "HabitatReadinessSampleV1",
+      "fields": [
+        "ref",
+        "ref",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    }
+  },
+  "skills": {
+    "tools-attention-select": {
+      "arguments": [
+        "mode",
+        "state",
+        "candidates",
+        "limit",
+        "ref",
+        "ref",
+        "ref"
+      ]
+    },
+    "tools-attention-event": {
+      "arguments": [
+        "state",
+        "event",
+        "admission"
+      ]
+    },
+    "tools-ensemble-compare": {
+      "arguments": [
+        "claim",
+        "claim"
+      ]
+    },
+    "tools-prediction-score": {
+      "arguments": [
+        "prediction",
+        "target"
+      ]
+    },
+    "tools-atom-recall": {
+      "arguments": [
+        "ref",
+        "refs",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "atom-entry"
+        }
+      ]
+    },
+    "tools-goal-step": {
+      "arguments": [
+        "goal-state",
+        "goal-evidence",
+        "ref"
+      ]
+    },
+    "tools-intent-bind": {
+      "arguments": [
+        "ref",
+        "ref",
+        "intent-state"
+      ]
+    },
+    "tools-intent-return": {
+      "arguments": [
+        "intent-binding",
+        "intent-state"
+      ]
+    },
+    "tools-value-transition": {
+      "arguments": [
+        "value-transition"
+      ]
+    },
+    "tools-retention-check": {
+      "arguments": [
+        "retention",
+        "retention-operation"
+      ]
+    },
+    "tools-ethical-compare": {
+      "arguments": [
+        "ref",
+        "ref",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "being"
+        },
+        "refs",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "impact"
+        },
+        "empty-history",
+        {
+          "kind": "list",
+          "max": 64,
+          "item": "floor"
+        }
+      ]
+    },
+    "tools-belief-appraise": {
+      "arguments": [
+        "ref",
+        "stv",
+        "ref"
+      ]
+    },
+    "tools-provenance-revise": {
+      "arguments": [
+        "provenance-truth",
+        "provenance-truth"
+      ]
+    },
+    "tools-self-readback": {
+      "arguments": [
+        "turn",
+        "focus",
+        "mechanism-set"
+      ]
+    },
+    "tools-novelty-genesis": {
+      "arguments": [
+        "novelty-policy",
+        "integer"
+      ]
+    },
+    "tools-novelty-inspect": {
+      "arguments": [
+        "novelty-policy",
+        "novelty-state",
+        "ingress",
+        "digest-result",
+        "arrival"
+      ]
+    },
+    "tools-energy-reserve": {
+      "arguments": [
+        "energy-state",
+        "energy-proposal"
+      ]
+    },
+    "tools-energy-close": {
+      "arguments": [
+        "energy-receipt",
+        "energy-terminal"
+      ]
+    },
+    "tools-scratch-promote": {
+      "arguments": [
+        "scratch-head",
+        "scratch-promotion"
+      ]
+    },
+    "tools-consolidation-propose": {
+      "arguments": [
+        "consolidation"
+      ]
+    },
+    "tools-rest-appraise": {
+      "arguments": [
+        "rest-pressure"
+      ]
+    },
+    "tools-skill-nominate": {
+      "arguments": [
+        "skill-descriptor",
+        "refs"
+      ]
+    },
+    "tools-substrate-check": {
+      "arguments": [
+        "substrate",
+        "substrate-request"
+      ]
+    },
+    "tools-habitat-room": {
+      "arguments": [
+        "habitat-snapshot",
+        "ref"
+      ]
+    },
+    "tools-home-propose": {
+      "arguments": [
+        "home-device",
+        "home-intent"
+      ]
+    },
+    "tools-habitat-stage": {
+      "arguments": [
+        "habitat-readiness"
+      ]
+    }
+  },
+  "semantic_boundary": "Shapes do not authenticate labels, attest evidence or admit/persist outputs. Native laws perform appraisal; platform owns transport and call fences.",
+  "refusal_requirements": [
+    "unknown or disabled skill",
+    "unrecognized constructor/arity",
+    "executable/nested code",
+    "variables and bang directives",
+    "oversize/deep/nonfinite input",
+    "unsupported time or inference enforcement"
+  ],
+  "attention_history": "empty synthetic history only; persistent receipt histories require a later schema qualification",
+  "narrow_fields": [
+    "attention history empty",
+    "ethical constraints empty",
+    "novelty retained histories empty",
+    "opaque payloads only bounded references",
+    "no arbitrary expression or nested callable"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "tool": "skill-affordance",
+  "module": "tools_skill_affordance",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-skill-nominate",
+      "arguments": [
+        "descriptor",
+        "available"
+      ],
+      "semantics": "Inspect a versioned descriptor and unmet prerequisites; no invocation or capability grant.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-f9de274f5546c07b"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Discovery is not permission; installation must remain distinct from grants.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Versioned descriptor/prerequisite nomination; no installer or automatic execution grant.",
+  "examples": [
+    "prerequisites-visible-not-permission",
+    "missing-prerequisites-preserved",
+    "forged-descriptor-authority-refused"
+  ],
+  "module_id": "omegahive.tools.skill_affordance",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

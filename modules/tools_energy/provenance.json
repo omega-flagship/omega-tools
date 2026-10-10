@@ -1,0 +1,69 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "omegav2-cognitive-energy-reserve-v1": "tools-energy--omegav2-cognitive-energy-reserve-v1",
+    "omegav2-cognitive-energy-close-v1": "tools-energy--omegav2-cognitive-energy-close-v1"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "sha256": "7664852e0e7b060d96433b4a67dfba3caa8eccddc7ed2cbae082be66a3dc476c"
+    }
+  ],
+  "equations": [
+    {
+      "function": "omegav2-cognitive-energy-close-v1",
+      "projected_function": "tools-energy--omegav2-cognitive-energy-close-v1",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "6029992cf0bed5bb268b93fe2ea909b82b26f2628f5c71420338073a713fbf6d"
+    },
+    {
+      "function": "omegav2-cognitive-energy-lease-proposal-valid?",
+      "projected_function": "tools-energy--omegav2-cognitive-energy-lease-proposal-valid?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "3cb5b120565efe1ac3cbc8cd87c0d983d91c260af6ab1a6fcbf870f13be8c6f0"
+    },
+    {
+      "function": "omegav2-cognitive-energy-lease-receipt-valid?",
+      "projected_function": "tools-energy--omegav2-cognitive-energy-lease-receipt-valid?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "4801608b3ce0a59531eba71895728b6572a6ca3e2a1935cfe634a99fa4dd7a42"
+    },
+    {
+      "function": "omegav2-cognitive-energy-reserve-v1",
+      "projected_function": "tools-energy--omegav2-cognitive-energy-reserve-v1",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "0278bd8e9444516e36a800a535ad6acac6ceff338e5edc173642d75d2f57fded"
+    },
+    {
+      "function": "omegav2-cognitive-energy-state-valid?",
+      "projected_function": "tools-energy--omegav2-cognitive-energy-state-valid?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "46aeded3cae5b6398a9e3d17c3d3a259c7a7fe8d3e5fcdb34b4f0e5fece809bf"
+    },
+    {
+      "function": "omegav2-ew-known-work-mode?",
+      "projected_function": "tools-energy--omegav2-ew-known-work-mode?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "f91f600822f9dee459a2cd0e37b98a316c81b48e89a5e1d2c5bf700f7d9dc5bf"
+    },
+    {
+      "function": "omegav2-ew-ref-present?",
+      "projected_function": "tools-energy--omegav2-ew-ref-present?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "193781611afcef127dc7832d98c121684cb3ce1012d51a541a1dc627be3dda92"
+    },
+    {
+      "function": "omegav2-ew-safe-nonnegative-integer?",
+      "projected_function": "tools-energy--omegav2-ew-safe-nonnegative-integer?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "7f6ff5997f8ef9d17e0cada3fb605abb487d23cf18f94a31296f908b34530b4b"
+    },
+    {
+      "function": "omegav2-ew-safe-positive-integer?",
+      "projected_function": "tools-energy--omegav2-ew-safe-positive-integer?",
+      "source": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "equation_sha256": "671848fd2c099bdaef27d23783dc8a572ad4d26003dae226692ff9de2a7be480"
+    }
+  ]
+}

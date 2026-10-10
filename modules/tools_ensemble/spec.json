@@ -1,0 +1,55 @@
+{
+  "tool": "ensemble",
+  "module": "tools_ensemble",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-ensemble-compare",
+      "arguments": [
+        "left",
+        "right"
+      ],
+      "semantics": "Classify claim agreement, contradiction, mismatch or unknown without merging confidence or choosing truth.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": "../../admission.json#/skills/tools-ensemble-compare"
+    }
+  ],
+  "source_ids": [
+    "source-760ba69e7c8c5e58",
+    "native-d3dbafafcb3165f6"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "NAL/PLN donor interfaces and bounded components; calibration/integration outstanding.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Typed claim-coordinate relationship classification; no reasoner activation or TV fusion.",
+  "examples": [
+    "same-coordinate-agreement",
+    "opposed-claims-preserved",
+    "malformed-claim-unknown"
+  ],
+  "module_id": "omegahive.tools.ensemble",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "first-slice-candidate"
+}

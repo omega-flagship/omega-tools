@@ -1,0 +1,105 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "f385844fa55060d8f9cd7341509d13e2215c679d3499cb3503f9dea051e52401",
+    "catalog.metta": "cbf5a05e5bd699ddeab38a4a0a496d22c8524ea1c2260cb7022e7698dc93a290",
+    "signatures.metta": "69b99c649060bbb798f47a2a859fd69a8bdc047b3b1d629e56fde4dd2414eacc",
+    "skills.metta": "d216f498d10baad4430775f5b68a2e64950becc0452b94b9defade79c016fa44",
+    "src/law.metta": "f3074db67576169bb172b6ea412443ffa7ae9fb0f87feeb844d1605f853d64f5"
+  },
+  "callables": [
+    {
+      "name": "tools-prediction-score",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-predictive-learning--score",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "PredictionSampleV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "PredictionScoreSampleV1",
+      "arities": [
+        7
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "TargetSampleV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

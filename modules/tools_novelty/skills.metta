@@ -1,0 +1,2 @@
+(= (tools-novelty-genesis $policy $observation-time) (ToolsSampleResultV1 novelty (tools-novelty--novelty-inspection-genesis-v1 $policy $observation-time) inspect-simulate authority-none))
+(= (tools-novelty-inspect $policy $state $ingress $digest-result $arrival) (ToolsSampleResultV1 novelty (tools-novelty--novelty-inspection-grant-v1 $policy $state $ingress $digest-result $arrival) inspect-simulate authority-none))

@@ -1,0 +1,2 @@
+(= (tools-attention-select $mode $state $candidates $limit $input-ref $state-digest $observation-digest) (ToolsSampleResultV1 attention (tools-attention--focus-select $mode $state $candidates $limit $input-ref $state-digest $observation-digest) inspect-simulate authority-none))
+(= (tools-attention-event $state $event $admission) (ToolsSampleResultV1 attention (tools-attention--focus-apply $state $event $admission) inspect-simulate authority-none))

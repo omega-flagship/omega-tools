@@ -1,0 +1,1 @@
+(= (tools-ensemble-compare $left $right) (ToolsSampleResultV1 ensemble (EnsembleRelationV1 (tools-ensemble--omegav2-ee-claim-relation $left $right) no-winner no-tv-conversion) inspect-simulate authority-none))

@@ -1,0 +1,20 @@
+id = "omegahive.tools.substrates"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-substrate-check"]
+requires = ["runtime:petta"]
+
+[market]
+title = "AtomSpace substrate adapters"
+summary = "Declared feature-fit inspection; no backend migration, MORK/Jetta implementation or automatic runtime discovery."
+family = "substrates"
+origin = "sample"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

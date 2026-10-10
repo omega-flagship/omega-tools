@@ -1,0 +1,74 @@
+{
+  "tool": "living-intent",
+  "module": "tools_living_intent",
+  "version": "0.1.0",
+  "origin": "projected-native-donor",
+  "skills": [
+    {
+      "name": "tools-intent-bind",
+      "arguments": [
+        "call-id",
+        "episode",
+        "state"
+      ],
+      "semantics": "Bind a call to exactly one current foreground projection.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    },
+    {
+      "name": "tools-intent-return",
+      "arguments": [
+        "binding",
+        "state"
+      ],
+      "semantics": "Refuse stale/wrong-episode/changed-projection returns.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-3a5c1952e8ad7e87",
+    "native-adc7f58eb7dfee95",
+    "native-60871c82ee1fccb6"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Historical component evidence; enduring multi-goal agency remains unproven.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Current projection binding and stale-return refusal; no autonomous goal creation.",
+  "examples": [
+    "bind-complete-current-intent",
+    "intent-return-stale",
+    "intent-wrong-episode",
+    "current-return-bound"
+  ],
+  "module_id": "omegahive.tools.living_intent",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

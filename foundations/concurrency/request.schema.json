@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "omega-tools-concurrency-request/v1",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "parallel-map"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "tasks": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_-]{0,47}$",
+                    "maxLength": 48
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": -10000,
+                    "maximum": 10000
+                  },
+                  "increment": {
+                    "type": "integer",
+                    "minimum": -100,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "id",
+                  "value",
+                  "increment"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "tasks"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "mutex-counter"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "initial": {
+              "type": "integer",
+              "minimum": -10000,
+              "maximum": 10000
+            },
+            "increments": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "integer",
+                "minimum": -100,
+                "maximum": 100
+              }
+            }
+          },
+          "required": [
+            "initial",
+            "increments"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "omega-tools-concurrency-request/v1"
+        },
+        "recipe": {
+          "const": "transaction-counter"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "initial": {
+              "type": "integer",
+              "minimum": -10000,
+              "maximum": 10000
+            },
+            "delta": {
+              "type": "integer",
+              "minimum": -100,
+              "maximum": 100
+            },
+            "commit": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "initial",
+            "delta",
+            "commit"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema",
+        "recipe",
+        "input"
+      ],
+      "additionalProperties": false
+    }
+  ],
+  "$comment": "Unique task IDs are additionally enforced by recipe_api.validate."
+}

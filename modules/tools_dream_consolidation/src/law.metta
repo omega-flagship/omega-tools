@@ -1,0 +1,18 @@
+(= (tools-dream-consolidation--member? $ref $refs)
+ (if (== $refs ()) False (or (== $ref (car-atom $refs)) (tools-dream-consolidation--member? $ref (cdr-atom $refs)))))
+(= (tools-dream-consolidation--unique $refs $seen)
+ (if (== $refs ()) ()
+  (if (tools-dream-consolidation--member? (car-atom $refs) $seen)
+   (tools-dream-consolidation--unique (cdr-atom $refs) $seen)
+   (cons-atom (car-atom $refs) (tools-dream-consolidation--unique (cdr-atom $refs) (cons-atom (car-atom $refs) $seen))))))
+(= (tools-dream-consolidation--overlap? $refs $protected)
+ (if (== $refs ()) False (or (tools-dream-consolidation--member? (car-atom $refs) $protected)
+                            (tools-dream-consolidation--overlap? (cdr-atom $refs) $protected))))
+(= (tools-dream-consolidation--propose $request)
+ (case $request
+  (((ConsolidationSampleV1 $id $sleep-epoch $snapshot $refs $protected shareable-observed $wake-fence)
+    (if (or (not (is-expr $refs)) (not (is-expr $protected))) (ToolsRefusalV1 invalid-reference-lists)
+     (if (tools-dream-consolidation--overlap? $refs $protected) (ToolsRefusalV1 protected-memory)
+      (ConsolidationCandidateSampleV1 $id $sleep-epoch $snapshot
+       (tools-dream-consolidation--unique $refs ()) $wake-fence wake-review-required originals-preserved))))
+   ($invalid (ToolsRefusalV1 private-simulated-or-malformed-source)))))

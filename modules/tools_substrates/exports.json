@@ -1,0 +1,124 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "5cb82952379f261c68428eef9701240f1d35f9ca27557add5b28f136255a520b",
+    "catalog.metta": "6f0a204456d7ba87c3413524b9b5c2df5468bdd6b0ec2dd7696f2a24de3f07c7",
+    "signatures.metta": "2b931792ab5b2b93ec187e254c28a180f4c07f703d7b45201b75ce8280f0c9ce",
+    "skills.metta": "a5c298dd65a0676b5863998d7c00f5a67eba873a95d3f591ac0aeff71cc63c4c",
+    "src/law.metta": "ee412b40caa148f113e2d9b781185cbaad941c9cb74261c85b2ffb524c73451b"
+  },
+  "callables": [
+    {
+      "name": "tools-substrate-check",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-substrates--check",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-substrates--member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-substrates--missing",
+      "arities": [
+        2
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SubstrateCapabilitiesSampleV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SubstrateFitSampleV1",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SubstrateRequestSampleV1",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsRefusalV1",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

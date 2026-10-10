@@ -1,0 +1,60 @@
+{
+  "tool": "goal-compass",
+  "module": "tools_goal_compass",
+  "version": "0.1.0",
+  "origin": "exact-native-donor",
+  "skills": [
+    {
+      "name": "tools-goal-step",
+      "arguments": [
+        "state",
+        "evidence",
+        "successor-version"
+      ],
+      "semantics": "Represent goal lifecycle, bound progress evidence, refuse stale transitions and identify the next direction.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-3a5c1952e8ad7e87",
+    "donor-v2_goal_compass"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Native sample advisory only; no scheduler or authenticated completion.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Native lifecycle transition appraisal; existing Hive Goals retain orchestration.",
+  "examples": [
+    "goal-completion",
+    "goal-self-report-insufficient",
+    "goal-stale-evidence",
+    "goal-wrong-episode",
+    "goal-same-successor",
+    "goal-malformed",
+    "goal-cannot-authorize"
+  ],
+  "module_id": "omegahive.tools.goal_compass",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

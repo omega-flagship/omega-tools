@@ -1,0 +1,54 @@
+{
+  "tool": "affect",
+  "module": "tools_affect",
+  "version": "0.1.0",
+  "origin": "new-theory-derived-sample",
+  "skills": [
+    {
+      "name": "tools-rest-appraise",
+      "arguments": [
+        "state"
+      ],
+      "semantics": "Offer rest, quiet curiosity or foreground work from supplied debt/energy/availability; no claim of sentience or engagement target.",
+      "max_ms": 2000,
+      "max_steps": 1000000,
+      "ceiling_basis": "provisional, not measured reduction counts or execution guarantees",
+      "max_input_bytes": 8192,
+      "max_input_nodes": 512,
+      "max_input_depth": 12,
+      "step_unit": "SWI-Prolog inferences; host must enforce, otherwise refuse activation",
+      "input_schema": null
+    }
+  ],
+  "source_ids": [
+    "source-04c1ca169febdc58"
+  ],
+  "runtime": "PeTTa native",
+  "status": "private isolated sample candidate; not installed",
+  "effect_authority": "none",
+  "state": "explicit input/output only; host owns admission and persistence",
+  "admission_required": [
+    "typed finite inert data; no executable nested expressions",
+    "host evaluation/fuel/size limits",
+    "independent evidence authentication",
+    "no implicit grant from descriptors or memberships"
+  ],
+  "claim_ceiling": "Controller remains unassembled; affect cannot authorize an external action.",
+  "dependencies": {
+    "packages": [],
+    "services": [],
+    "provider_calls": false
+  },
+  "install_qualification": "explicit library resolution, namespace overlap and per-agent policy qualification pending",
+  "sample_scope": "Debt/energy/availability-based rest/quiet-work suggestion; no complete affect or motivation controller.",
+  "examples": [
+    "debt-rests-without-succession",
+    "person-unavailable-no-message",
+    "reserve-protected",
+    "invalid-pressure-refused"
+  ],
+  "module_id": "omegahive.tools.affect",
+  "library": "omegahive-tools",
+  "effects": [],
+  "activation": "disabled-input-admission-pending"
+}

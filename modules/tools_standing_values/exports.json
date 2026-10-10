@@ -1,0 +1,317 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "1d9cae6e6527ae089e77c691ee330f5c4930eb8832d10ff1c2616142c23713c1",
+    "catalog.metta": "ceffd3371eecab4a30dcc1316cd29332b6ac82949c167a9e4149992214f81582",
+    "signatures.metta": "b6c8e571a2f1f8f7a3e91c46f8ded04743744c98dc955003475300b89522d326",
+    "skills.metta": "99e8703e2e0a7a9325c6210d6942db001566845d7dba82d188fe4d072dbdcf1b",
+    "src/law.metta": "c7f4cc0c28f272676a3cc4139f0592b87986de89840b3ee5fe0d5021192cecc0"
+  },
+  "callables": [
+    {
+      "name": "tools-retention-check",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--contract-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-covenant-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-exact-transform?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-exact-transforms-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-guard-operation-bound",
+      "arities": [
+        14
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-guard-operation-v1",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-member?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-mode-transforms-valid?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-mode-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-preserve-allowed?",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-recovery-witness-valid?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-standing-values--retention-release-condition-valid?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-adopt-valid?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-authority-valid-for?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-id",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-jurisdiction",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-jurisdiction-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-predecessor",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-release-valid?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-revise-valid?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-same-subject-and-scope?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-status",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-status-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-subject",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-transition-result",
+      "arities": [
+        5
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-transition-v1",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-standing-values--standing-value-valid?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-value-transition",
+      "arities": [
+        1
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RecoveryWitnessV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RetentionCovenantV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RetentionOperationDecisionV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RetentionOperationRefusalV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "RetentionOperationV1",
+      "arities": [
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        2,
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "StandingValueAuthorityV1",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "StandingValueTransitionDecisionV1",
+      "arities": [
+        7
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "StandingValueTransitionRefusalV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "StandingValueTransitionV1",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "StandingValueV1",
+      "arities": [
+        10
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "is-expr",
+      "arities": [
+        1
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

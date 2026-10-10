@@ -1,0 +1,280 @@
+{
+  "schema": "omega-tools-source-pins/0.1",
+  "recorded_at": "2026-10-03T19:23:51.845183+00:00",
+  "sources": [
+    {
+      "id": "source-3b26203a1f005ce4",
+      "label": "OMEGAV2_D08_MEMORY_RECALL_LINEAGE_CREDIT_AND_SHARED_MEMORY_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D08_MEMORY_RECALL_LINEAGE_CREDIT_AND_SHARED_MEMORY_2026-08-07.md",
+      "sha256": "3b26203a1f005ce4581893ab979b879b2bc35b6672840fba937419a1e34ca2f7",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-5e5e7b79c6b1b85d",
+      "label": "OMEGAV2_D05_SALIENCE_ATTENTIONBANK_AND_FOCUS_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D05_SALIENCE_ATTENTIONBANK_AND_FOCUS_2026-08-07.md",
+      "sha256": "5e5e7b79c6b1b85d0b839d8ecbb9a5e2e9ec9465bc64f654ed91ea080850b3f4",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-3a5c1952e8ad7e87",
+      "label": "OMEGAV2_D07_GOALS_LIVINGINTENT_AND_COMMITMENT_CONTINUITY_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D07_GOALS_LIVINGINTENT_AND_COMMITMENT_CONTINUITY_2026-08-07.md",
+      "sha256": "3a5c1952e8ad7e8775eeaa35ef6784d110279b65337244b9d00dd2fb014980b9",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-a382864ee5afc0c6",
+      "label": "OMEGAV2_D06_STANDING_VALUES_IMPORTANCE_AND_RETENTION_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D06_STANDING_VALUES_IMPORTANCE_AND_RETENTION_2026-08-07.md",
+      "sha256": "a382864ee5afc0c6b58e5991044e3ae4486e134dc0d1246ffb58935661ad9e0a",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-3864c924cb3b4735",
+      "label": "OMEGAV2_D11_FLOURISHING_ETHICAL_GROUND_AND_PROTECTED_FLOORS_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D11_FLOURISHING_ETHICAL_GROUND_AND_PROTECTED_FLOORS_2026-08-07.md",
+      "sha256": "3864c924cb3b473593ce710a483813918df0acc8fae65e10ebd8a398b17419cf",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-731389b9e67a5663",
+      "label": "OMEGAV2_D10_EPISTEMIC_IMMUNE_SYSTEM_AND_BELIEF_GOVERNANCE_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D10_EPISTEMIC_IMMUNE_SYSTEM_AND_BELIEF_GOVERNANCE_2026-08-07.md",
+      "sha256": "731389b9e67a566356f6ce103cd73691d029e592bbb411f1af45f5c9a99f10ba",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-7418a42d1078d769",
+      "label": "OMEGAV2_D09_SELF_OBSERVATION_AND_REVISABLE_SELF_MODEL_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D09_SELF_OBSERVATION_AND_REVISABLE_SELF_MODEL_2026-08-07.md",
+      "sha256": "7418a42d1078d7693c5f0a4e1493c6b560fbac3a4e8e6082e883450e9766a630",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-760ba69e7c8c5e58",
+      "label": "OMEGAV2_D25_FORMAL_REASONING_ENSEMBLE_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D25_FORMAL_REASONING_ENSEMBLE_2026-08-07.md",
+      "sha256": "760ba69e7c8c5e5875060069b7a900efdd5cf4197393838ab56f31ad29276aa2",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-9f16bfe390f76eaa",
+      "label": "OMEGAV2_D26_PREDICTIVE_CODING_AND_CONCEPT_FORMATION_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D26_PREDICTIVE_CODING_AND_CONCEPT_FORMATION_2026-08-07.md",
+      "sha256": "9f16bfe390f76eaa2696fbdb72182dc74eb112ccb0312a14100a3916c04ef1d6",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-c4ed771c0ddc5af8",
+      "label": "OMEGAV2_D27_PLANNING_SCRATCH_AND_TASK_GRAPHS_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D27_PLANNING_SCRATCH_AND_TASK_GRAPHS_2026-08-07.md",
+      "sha256": "c4ed771c0ddc5af8d20cf4aeb8604b4beff13b6292b5b355912cd3ceea10251f",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-6960087067a5562f",
+      "label": "OMEGAV2_D15_NOVELTY_CURIOSITY_AND_AUTONOMOUS_RESEARCH_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D15_NOVELTY_CURIOSITY_AND_AUTONOMOUS_RESEARCH_2026-08-07.md",
+      "sha256": "6960087067a5562fb763d027efaa5483cb13dfe34b3b386470bbcb4ff91744f6",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-b15f8a1342f08e08",
+      "label": "OMEGAV2_D28_SLEEP_DREAMS_AND_CONSOLIDATION_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D28_SLEEP_DREAMS_AND_CONSOLIDATION_2026-08-07.md",
+      "sha256": "b15f8a1342f08e08be207e3325575e09da64b31fe70656c5b2fad41f648cb090",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-097784e4fae3bee8",
+      "label": "OMEGAV2_D16_RESOURCE_ASSIMILATION_AND_COGNITIVE_ECONOMICS_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D16_RESOURCE_ASSIMILATION_AND_COGNITIVE_ECONOMICS_2026-08-07.md",
+      "sha256": "097784e4fae3bee8c3fdedd5fd6a52cb2821841257a5d5aa26bdc3ead47ea9b9",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-04c1ca169febdc58",
+      "label": "OMEGAV2_D29_AFFECT_ENERGY_REST_AND_PROACTIVITY_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D29_AFFECT_ENERGY_REST_AND_PROACTIVITY_2026-08-07.md",
+      "sha256": "04c1ca169febdc5805860a42f23ce185468e70ee66f95d10cfa7d62031b713da",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-f9de274f5546c07b",
+      "label": "OMEGAV2_D14_CAPABILITY_DISCOVERY_EXECUTION_AND_SKILL_AFFORDANCE_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D14_CAPABILITY_DISCOVERY_EXECUTION_AND_SKILL_AFFORDANCE_2026-08-07.md",
+      "sha256": "f9de274f5546c07b73db902f896f3556950447bfb98c4fda9ccbf17b133ad6c4",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-779ed3b895fd9b55",
+      "label": "OMEGAV2_D34_PETTA_MORK_ATOMSPACE_AND_JETTA_SUBSTRATES_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D34_PETTA_MORK_ATOMSPACE_AND_JETTA_SUBSTRATES_2026-08-07.md",
+      "sha256": "779ed3b895fd9b5555c17f3cea2fd70e1a704b48236426342719eaa252d50fdb",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-378d1476bc9d37e4",
+      "label": "OMEGAV2_D30_EMBODIMENT_SENSORIUM_AND_HABITAT_2026-08-07.md",
+      "path": "historical-source:OMEGAV2_D30_EMBODIMENT_SENSORIUM_AND_HABITAT_2026-08-07.md",
+      "sha256": "378d1476bc9d37e4b73664cce8f5d8b7cde52a1e7f9ed5da9a81509f2f4729bf",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-49797251a5b16ca7",
+      "label": "HABITAT_ROUND1_SYNTHESIS_2026-07-19.md",
+      "path": "historical-source:HABITAT_ROUND1_SYNTHESIS_2026-07-19.md",
+      "sha256": "49797251a5b16ca748b523acdb42daa0c17aac2f9cd13123fd880c83a92cb489",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-c3fef77033ec1205",
+      "label": "SINGULARITYNET_OMEGA_HABITAT_MANAGEMENT_PLUGIN_WHITEPAPER_V1.md",
+      "path": "historical-source:SINGULARITYNET_OMEGA_HABITAT_MANAGEMENT_PLUGIN_WHITEPAPER_V1.md",
+      "sha256": "c3fef77033ec120552d3ce0feb9fef11d1bbfc17fb1668db3aa2e532bef5f159",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "donor-v2_atom_recall",
+      "label": "lib_omegaclaw_memory_recall.metta",
+      "path": "historical-source:lib_omegaclaw_memory_recall.metta",
+      "sha256": "4efd99cb48df41888fc76602593e537cf82b76d25d754aab624c7ee3eb8c6896",
+      "copy": "modules/tools_atom_recall/src/law.metta",
+      "basis": "exact native donor copy; no imports or top-level execution directives"
+    },
+    {
+      "id": "donor-v2_goal_compass",
+      "label": "lib_omegaclaw_goal_composition.metta",
+      "path": "historical-source:lib_omegaclaw_goal_composition.metta",
+      "sha256": "bb892b33fb24d2a1977f4fc8383d3313b55719e8aa2d0d1a83402819cf8227f1",
+      "copy": "modules/tools_goal_compass/src/law.metta",
+      "basis": "native donor copy; no imports or top-level execution directives; one comment line reworded in the 2026-10-10 handover copy, so the copy no longer matches this donor SHA"
+    },
+    {
+      "id": "source-142a6e6bc055731f",
+      "label": "Legacy module.toml",
+      "path": "historical-source:home-assistant-legacy.module.toml",
+      "sha256": "ae3ce28eaf40ca2f5e4c9f0768c82068d49ae7d89b3cae2423ea3f594a5ac76d",
+      "basis": "Exact technical member recovered from authorized legacy archive after original retirement; same banked SHA. No runtime or full archive qualification.",
+      "original_path": "historical-source:module.toml",
+      "copy": "donors/home-assistant-legacy.module.toml",
+      "archive_provenance": {
+        "archive": "historical-source:LinuxVM-legacy-20261004.tar.zst",
+        "member": "LinuxVM/OmegaClaw-Core-live/modules/home_assistant/module.toml",
+        "receipt": "evidence/legacy-source-recovery.json",
+        "archive_sha256_reported": "9c5d3ea0e19d72e0d161f8956475669becb9181774d7aab6e42a18044f42c030",
+        "current_custody": "Original archive no longer held; recovery receipt is historical, not current restoration proof",
+        "current_custody_source": "historical-source:PLATFORM_DISK_PLAN_20261004.md",
+        "current_custody_checked_utc": "2026-10-05T09:30:30.215618+00:00"
+      }
+    },
+    {
+      "id": "source-630e063bf478b7b8",
+      "label": "OmegaDot module.toml",
+      "path": "historical-source:module.toml",
+      "sha256": "ae3ce28eaf40ca2f5e4c9f0768c82068d49ae7d89b3cae2423ea3f594a5ac76d",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "source-e46a02a03aeefdc9",
+      "label": "OmegaDot README.md",
+      "path": "historical-source:README.md",
+      "sha256": "c1d8e5449163ef2384140bb04a77038307a4093124878300b9accd40f22eb199",
+      "basis": "inspected technical source; historical claims not re-executed"
+    },
+    {
+      "id": "native-309b11d56ba12202",
+      "label": "lib_omegaclaw_resident_focus.metta",
+      "path": "historical-source:lib_omegaclaw_resident_focus.metta",
+      "sha256": "04db059d035f29329a013ba4de7d7167d44541ffe29fb13608315f4ec3b1802c",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-adc7f58eb7dfee95",
+      "label": "lib_omegaclaw_living_intent.metta",
+      "path": "historical-source:lib_omegaclaw_living_intent.metta",
+      "sha256": "caf02f7bbd7667d95f183550d999bb456b8a68b8bf739c0b3c1a4a4047312370",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-60871c82ee1fccb6",
+      "label": "lib_omegaclaw_contracts.metta",
+      "path": "historical-source:lib_omegaclaw_contracts.metta",
+      "sha256": "86a8e998aec33506ad0211e53d2aa88d05746b9d590dc3b3c34690a2e45126c0",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-9784a2e9c41c99fb",
+      "label": "lib_omegaclaw_standing_value.metta",
+      "path": "historical-source:lib_omegaclaw_standing_value.metta",
+      "sha256": "6e3ce0fa781ad2beec002640c2ce85ba9081a6cc9b9c5b85737b2a9f2a403725",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-4574c83a357f2042",
+      "label": "lib_omegaclaw_resident_flourishing.metta",
+      "path": "historical-source:lib_omegaclaw_resident_flourishing.metta",
+      "sha256": "3e67eb51f36d5fe11bc12b460e63057d92e9577bd7141c25fd4bbea17f0f8590",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-c752c0d63d1b758c",
+      "label": "lib_omegaclaw_resident_epistemic_kernel.metta",
+      "path": "historical-source:lib_omegaclaw_resident_epistemic_kernel.metta",
+      "sha256": "07f1b0d831fb0b020a2c1c45b8aee3dd64df87c8c3ddf00ef15d5e246b49b3f9",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-79deb7acaf3757f8",
+      "label": "lib_omegaclaw_immune.metta",
+      "path": "historical-source:lib_omegaclaw_immune.metta",
+      "sha256": "53d245a310206fad9108fe5a9d9c82bb941c4df0f829ff3ca30e3e9752a642bb",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-367718dd8f3b0c31",
+      "label": "lib_omegaclaw_self_observation_consumer.metta",
+      "path": "historical-source:lib_omegaclaw_self_observation_consumer.metta",
+      "sha256": "7720691ab1a7c2a4fc98de882119ab75f00adea655103430685e9518b20c519f",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-d3dbafafcb3165f6",
+      "label": "lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "path": "historical-source:lib_omegaclaw_epistemic_no_winner_ensemble.metta",
+      "sha256": "8bf1bb4ec9409644045ca02f5604614b9b9271cd69e73aad32af4a6b0c7b4d76",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-92f6c3a76acfbd57",
+      "label": "lib_omegaclaw_novelty_inspection.metta",
+      "path": "historical-source:lib_omegaclaw_novelty_inspection.metta",
+      "sha256": "3325bae69dacf5f12d6fd32c3d3390c591392663de9f59f24a4606d70794af9a",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-ff9f756fc5e41f20",
+      "label": "lib_omegaclaw_cycle_composer_ingress.metta",
+      "path": "historical-source:lib_omegaclaw_cycle_composer_ingress.metta",
+      "sha256": "fa70f4b9ff75f7b892e8a17956da408ca804c96d462bb6acc105c1cfcd97ee18",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-eaeaef49a42f0e52",
+      "label": "lib_omegaclaw_cognitive_energy_wallet.metta",
+      "path": "historical-source:lib_omegaclaw_cognitive_energy_wallet.metta",
+      "sha256": "7664852e0e7b060d96433b4a67dfba3caa8eccddc7ed2cbae082be66a3dc476c",
+      "basis": "source-bound native equation projection; function names namespaced"
+    },
+    {
+      "id": "native-home-bridge-de9efae8068d0947",
+      "label": "Legacy Home Assistant physical bridge",
+      "path": "historical-source:home_assistant.py",
+      "sha256": "de9efae8068d0947de8be47f7ffe9331ea31a9e754c026b085e99a3ba77217df",
+      "copy": "modules/tools_home_assistant/src/legacy_home_assistant.py",
+      "basis": "exact dormant donor; only pure service mapping tested under blocked network/filesystem"
+    }
+  ],
+  "scope": "Selected inspected technical sources; no novelty, exhaustive-corpus or live-runtime claim."
+}

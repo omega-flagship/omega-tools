@@ -1,0 +1,479 @@
+{
+  "schema": "omega-tools-exports-v1",
+  "files": {
+    "affordance.metta": "e3658e392fe9f932eed68712a28e1a4d07cdfba195d5551ea3d7349ceeaf4097",
+    "catalog.metta": "1c4a7026f213b61efbb79498d37dfe345085c0760ff4d46d27d63f0518dddb31",
+    "signatures.metta": "e7c6cf3e9256b74ac79e88852b52a9e96c2238c3208e0ae1045792f623934de3",
+    "skills.metta": "1374faad5e942c9d65485d1957f4a20159f906a86e50b5180aeb40e3f6e856ff",
+    "src/law.metta": "d63a240c10a41b6215a946308ef059728e448d0defd4b6f1d42ee0540bce6b1c"
+  },
+  "callables": [
+    {
+      "name": "tools-attention--contract-and3",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--contract-present?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-admission-class",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-admission-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-apply",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-apply-admitted",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-apply-rent",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-attention--focus-apply-wage",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-attention--focus-candidate-ordinal",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-decay-preview",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-enabled-score",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-event-identifiers-valid?",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-find-receipt",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-min",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ordinal-present?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ordinals-unique?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-pin-bias",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-pin-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-rank-all",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-rank-one",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ranked-before?",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ranked-insert",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ranked-ordinal",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ranked-refs",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-ranked-score",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-receipt-event",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-receipt-matches?",
+      "arities": [
+        4
+      ]
+    },
+    {
+      "name": "tools-attention--focus-record-no-transfer",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "tools-attention--focus-rent",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-attention--focus-safe-pin-bias",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-add-sti",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-decay-records",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-find",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-lti",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-pin",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-ref",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-ref-sti",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-replace",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-sti",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-salience-vlti",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-score",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention--focus-select",
+      "arities": [
+        7
+      ]
+    },
+    {
+      "name": "tools-attention--focus-signal-known?",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-sort-ranked",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-take",
+      "arities": [
+        2
+      ]
+    },
+    {
+      "name": "tools-attention--focus-vlti-bias",
+      "arities": [
+        1
+      ]
+    },
+    {
+      "name": "tools-attention--focus-wage",
+      "arities": [
+        0
+      ]
+    },
+    {
+      "name": "tools-attention-event",
+      "arities": [
+        3
+      ]
+    },
+    {
+      "name": "tools-attention-select",
+      "arities": [
+        7
+      ]
+    }
+  ],
+  "defined_constants": {},
+  "constructors": [
+    {
+      "head": "Arg",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Effect",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "Risk",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillHelp",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillSignature",
+      "arities": [
+        4,
+        8
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "SkillTopic",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "ToolsSampleResultV1",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "admitted",
+      "arities": [
+        3
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-agenda",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-agenda-receipt",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-candidate",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-decay-plan",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-duplicate",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-event",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-id-conflict",
+      "arities": [
+        5
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-ranked",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-receipt",
+      "arities": [
+        11
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-result",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-selection",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-selection-rejected",
+      "arities": [
+        2
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "focus-state",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "quarantined",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "rejected",
+      "arities": [
+        4
+      ],
+      "types": "unqualified; see admission schema"
+    },
+    {
+      "head": "salience",
+      "arities": [
+        6
+      ],
+      "types": "unqualified; see admission schema"
+    }
+  ],
+  "constructor_scope": "referenced/declaration heads; no executable ownership implied"
+}

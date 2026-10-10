@@ -1,0 +1,20 @@
+id = "omegahive.tools.living_home"
+kind = "cognitive-skill"
+version = "0.1.0"
+entrypoint = "entry.metta"
+catalog = "catalog.metta"
+signatures = "signatures.metta"
+optional = true
+default_enabled = false
+provides = ["skill:tools-habitat-stage"]
+requires = ["runtime:petta"]
+
+[market]
+title = "Aware Habitat to Living Home"
+summary = "Staged readiness guidance preserving awareness/relationships/control destination; no household surveillance or management daemon."
+family = "living-home"
+origin = "sample"
+qualification = "VERIFIED"
+effects = []
+evidence = "../../evidence/all-tools-native-check.json"
+maker = "OmegaDot Platform contributors; donor licence preserved"

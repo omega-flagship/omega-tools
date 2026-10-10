@@ -1,0 +1,181 @@
+{
+  "transformation": "equation dependency closure; function-symbol namespace only; no imports/initialisers",
+  "exports": {
+    "living-intent-bind-call": "tools-living-intent--living-intent-bind-call",
+    "living-intent-admit-contribution": "tools-living-intent--living-intent-admit-contribution"
+  },
+  "sources": [
+    {
+      "path": "historical-source:lib_omegaclaw_living_intent.metta",
+      "sha256": "caf02f7bbd7667d95f183550d999bb456b8a68b8bf739c0b3c1a4a4047312370"
+    },
+    {
+      "path": "historical-source:lib_omegaclaw_contracts.metta",
+      "sha256": "86a8e998aec33506ad0211e53d2aa88d05746b9d590dc3b3c34690a2e45126c0"
+    }
+  ],
+  "equations": [
+    {
+      "function": "contract-and3",
+      "projected_function": "tools-living-intent--contract-and3",
+      "source": "historical-source:lib_omegaclaw_contracts.metta",
+      "equation_sha256": "af63088f06a9b182ece76fb737949f4c8b3d88e3576d25d4d8a49f2098cc302f"
+    },
+    {
+      "function": "contract-present?",
+      "projected_function": "tools-living-intent--contract-present?",
+      "source": "historical-source:lib_omegaclaw_contracts.metta",
+      "equation_sha256": "6b009767f69ff56f1d8d2ac6b0a6c6fabeaab180d116b04c07103eb9e0626006"
+    },
+    {
+      "function": "living-intent-admit-contribution",
+      "projected_function": "tools-living-intent--living-intent-admit-contribution",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "f799ee951e8c7e6167c490e7ef36f2e602ce328d2e97730d077362f9ce7f6365"
+    },
+    {
+      "function": "living-intent-bind-call",
+      "projected_function": "tools-living-intent--living-intent-bind-call",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "3a1aa79e65205a107b31363ebcefca5c03691151f20ce37aae07d7eb019c3ad8"
+    },
+    {
+      "function": "living-intent-binding-shape?",
+      "projected_function": "tools-living-intent--living-intent-binding-shape?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "586cbe4a24adbdb4280f5c593389fe476cd28b819b7ef0cfbbea84a988f276c9"
+    },
+    {
+      "function": "living-intent-count-heads",
+      "projected_function": "tools-living-intent--living-intent-count-heads",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "6dc9ac1f7a179c318cb2a5b69849987fda62b30453b41a3f2942ddf727ec2f60"
+    },
+    {
+      "function": "living-intent-count-projections",
+      "projected_function": "tools-living-intent--living-intent-count-projections",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "d058c7133130babc888651440bc3582d7fc21fa93740659fdd5a85ada6adcf8e"
+    },
+    {
+      "function": "living-intent-eighth",
+      "projected_function": "tools-living-intent--living-intent-eighth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "4d69fac0e1f91861dff473c0a0434cbbb316920cbf93d010fb25ae249175a6cb"
+    },
+    {
+      "function": "living-intent-eleventh",
+      "projected_function": "tools-living-intent--living-intent-eleventh",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "6070102bdd8af1cbdc6f7f8bc8d6ab6128677e5da8104cc949070f79a060ce56"
+    },
+    {
+      "function": "living-intent-fifth",
+      "projected_function": "tools-living-intent--living-intent-fifth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "da0c507ee194ccab4bacfdf813c9ba0b9f5fde0ecb4b66b7ef50227714a30a14"
+    },
+    {
+      "function": "living-intent-fourth",
+      "projected_function": "tools-living-intent--living-intent-fourth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "166f67282d8bcba19a6552ba6ff8adf97755c78f944494acca7a03b82492252e"
+    },
+    {
+      "function": "living-intent-head-complete?",
+      "projected_function": "tools-living-intent--living-intent-head-complete?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "e0134e3ca35791b91803cdf8ab92f2687db7881c2bd819a378728a4f2cf37ce9"
+    },
+    {
+      "function": "living-intent-head-matches?",
+      "projected_function": "tools-living-intent--living-intent-head-matches?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "4df31d22f145df52cdf550342a1da7b30ffd14e4559d1ed3fba266a70ac1e137"
+    },
+    {
+      "function": "living-intent-head-shape?",
+      "projected_function": "tools-living-intent--living-intent-head-shape?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "964a10fc0bf8b25840141f83e1975b881786df59e97dd7856a0a76a2e5ca3901"
+    },
+    {
+      "function": "living-intent-ninth",
+      "projected_function": "tools-living-intent--living-intent-ninth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "c8ffb7afadcec33b6f13fb2ce6f67a824194baa95a05eeb989ce213ece01f7e2"
+    },
+    {
+      "function": "living-intent-projection-complete?",
+      "projected_function": "tools-living-intent--living-intent-projection-complete?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "a73fb819d399549a995033891e0bda02f91326361b112f600b01200737cc0259"
+    },
+    {
+      "function": "living-intent-projection-matches?",
+      "projected_function": "tools-living-intent--living-intent-projection-matches?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "505ec1e08f133bd904f9470ebe35937b0b8cac4b4e37ab0aa0230e202a0c9ad2"
+    },
+    {
+      "function": "living-intent-projection-refs-valid?",
+      "projected_function": "tools-living-intent--living-intent-projection-refs-valid?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "a7685d397adf97ba053fc4b17ea8b19cbe7741d9ade812eaa7275e90d2e4900b"
+    },
+    {
+      "function": "living-intent-projection-shape?",
+      "projected_function": "tools-living-intent--living-intent-projection-shape?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "bc1a0713afac0e68bbbe4f8e3264a4112717bfd7727ca6576c64da0ca93524cd"
+    },
+    {
+      "function": "living-intent-second",
+      "projected_function": "tools-living-intent--living-intent-second",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "c5e143ccd928d8d5dcd2d12cd56b31b979fac4c0dd2bec059a0fee0655dfce65"
+    },
+    {
+      "function": "living-intent-seventh",
+      "projected_function": "tools-living-intent--living-intent-seventh",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "0c959c0c6fb3310b34b5d78c6b99e2d6dba051ba3da3a5e248bd0f5c109ed072"
+    },
+    {
+      "function": "living-intent-sixth",
+      "projected_function": "tools-living-intent--living-intent-sixth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "246b1b89c216bdb70c9bd136d91fa6b548a875ebfbc88813688b33674b774029"
+    },
+    {
+      "function": "living-intent-state-current-version",
+      "projected_function": "tools-living-intent--living-intent-state-current-version",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "8d0e6c4a29e2c12071982e50790acd5cc959a3100b89b597ca12c43f34a6dcba"
+    },
+    {
+      "function": "living-intent-state-shape?",
+      "projected_function": "tools-living-intent--living-intent-state-shape?",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "e6ab03f07d6e0f731aac5007548dfa486c4bf8f1716aad11256ed784117f2e9a"
+    },
+    {
+      "function": "living-intent-tenth",
+      "projected_function": "tools-living-intent--living-intent-tenth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "4e89645233a0c5c87cabacd245822a4145eeeaaa2632cb63927fd91f65136dae"
+    },
+    {
+      "function": "living-intent-third",
+      "projected_function": "tools-living-intent--living-intent-third",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "d6a2fc382120c8e4a67de6e318bef566dc412960a8841b5a2fc31ce355d1f718"
+    },
+    {
+      "function": "living-intent-twelfth",
+      "projected_function": "tools-living-intent--living-intent-twelfth",
+      "source": "historical-source:lib_omegaclaw_living_intent.metta",
+      "equation_sha256": "7249f0c876dd8534d7835e1a9780e20be870726fddc4c282cb2663e9126ebf26"
+    }
+  ]
+}
